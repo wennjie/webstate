@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const srcDir = path.resolve(__dirname, '../dist/').replace(/\\/g, "\/")
+const srcDir = path.resolve(__dirname, '../views/dist/').replace(/\\/g, "\/")
 const prefixMulti = {}
 prefixMulti[srcDir] = ''
 

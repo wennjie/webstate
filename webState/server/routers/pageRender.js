@@ -7,7 +7,7 @@ router.get('/',(req,res)=>{
 
 console.log(123)
 // res.send('123')
-res.render('views/index')
+res.render('index',{title:"天麒科技"})
 
 })
 

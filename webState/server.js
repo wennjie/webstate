@@ -52,7 +52,7 @@ function createRenderer(bundle, template) {
         }),
 
         // this is only needed when vue-server-renderer is npm-linked
-        basedir: resolve('./dist'),
+        basedir: resolve('./views/dist'),
 
         // recommended for performance
         runInNewContext: false
@@ -68,8 +68,8 @@ let backend
 let renderer
 if (isProd) {
     // 生产模式: 从 fs 创建服务器 HTML 渲染器和索引
-    const bundle = require('./dist/vue-ssr-bundle.json')
-    frontend = fs.readFileSync(resolve('./dist/server.html'), 'utf-8')
+    const bundle = require('./views/dist/vue-ssr-bundle.json')
+    frontend = fs.readFileSync(resolve('./views/dist/server.html'), 'utf-8')
     renderer = createRenderer(bundle, frontend)
 } else {
     // 开发模式: 设置带有热重新加载的 dev 服务器，并在文件更改时更新渲染器和索引 HTML
@@ -84,7 +84,7 @@ if (isProd) {
 const serve = (path, cache) => express.static(resolve(path), { maxAge: cache && isProd ? 60 * 60 * 24 * 30 : 0 })
 
 // 引用 esj 模板引擎
-app.set('views', path.join(__dirname, 'dist'))
+app.set('views', path.join(__dirname, 'views'))
 app.engine('.html', require('hbs').__express)
 app.set('view engine', 'hbs')
 
@@ -144,12 +144,12 @@ app.use(authUser.auth);
 // 初始化日志目录
 logUtil.initPath();
 // 设置 express 根目录
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'views')))
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/server', serve('./dist/server', true))
-app.use('/static', serve('./dist/static', true))
+app.use('/server', serve('./views/dist/server', true))
+app.use('/static', serve('./views/dist/static', true))
 app.use('/manifest.json', serve('./manifest.json'))
-app.use('/service-worker.js', serve('./dist/service-worker.js'))
+app.use('/service-worker.js', serve('./views/dist/service-worker.js'))
 
 // api 路由
 app.use('/',page);
@@ -158,9 +158,7 @@ app.use('/api', routes);
 app.use('/system', system);
 
 // 前台路由, ssr 渲染
-app.get(['/page/:current(\\d+)?', '/:cate1?___:typeId?/:current(\\d+)?',
-    '/:cate0/:cate1?___:typeId?/:current(\\d+)?', '/search/:searchkey/:current(\\d+)?',
-    '/details/:id', '/users/:userPage', '/users/editContent/:id', '/dr-admin', '/sitemap.html', '/tag/:tagName/:page(\\d+)?'], (req, res) => {
+app.get(['/dr-admin', '/sitemap.html'], (req, res) => {
 
         // 非正常登录用户禁止访问
         if (req.originalUrl.indexOf('/users') == 0 && !req.session.logined) {
@@ -290,15 +288,15 @@ app.get('/manage', authSession, function (req, res) {
 app.use('/manage', manage);
 
 // 404 页面
-// app.get('*', (req, res) => {
-//     let Page404 = `
-//         <div style="text-align:center">
-//             <h3 style="width: 25%;font-size: 12rem;color: #409eff;margin: 0 auto;margin-top: 10%;">404</h3>
-//             <div style="font-size: 15px;color: #878d99;"><a href="/">返回首页</a></div>
-//         </div>
-//     `
-//     res.send(Page404)
-// })
+app.get('*', (req, res) => {
+    let Page404 = `
+        <div style="text-align:center">
+            <h3 style="width: 25%;font-size: 12rem;color: #409eff;margin: 0 auto;margin-top: 10%;">404</h3>
+            <div style="font-size: 15px;color: #878d99;"><a href="/">返回首页</a></div>
+        </div>
+    `
+    res.send(Page404)
+})
 
 app.use(function (req, res, next) {
     var err = new Error(req.originalUrl + ' Not Found')

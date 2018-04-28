@@ -13,7 +13,7 @@ const config = {
         admin: './src/admin.js'
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../views/dist'),
         publicPath: '/',
         filename: 'static/js/[name].[chunkhash:7].js',
         chunkFilename: 'static/js/[name].[chunkhash:7].js',
