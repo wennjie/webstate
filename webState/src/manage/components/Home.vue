@@ -1,8 +1,8 @@
 <template>
     <el-row class="container" v-loading.body="loading">
         <el-col :span="24" class="header">
-            <el-col :span="10" class="logo" :class="collapsed?'logo-collapse-width':'logo-width'">
-                <router-link v-show="!collapsed" :to="{path: '/main'}"><img src="../assets/images/doracms-logo.png" alt="DoraCMS内容管理系统" /></router-link>
+            <el-col :span="10" class="logo" :class="collapsed?'logo-collapse-width':'logo-width'" style="">
+                <router-link v-show="!collapsed" :to="{path: '/main'}"><img src="../assets/images/logo2.png" alt="天麒科技官网后台管理" /></router-link>
             </el-col>
             <el-col :span="10">
                 <div class="tools" @click.prevent="collapse">
@@ -12,7 +12,7 @@
             <el-col :span="4" class="userinfo" v-if="loginState && loginState.userInfo">
                 <el-dropdown trigger="hover">
                     <span class="el-dropdown-link userinfo-inner">
-                        <img :src="loginState.userInfo.logo" /> {{loginState.userInfo.userName}}</span>
+                        <img src="../assets/images/logo1.png" /> {{loginState.userInfo.userName}}</span>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item @click.native="sysMessage">我的消息
                             <el-badge v-show="loginState.noticeCounts > 0" class="mark" :value="loginState.noticeCounts" /></el-dropdown-item>
@@ -156,6 +156,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 @import "~scss_vars";
 .container {
   position: absolute;
@@ -195,7 +196,7 @@ export default {
       img {
         width: 100%;
         float: left;
-        margin: 10px 10px 10px 0px;
+        // margin: 10px 10px 10px 0px;
       }
       .txt {
         color: #fff;

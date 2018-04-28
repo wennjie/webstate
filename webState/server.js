@@ -32,6 +32,7 @@ const routes = require('./server/routers/api')
 const foreground = require('./server/routers/foreground')
 const manage = require('./server/routers/manage');
 const system = require('./server/routers/system');
+const page = require('./server/routers/pageRender');
 
 const isCacheable = () => useMicroCache
 const microCache = lurCache({
@@ -84,8 +85,19 @@ const serve = (path, cache) => express.static(resolve(path), { maxAge: cache && 
 
 // 引用 esj 模板引擎
 app.set('views', path.join(__dirname, 'dist'))
-app.engine('.html', require('ejs').__express)
-app.set('view engine', 'ejs')
+app.engine('.html', require('hbs').__express)
+app.set('view engine', 'hbs')
+
+
+
+
+
+
+
+
+
+
+
 
 app.use(favicon('./favicon.ico'))
 app.use(compression({ threshold: 0 }))
@@ -138,13 +150,15 @@ app.use('/server', serve('./dist/server', true))
 app.use('/static', serve('./dist/static', true))
 app.use('/manifest.json', serve('./manifest.json'))
 app.use('/service-worker.js', serve('./dist/service-worker.js'))
+
 // api 路由
-app.use('/', foreground);
+app.use('/',page);
+// app.use('/', foreground);
 app.use('/api', routes);
 app.use('/system', system);
 
 // 前台路由, ssr 渲染
-app.get(['/', '/page/:current(\\d+)?', '/:cate1?___:typeId?/:current(\\d+)?',
+app.get(['/page/:current(\\d+)?', '/:cate1?___:typeId?/:current(\\d+)?',
     '/:cate0/:cate1?___:typeId?/:current(\\d+)?', '/search/:searchkey/:current(\\d+)?',
     '/details/:id', '/users/:userPage', '/users/editContent/:id', '/dr-admin', '/sitemap.html', '/tag/:tagName/:page(\\d+)?'], (req, res) => {
 
@@ -276,15 +290,15 @@ app.get('/manage', authSession, function (req, res) {
 app.use('/manage', manage);
 
 // 404 页面
-app.get('*', (req, res) => {
-    let Page404 = `
-        <div style="text-align:center">
-            <h3 style="width: 25%;font-size: 12rem;color: #409eff;margin: 0 auto;margin-top: 10%;">404</h3>
-            <div style="font-size: 15px;color: #878d99;">太调皮辣，不过我喜欢...哼哼 😏👽 &nbsp;<a href="/">返回首页</a></div>
-        </div>
-    `
-    res.send(Page404)
-})
+// app.get('*', (req, res) => {
+//     let Page404 = `
+//         <div style="text-align:center">
+//             <h3 style="width: 25%;font-size: 12rem;color: #409eff;margin: 0 auto;margin-top: 10%;">404</h3>
+//             <div style="font-size: 15px;color: #878d99;"><a href="/">返回首页</a></div>
+//         </div>
+//     `
+//     res.send(Page404)
+// })
 
 app.use(function (req, res, next) {
     var err = new Error(req.originalUrl + ' Not Found')

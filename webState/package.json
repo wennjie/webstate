@@ -1,7 +1,7 @@
 {
-  "name": "doracms",
-  "version": "2.0.5",
-  "description": "基于nodejs,express,vue2 内容管理系统.",
+  "name": "webstate",
+  "version": "1.0.0",
+  "description": "天麒科技官网",
   "keywords": [
     "vue",
     "vuex",
@@ -9,7 +9,7 @@
     "webpack",
     "server-side"
   ],
-  "author": "dora <admin@html-js.cn>",
+  "author": "wenjie",
   "license": "MIT",
   "scripts": {
     "init": " node build/restore",
@@ -40,6 +40,7 @@
     "express-session": "^1.15.6",
     "font-awesome": "^4.7.0",
     "formidable": "^1.1.1",
+    "hbs": "^4.0.1",
     "highlight.js": "^9.12.0",
     "iconv-lite": "^0.4.19",
     "js-cookie": "^2.2.0",
@@ -90,6 +91,7 @@
     "babel-runtime": "^6.20.0",
     "browserslist": "^2.1.2",
     "connect-multiparty": "^2.0.0",
+    "copy-webpack-plugin": "^4.0.0",
     "css-loader": "^0.28.1",
     "eslint": "^4.11.0",
     "eslint-config-lcy-vue": "^1.0.6",
@@ -116,10 +118,10 @@
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0",
-    "webpack-merge": "^4.1.0",
-    "copy-webpack-plugin": "^4.0.0"
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": "8.x"
-  }
+  },
+  "main": "index.js"
 }
