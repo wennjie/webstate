@@ -24,28 +24,9 @@
             epub360_domain = 'epub360';
     </script>
     <!--[if lt ie 9]>
-<!--
-<script>
-       (function() {
-      var testObject = {};
-      if (!(Object.setPrototypeOf || testObject.__proto__)) {
-          var nativeGetPrototypeOf = Object.getPrototypeOf;
-
-          Object.getPrototypeOf = function(object) {
-              if (object.__proto__) {
-                  return object.__proto__;
-              } else {
-                  return nativeGetPrototypeOf.call(Object, object);
-              }
-          }
-      }
-    })();
-</script>
--->
     <script src="{{_ROOT_}}/js/es5-shim.js"></script>
     <script src="{{_ROOT_}}/js/es5-sham.js"></script>
-    <!--<script src="js/es6-shim.js"></script>-->
-    <!--<script src="js/es6-sham.js"></script>-->
+
     <script type="text/javascript" src="{{_ROOT_}}/js/object-assign.min.js"></script>
     <script type="text/javascript" src="{{_ROOT_}}/js/promise.js"></script>
     <script>
@@ -53,7 +34,7 @@
         window.ObjectAssign.polyfill();
     </script>
     <![endif]-->
-
+   
     <link rel="stylesheet" type="text/css" href="{{_ROOT_}}/js/jquery.fancybox.min.css">
 
     <link rel="stylesheet" type="text/css" href="{{_ROOT_}}/css/font-awesome.min.css">
@@ -129,7 +110,7 @@
 <script type="text/javascript" src="http://o3bnyc.creatby.com/diazo/c_pro/js/pack.built.6ba18c25.cache.js"></script>
 
 
-
+ {{!-- <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script> --}}
 
 
 </html>

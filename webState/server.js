@@ -3,26 +3,29 @@ const isProd = process.env.NODE_ENV === 'production'
 global.NODE_ENV = isProd
 const useMicroCache = process.env.MICRO_CACHE !== 'false'
 
-const fs = require('fs')
-const path = require('path')
-const favicon = require('serve-favicon')
-const express = require('express')
-const session = require('express-session');
+const fs = require('fs'); //文件
+const path = require('path'); //path
+const favicon = require('serve-favicon'); //favicon
+const express = require('express');
+const session = require('express-session'); 
 const MongoStore = require('connect-mongo')(session);
 const RedisStore = require('connect-redis')(session);
-const compression = require('compression')
-const lurCache = require('lru-cache')
-const ueditor = require("ueditor")
-const logger = require('morgan')
+const compression = require('compression'); //压缩 Gzip
+const lurCache = require('lru-cache')//
+const ueditor = require("ueditor")//可视化编辑
+const logger = require('morgan')//日志管理
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const { createBundleRenderer } = require('vue-server-renderer')
-const _ = require('lodash')
-const resolve = file => path.resolve(__dirname, file)
+import hbs from 'hbs';
+const _ = require('lodash')//遍历 array、object 和 string
 
-const serverInfo =
-    `express/${require('express/package.json').version} ` +
-    `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
+const resolve = file => path.resolve(__dirname, file) //文件
+
+//服务的相关。。TODO
+const serverInfo =`express/${require('express/package.json').version} ` +`vue-server-renderer/${require('vue-server-renderer/package.json').version}`
+
+    
 
 const { service, settings, authSession, logUtil, siteFunc } = require('./utils');
 const authUser = require('./utils/middleware/authUser');
@@ -62,10 +65,8 @@ function createRenderer(bundle, template) {
 const app = express()
 
 // 由 html-webpack-plugin 生成
-let frontend
-let backend
-// 创建来自 webpack 生成的服务端包
-let renderer
+let frontend,backend,renderer
+
 if (isProd) {
     // 生产模式: 从 fs 创建服务器 HTML 渲染器和索引
     const bundle = require('./views/dist/vue-ssr-bundle.json')
@@ -83,26 +84,23 @@ if (isProd) {
 // 设置静态文件缓存时间
 const serve = (path, cache) => express.static(resolve(path), { maxAge: cache && isProd ? 60 * 60 * 24 * 30 : 0 })
 
-// 引用 esj 模板引擎
+// 引用 hbs 模板引擎
 app.set('views', path.join(__dirname, 'views'))
 app.engine('.html', require('hbs').__express)
 app.set('view engine', 'hbs')
 
+//components  hbs组件
+hbs.registerPartials(__dirname + '/views/partials');
 
 
-
-
-
-
-
-
-
-
-
+//
 app.use(favicon('./favicon.ico'))
+//gzip
 app.use(compression({ threshold: 0 }))
 // 日志
 app.use(logger('":method :url" :status :res[content-length] ":referrer" ":user-agent"'))
+
+
 // body 解析中间件
 // app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -110,6 +108,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser(settings.session_secret));
 // session配置
 let sessionConfig = {};
+//
 if (settings.openRedis) {
     sessionConfig = {
         secret: settings.session_secret,
@@ -145,10 +144,13 @@ app.use(authUser.auth);
 logUtil.initPath();
 // 设置 express 根目录
 app.use(express.static(path.join(__dirname, 'views')))
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/server', serve('./views/dist/server', true))
+app.use(express.static(path.join(__dirname, 'public')))
+//设置缓存
+app.use('/server', serve('./views/dist/server', true)) 
 app.use('/static', serve('./views/dist/static', true))
+
 app.use('/manifest.json', serve('./manifest.json'))
+
 app.use('/service-worker.js', serve('./views/dist/service-worker.js'))
 
 // api 路由
@@ -202,13 +204,14 @@ app.get(['/dr-admin', '/sitemap.html'], (req, res) => {
         }
 
         const context = {
-            title: '前端开发俱乐部',
-            description: '前端开发俱乐部',
-            keywords: 'doracms',
+            title: '成都天麒科技',
+            description: '成都天麒科技',
+            keywords: 'skylinuav',
             url: req.url,
             cookies: req.cookies,
             env: process.env.NODE_ENV
         }
+        console.log(context)
         renderer.renderToString(context, (err, html) => {
             if (err) {
                 return errorHandler(err)
@@ -217,7 +220,7 @@ app.get(['/dr-admin', '/sitemap.html'], (req, res) => {
             if (cacheable) {
                 microCache.set(req.url, html)
             }
-            console.log(`whole request: ${Date.now() - s}ms`)
+            // console.log(`whole request: ${Date.now() - s}ms`)
         })
 
     })
@@ -298,18 +301,26 @@ app.get('*', (req, res) => {
     res.send(Page404)
 })
 
+
+//404
 app.use(function (req, res, next) {
     var err = new Error(req.originalUrl + ' Not Found')
     err.status = 404
     next(err)
 })
 
+
+//500
 app.use(function (err, req, res) {
     if (err) logUtil.error(err, req);
     res.status(err.status || 500)
     res.send(err.message)
 })
 
+
+
+
+//设置监听
 const port = process.env.PORT || settings.serverPort
 app.listen(port, () => {
     console.log(`server started at localhost:${port}`)
