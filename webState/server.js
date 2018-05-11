@@ -116,7 +116,7 @@ if (settings.openRedis) {
             port: settings.redis_port,
             host: settings.redis_host,
             pass: settings.redis_psd,
-            ttl: 1800 // 过期时间
+            ttl: 18000 // 过期时间
         }),
         resave: true,
         saveUninitialized: true
@@ -125,7 +125,7 @@ if (settings.openRedis) {
     sessionConfig = {
         secret: settings.encrypt_key,
         cookie: {
-            maxAge: 1000 * 60 * 10
+            maxAge: 1000 * 60 * 100
         },
         resave: false,
         saveUninitialized: true,
@@ -279,7 +279,7 @@ app.get('/manage', authSession, function (req, res) {
         let currentCates = JSON.stringify(siteFunc.renderNoPowerMenus(manageCates, adminPower));
         if (isProd) {
             res.render('admin.html', {
-                title: 'DoraCMS后台管理',
+                title: '天麒科技后台管理',
                 manageCates: currentCates
             })
         } else {
@@ -299,6 +299,7 @@ app.get('*', (req, res) => {
         </div>
     `
     res.send(Page404)
+    return
 })
 
 
@@ -307,6 +308,7 @@ app.use(function (req, res, next) {
     var err = new Error(req.originalUrl + ' Not Found')
     err.status = 404
     next(err)
+    return
 })
 
 
@@ -315,6 +317,7 @@ app.use(function (err, req, res) {
     if (err) logUtil.error(err, req);
     res.status(err.status || 500)
     res.send(err.message)
+    return
 })
 
 

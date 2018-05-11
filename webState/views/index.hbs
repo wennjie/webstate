@@ -20,10 +20,10 @@
         position: relative;
         height: 570px;
         float: left;
-        /*width: 33.33%;*/
         text-align: center;
         background: #fff;
         transition: all 0.2s;
+        border-right: 1px solid #e5e5e5;
 
     }
 
@@ -61,13 +61,21 @@
         position: relative;
     }
 
-    .container-info .titles {
+    .titles {
         height: 49px;
         margin: 40px 30px 30px 30px;
         display: block;
         position: relative;
         font-size: 18px;
+        letter-spacing: 5px;
         z-index: 1;
+
+    }
+
+    .container-info {
+        line-height: 1.7em;
+        font-weight: normal;
+        font-size: 12px;
 
     }
 
@@ -81,11 +89,23 @@
         padding: 20px 20px;
         position: relative;
         z-index: 1;
+
+    }
+
+    .container-info-box .title {
+        letter-spacing: 5px;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    .div_yrNuav img {
+        width: 55px;
     }
 </style>
 <div class="app">
-    {{!-- {{title}} --}} 
-    {{> header}}
+    {{!-- {{title}} --}} {{> header}}
 
     <!--banner -start -->
     <div class="container-fluid cst_sectionBlock cst_sectionBlock_slide c-section cbsect_0fa8babf" data-c_tl_id="tl_a31d502a">
@@ -149,9 +169,9 @@
                     <div class="border_left c-div div_uMmNly">
                         <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_3fc2510ce4f83ae7">
                             <div class="c-div div_yrNuav">
-                                <i class="fa fa-plane c-icon icon_HuFtLd"></i>
+                                <img src="/imgs/icon/1.png" alt="">
                             </div>
-                            <div class="div_custom_padding1 c-div div_n7Kcyv" >
+                            <div class="div_custom_padding1 c-div div_n7Kcyv">
                                 <p class="c-ellipse c-paragraph paragraph_RYeMb5">智能植保无人机</p>
                                 <p class="c-ellipse c-paragraph paragraph_UEFez8">天麒科技致力于智能植保无人机的研发与制造，以尖端科技解放农业生产力。</p>
                             </div>
@@ -161,7 +181,7 @@
                     <div class="border_left c-div div_dwoK5v">
                         <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_adfcf1d0468f59d4">
                             <div class="c-div div_yrNuav">
-                                <i class="fa fa-shield c-icon icon_HuFtLd"></i>
+                                <img src="/imgs/icon/2.png" alt="">
                             </div>
                             <div class="div_custom_padding1 c-div div_n7Kcyv">
                                 <p class="c-ellipse c-paragraph paragraph_RYeMb5">智能一体化农业服务</p>
@@ -173,7 +193,7 @@
                     <div class="border_left c-div div_u2pcQm">
                         <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_8d8af16b071bf93a">
                             <div class="c-div div_yrNuav">
-                                <i class="fa fa-book c-icon icon_HuFtLd"></i>
+                                <img src="/imgs/icon/3.png" alt="">
                             </div>
                             <div class="div_custom_padding1 c-div div_n7Kcyv" style="padding-right:0;">
                                 <p class="c-ellipse c-paragraph paragraph_RYeMb5">智慧农业解决方案</p>
@@ -202,34 +222,57 @@
                     <!--<img src="src/f7921981f18958c8d1f094786911074b_origin.jpg"/>-->
                 </div>
                 <div class="container-info-box">
-                    更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案
+                    <div>
+                        天麒农情监测系统（防病患于未然，为农作物保驾护航）
+                        <br/> 天麒植保基础设施（智能农机规模化、去人化作业，定位数据随用随调）
+                        <br/> 卫星遥感技术（农作物病虫害成像分析）
+                        <br/> 农业大数据平台（农业数据采集存储、运算分析、挖掘应用）
+                        <br/>
+                    </div>
+
+                    <div>More...</div>
                 </div>
                 <div class="offset-box"></div>
             </div>
             <div class="container-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="offset-box"></div>
                 <div class="titles">
-                    <span>更懂农作物的系列解决方案</span>
+                    <span>天麒全自主植保无人机</span>
                 </div>
                 <div class="imgs" style="background-image: url(src/6647992cbd95cc8733950479af8399e2_origin.jpg);">
                     <!--<img src="src/6647992cbd95cc8733950479af8399e2_origin.jpg"/>-->
                 </div>
                 <div class="container-info-box">
-                    更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案
 
+                    <div>
+                        一控多机 精密高效
+                        <br/> 作业效率翻倍多 劳作成本翻倍少
+                        <br/> 支持一控多机 一个遥控器可遥控4-6台无人机
+                        <br/> 大大降低人力成本，节约时间成本，
+                        <br/> 智能生成无死角作业路径，无复喷漏喷错喷
+                    </div>
+
+                    <div>More...</div>
                 </div>
             </div>
             <div class="container-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="offset-box"></div>
                 <div class="titles">
-                    <span>更懂农作物的系列解决方案</span>
+                    <span>无人机无人化的无人值守体系
+                    </span>
                 </div>
                 <div class="imgs" style="background-image: url(src/a553d62f51ae1e1e550c6b1245d369af_4096.jpg);">
                     <!--<img src="src/a553d62f51ae1e1e550c6b1245d369af_4096.jpg"/>-->
                 </div>
                 <div class="container-info-box">
-                    更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案 更懂农作物的系列解决方案
+                    <div>
+                        成功研发出更懂无人机的天麒全自主作业平台
+                        <br/> 全程自动为无人机续药续电续航
+                        <br/> 采集储存植保数据，提供智能自动化操作
 
+                    </div>
+
+                    <div>Mor.e..</div>
                 </div>
             </div>
         </div>
@@ -278,76 +321,40 @@
                     </div>
                     <div class="hidden-sm hidden-xs c-div cbdiv_c5f1224a"></div>
                 </div>
-                <div class="c-div div_BDkRAn" v-if='list.length!=0'>
+                <div class="c-div div_BDkRAn">
                     <div class="cst_hoverLink_effect03 cst_hovershadow_Griditem cst_mLR-15 cst_cardlist_grid_base_CMS c-div cbdiv_82015426">
                         <div class="cst_gridSpace c-contentlistviewv2 c-initHide cbcont_70b35c8e" data-c_ani_id="ani_bfc8168110ce610c">
                             <div class="row cst_textSetting c-row cbrow_f1efb214">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_ed5c47a7" data-c_content_url="/sites/ynzzkt/index/5a5da6c1c8d27f3d6041b59a/contentview_58c9f0cc/"
-                                    data-c_contentview_id="contentview_58c9f0cc">
-                                    <div class="div_news c-div div_tqTQbn">
-                                        <div class="c-div div_LE74pF">
-                                            <div class="div_news_top c-div div_0LCLug">
-                                                <p class="c-ellipse c-paragraph paragraph_QzkeDW" v-text='list[0].title'></p>
-                                                <div class="c-div div_lLKXS2"></div>
-                                                <div class="c-div div_0xAqdX">
-                                                    <p class="c-paragraph youziku-e094346a5670469eaacd0dcc3afa6f0d paragraph_PjD2zu" v-text='list[0].updateDate'></p>
-                                                </div>
-                                                <p class="c-ellipse c-paragraph paragraph_1ICu4N" v-text='list[0].stitle'></p>
-                                            </div>
-                                            <div class="div_news_bottom c-div div_5ypStR">
-                                                <div class="c-inlineblock c-imageblock imageblock_fktKXj" mode="aspectFill"
-                                                    style="background-size: cover;background-repeat: no-repeat;;background-position: center center;" :style='{"background-image":list[0].sImg}'></div>
-                                            </div>
-                                        </div>
-                                        <a class="c-linkblock linkblock_UXSBR4" :href="'/news/'+list[0].id"></a>
-                                    </div>
-                                </div>
+                                {{#each data}}
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_ed5c47a7" data-c_content_url="/sites/ynzzkt/index/5a5da6c1c8d27f3d8bceab88/contentview_58c9f0cc/"
                                     data-c_contentview_id="contentview_58c9f0cc">
                                     <div class="div_news c-div div_tqTQbn">
                                         <div class="c-div div_LE74pF">
                                             <div class="div_news_top c-div div_0LCLug">
-                                                <p class="c-ellipse c-paragraph paragraph_QzkeDW"> 2018全球华人新春摄影大赛在美启动</p>
+                                                <p class="c-ellipse c-paragraph paragraph_QzkeDW"> {{title}}</p>
                                                 <div class="c-div div_lLKXS2"></div>
                                                 <div class="c-div div_0xAqdX">
-                                                    <p class="c-paragraph youziku-e094346a5670469eaacd0dcc3afa6f0d paragraph_PjD2zu">2018-01-16 15:18</p>
+                                                    <p class="c-paragraph youziku-e094346a5670469eaacd0dcc3afa6f0d paragraph_PjD2zu">{{updateDate}}</p>
                                                 </div>
-                                                <p class="c-ellipse c-paragraph paragraph_1ICu4N">在进行照相时，光通过小孔（更多时候是一个透镜组）进入暗盒，在暗盒背部（相对于光入射方向）的介质上成像。根据实际光强度和介质感光能力的不同，要求的光照时间也不同。在光照过程中，介质被感光</p>
+                                                <p class="c-ellipse c-paragraph paragraph_1ICu4N">{{discription}}</p>
                                             </div>
                                             <div class="div_news_bottom c-div div_5ypStR">
-                                                <div class="c-inlineblock c-imageblock imageblock_fktKXj" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/3c28ab78af3484bd7e839fdaae456e43_origin.jpg"
-                                                    style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/36d7502a1f0df2b43add7aebf2ef97ee_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                <div class="c-inlineblock c-imageblock imageblock_fktKXj" mode="aspectFill" 
+                                                    style="background-image: url({{sImg}});background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
                                             </div>
                                         </div>
-                                        <a class="c-linkblock linkblock_UXSBR4" href="/sites/ynzzkt/newsdetails/5a5da6c1c8d27f3d8bceab88/"></a>
+                                        <a class="c-linkblock linkblock_UXSBR4" href="/news/{{_id}}"></a>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_ed5c47a7" data-c_content_url="/sites/ynzzkt/index/5a5da6c2c8d27f3d6041b59b/contentview_58c9f0cc/"
-                                    data-c_contentview_id="contentview_58c9f0cc">
-                                    <div class="div_news c-div div_tqTQbn">
-                                        <div class="c-div div_LE74pF">
-                                            <div class="div_news_top c-div div_0LCLug">
-                                                <p class="c-ellipse c-paragraph paragraph_QzkeDW">当“职业”摄影师处理家庭合照 结果惊悚诡异|摄影师|惊悚|家庭</p>
-                                                <div class="c-div div_lLKXS2"></div>
-                                                <div class="c-div div_0xAqdX">
-                                                    <p class="c-paragraph youziku-e094346a5670469eaacd0dcc3afa6f0d paragraph_PjD2zu">2018-01-16 15:18</p>
-                                                </div>
-                                                <p class="c-ellipse c-paragraph paragraph_1ICu4N">在进行照相时，光通过小孔（更多时候是一个透镜组）进入暗盒，在暗盒背部（相对于光入射方向）的介质上成像。根据实际光强度和介质感光能力的不同，要求的光照时间也不同。在光照过程中，介质被感光</p>
-                                            </div>
-                                            <div class="div_news_bottom c-div div_5ypStR">
-                                                <div class="c-inlineblock c-imageblock imageblock_fktKXj" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/3c28ab78af3484bd7e839fdaae456e43_origin.jpg"
-                                                    style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/3cd66a2b3eb2472c8639f2cde9e37311_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
-                                            </div>
-                                        </div>
-                                        <a class="c-linkblock linkblock_UXSBR4" href="/sites/ynzzkt/newsdetails/5a5da6c2c8d27f3d6041b59b/"></a>
-                                    </div>
-                                </div>
+                                {{/each}}
+
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="c-div div_gJooH6">
-                    <a class="btn-default btn c-initHide bsbutton_bmayCG" data-c_ani_id="ani_a017b3d419fb51a3" href="/sites/ynzzkt/news.html"
+                    <a class="btn-default btn c-initHide bsbutton_bmayCG" data-c_ani_id="ani_a017b3d419fb51a3" href="/news"
                         options="btn btn-default" sizes="" type="button">read more</a>
                 </div>
             </div>
@@ -578,13 +585,15 @@
         <div class="container cst_container_base c-container-1 cbcont_2a5290db">
             <div class="c-div div_R8aGO0">
                 <div class="c-div div_Ml2ukZ">
-                    <div class="c-div div_IVkN4Q" style="width:33%">
+                    <div class="c-div div_IVkN4Q" >
                         <div class="c-div c-initHide div_Wt96rg" data-c_ani_id="ani_c015493d753eacad">
                             <div class="c-div div_r3DxsT">
                                 <a class="c-textlink textlink_OsLYwX" href="#"></a>
                             </div>
-                            <p class="c-paragraph paragraph_IsyezX">在旅行作为一种社会行为，古代即以存在，中国是世界文明古国之一，旅行活动的兴起同样居世界前列，中国早在公元前22世纪就有了。当时最典型的旅行家大概要数大禹了，他为了疏浚九江十八河，游览了大好河山。
-                                <br/>
+                            <p class="c-paragraph paragraph_IsyezX">
+                                以人工智能研发与应用为核心 <br/>
+                                聚焦农业现代化发展 <br/>
+                                提供智能一体化农业服务
                             </p>
                             <div class="c-div cs-repeatable div_mADiDs">
                                 <div class="c-div div_SKVkXn">
@@ -592,7 +601,10 @@
                                         <i class="fa fa-map-marker c-icon icon_jdeIU9"></i>
                                     </div>
                                     <div class="c-div div_UueHuy">
-                                        <p class="c-paragraph paragraph_8ZpSxx">中国地区上海市长宁区SAUNDERS大厦</p>
+                                        <p class="c-paragraph paragraph_8ZpSxx">
+                                            四川省成都市天府大道中段翠华路99号<br/>
+                                            成都节能国际大厦A座3405号
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="c-div cbdiv_c23f3e10">
@@ -600,7 +612,10 @@
                                         <i class="fa fa-phone c-icon cbicon_ad273e5b"></i>
                                     </div>
                                     <div class="c-div cbdiv_cd9ac49a">
-                                        <p class="c-paragraph cbpara_742d59e8">021-88888888</p>
+                                        <p class="c-paragraph cbpara_742d59e8">
+                                            400-117-7757<br/>
+                                            服务时间：周一至周五 9:00-18:00
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="c-div cbdiv_883081e6">
@@ -608,46 +623,47 @@
                                         <i class="fa fa-envelope-square c-icon cbicon_a9cc93e3"></i>
                                     </div>
                                     <div class="c-div cbdiv_63b2c890">
-                                        <p class="c-paragraph cbpara_567fd2bf">support@21epub.com  </p>
+                                        <p class="c-paragraph cbpara_567fd2bf">sales@skylinuav.com </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="hidden-sm hidden-xs c-div div_C2o8fP" style="width:33%">
+
+                    <div class="hidden-sm hidden-xs c-div div_C2o8fP" >
                         <div class="c-div c-initHide div_mcOfFo" data-c_ani_id="ani_ab7b72b5a1456bcd">
                             <p class="c-paragraph paragraph_VqH5jw">快速导航入口</p>
                             <div class="c-div div_ixeCUC"></div>
                             <div class="c-div cs-repeatable div_aFpmKS">
                                 <div class="c-div div_cjzCmJ">
                                     <a class="c-textlink textlink_4XGEGD" href="/">网站首页</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/index.html">Home</a>
+                                    
                                 </div>
                                 <div class="c-div div_cjzCmJ">
-                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/product.html">精品路线</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/product.html">Tourist route</a>
+                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/product.html">公司产品</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/V02">V02</a>
+                               <a class="c-textlink textlink_xeD7eH" href="/V02S">V02S</a>
+                               <a class="c-textlink textlink_xeD7eH" href="/V01">V01</a>
+                               
                                 </div>
                                 <div class="c-div div_cjzCmJ">
-                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/news.html">行业新闻</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/news.html">News center</a>
+                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/news.html">解决方案</a>
                                 </div>
                                 <div class="c-div div_cjzCmJ">
-                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/advantage.html">服务优势</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/advantage.html">Advantage</a>
+                                    <a class="c-textlink textlink_4XGEGD" href="/aboutUs">关于我们</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/aboutUs">天麒</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/news">新闻</a>
                                 </div>
                                 <div class="c-div div_cjzCmJ">
-                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/about.html">关于我们</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/about.html">About us</a>
-                                </div>
-                                <div class="c-div div_cjzCmJ">
-                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/contact.html">联系我们</a>
-                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/contact.html">Contact us</a>
+                                    <a class="c-textlink textlink_4XGEGD" href="/service">服务于支持</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/about.html">联系</a>
+
+                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/about.html">服务</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden-xs c-div div_RHQ41K" style="width:33%">
+                    <div class="hidden-xs c-div div_RHQ41K" >
                         <div class="c-div c-initHide div_oNsHJY" data-c_ani_id="ani_218bac3bb3ec152c">
                             <p class="c-paragraph paragraph_VqH5jw">精品度假路线</p>
                             <div class="c-div div_ixeCUC"></div>
@@ -739,18 +755,6 @@
     var page_slug = 'index';
 </script>
 <script>
-    new Vue({
-        el:'.app',
-        data:{
-            list:[]
-        },
-       created(){
-            $.get('/api/content/getList').then((res)=>{
-                console.log(res)
-                this.list=res.docs
-            })
-        },
-       
-    })
+    
 
 </script>

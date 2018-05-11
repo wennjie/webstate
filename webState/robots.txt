@@ -2,4 +2,5 @@ User-Agent: *
 Allow: /
 Disallow: /dr-admin
 Disallow: /manage
-Disallow: /users
+Disallow: /news
+Disallow: /aboutUs
