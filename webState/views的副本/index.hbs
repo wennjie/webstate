@@ -1,0 +1,760 @@
+<style type="text/css">
+    .wj-container {
+        padding: 150px 0;
+        background: #e5e5e5;
+        margin-top: 120px;
+        /*height: 850px;*/
+        overflow: hidden;
+        width: 100%;
+
+    }
+
+    .container-infos {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        /*overflow: hidden;*/
+    }
+
+    .container-info {
+        position: relative;
+        height: 570px;
+        float: left;
+        text-align: center;
+        background: #fff;
+        transition: all 0.2s;
+        border-right: 1px solid #e5e5e5;
+
+    }
+
+    .offset-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        transition: all .2s;
+    }
+
+    .container-info:hover {
+        color: #FFFFFF;
+    }
+
+    .container-info:hover .offset-box {
+        background: rgb(161, 177, 170);
+        box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+        color: #FFFFFF;
+        top: -30px;
+        bottom: -30px;
+
+    }
+
+    .container-info .imgs {
+        height: 250px;
+        overflow: hidden;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        position: relative;
+    }
+
+    .titles {
+        height: 49px;
+        margin: 40px 30px 30px 30px;
+        display: block;
+        position: relative;
+        font-size: 18px;
+        letter-spacing: 5px;
+        z-index: 1;
+
+    }
+
+    .container-info {
+        line-height: 1.7em;
+        font-weight: normal;
+        font-size: 12px;
+
+    }
+
+    .container-info .title span {
+        display: block;
+        height: 49px;
+
+    }
+
+    .container-info-box {
+        padding: 20px 20px;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .container-info-box .title {
+        letter-spacing: 5px;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    .div_yrNuav img {
+        width: 55px;
+    }
+</style>
+<div class="app">
+    {{!-- {{title}} --}} {{> header}}
+
+    <!--banner -start -->
+    <div class="container-fluid cst_sectionBlock cst_sectionBlock_slide c-section cbsect_0fa8babf" data-c_tl_id="tl_a31d502a">
+        <div class="container cst_container_base cst_w100 c-container-1 cbcont_36c6503c" style="background-color: rgba(0, 0, 0, 0); ">
+            <div class="cst_mLR-15 cst_block_slide c-slider cbslid_e9618f9f" data-c_slider_args="type:0;ap:1;ti:4" data-c_tl_id="tl_6cbffc05">
+                <div class="c-slider-mask c-transition-containment cbslid_c209cd2c">
+                    <div class="cst_slideitem cst_BGimageSetting cst_BGcover c-slide c-transition-item cbslid_0eeb5120" data-c_tl_id="tl_a6277508"
+                        src="http://qty83k.creatby.com/materials/95622/origin/a9cf78abd0eb004bc2135829a7d4d615_origin.jpg">
+                        <div class="cst_overlay c-div cbdiv_d4a5e15f"></div>
+                        <div class="cst_slideitemContent container c-div cbdiv_b20264b4">
+                            <div class="cst_flexitem cst_flexsetting cst_flex_vetically c-div cbdiv_e27f8ec1">
+                                {{!--
+                                <div class="cst_textSetting cst_textWrap c-div c-initHide cbdiv_1fbe31b3" data-c_ani_id="ani_6bfde56332a8b14d">
+                                    <p class="c-paragraph paragraph_f8rgmm">欧洲戈壁之旅 感受世界之壮阔</p>
+                                    <p class="c-paragraph paragraph_rEjhqr">Enjoy a trip to the beach and the cliffs</p>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cst_slideitem cst_BGimageSetting cst_BGcover c-slide c-transition-item cbslid_2203451a" data-c_tl_id="tl_87061709"
+                        src="http://qty83k.creatby.com/materials/95622/origin/d07af348290ce46ef3ab1d3497d5da4d_origin.jpg">
+                        <div class="cst_overlay c-div cbdiv_a331f663"></div>
+                        <div class="cst_slideitemContent container c-div cbdiv_3b52416d">
+                            <div class="cst_flexitem cst_flexsetting cst_flex_vetically c-div cbdiv_a62385d5">
+                                {{!--
+                                <div class="cst_textSetting cst_textWrap c-div c-initHide cbdiv_25d8c60d" data-c_ani_id="ani_ac6a5890">
+                                    <p class="c-paragraph cbpara_3445ebda">休闲度假南半球 慢调生活</p>
+                                    <p class="c-paragraph cbpara_54e30014">Feel the sound of mountain and nature</p>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cst_slideitem cst_BGimageSetting cst_BGcover c-slide c-transition-item cbslid_794354e6" data-c_tl_id="tl_e941f1b1"
+                        src="http://qty83k.creatby.com/materials/95622/origin/fd3563938702eb5979da5af454f24e9a_origin.jpg">
+                        <div class="cst_overlay c-div cbdiv_e31a7dc5"></div>
+                        <div class="cst_slideitemContent container c-div cbdiv_065a357f">
+                            <div class="cst_flexitem cst_flexsetting cst_flex_vetically c-div cbdiv_09362de5">
+                                {{!--
+                                <div class="cst_textSetting cst_textWrap c-div c-initHide cbdiv_3388dc74" data-c_ani_id="ani_b03f39dc">
+                                    <p class="c-paragraph cbpara_3091c57f">欧洲曼妙之旅 海港之声</p>
+                                    <p class="c-paragraph cbpara_357cd514">Enjoy the sound of the European seaport</p>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="hidden-xs cst_slideNav c-leftarrow cbleft_6f478bbf" href="#">
+                    <i class="fa fa-angle-left c-icon c-icon-arrowicon cbicon_21cbcff7"></i>
+                </a>
+                <a class="hidden-xs cst_slideNav c-rightarrow cbrigh_76b04d11" href="#">
+                    <i class="fa fa-angle-right c-icon c-icon-arrowicon cbicon_f270a32a"></i>
+                </a>
+                <div class="hidden-lg hidden-md hidden-sm hidden-xs c-slider-nav c-round cbslid_d35d7eb4">
+                    <div class="c-slider-nav-dot cbslid_863c40fe"></div>
+                    <div class="c-slider-nav-dot slidernavdot_vXO6DD"></div>
+                    <div class="c-slider-nav-dot slidernavdot_VmNtnr"></div>
+                </div>
+            </div>
+            <div class="cst_slidearrow hidden-xs c-div cbdiv_d3bf655f" data-c_cssani="0|1|0|0">
+                <div class="c-div cs-repeatable div_3XhQLl">
+                    <div class="border_left c-div div_uMmNly">
+                        <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_3fc2510ce4f83ae7">
+                            <div class="c-div div_yrNuav">
+                                <img src="/imgs/icon/1.png" alt="">
+                            </div>
+                            <div class="div_custom_padding1 c-div div_n7Kcyv">
+                                <p class="c-ellipse c-paragraph paragraph_RYeMb5">智能植保无人机</p>
+                                <p class="c-ellipse c-paragraph paragraph_UEFez8">天麒科技致力于智能植保无人机的研发与制造，以尖端科技解放农业生产力。</p>
+                            </div>
+                            <a class="cst_hoverLink_navLink c-linkblock linkblock_qs78RM" href="/sites/ynzzkt/advantage.html"></a>
+                        </div>
+                    </div>
+                    <div class="border_left c-div div_dwoK5v">
+                        <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_adfcf1d0468f59d4">
+                            <div class="c-div div_yrNuav">
+                                <img src="/imgs/icon/2.png" alt="">
+                            </div>
+                            <div class="div_custom_padding1 c-div div_n7Kcyv">
+                                <p class="c-ellipse c-paragraph paragraph_RYeMb5">智能一体化农业服务</p>
+                                <p class="c-ellipse c-paragraph paragraph_UEFez8">由植保无人机切入大农业，以人工智能为核心，让用户享受智能一体化农业服务。</p>
+                            </div>
+                            <a class="cst_hoverLink_navLink c-linkblock linkblock_qs78RM" href="/sites/ynzzkt/advantage.html"></a>
+                        </div>
+                    </div>
+                    <div class="border_left c-div div_u2pcQm">
+                        <div class="border_left div_banner_custom_box c-div c-initHide div_smTzGT" data-c_ani_id="ani_8d8af16b071bf93a">
+                            <div class="c-div div_yrNuav">
+                                <img src="/imgs/icon/3.png" alt="">
+                            </div>
+                            <div class="div_custom_padding1 c-div div_n7Kcyv" style="padding-right:0;">
+                                <p class="c-ellipse c-paragraph paragraph_RYeMb5">智慧农业解决方案</p>
+                                <p class="c-ellipse c-paragraph paragraph_UEFez8">深度参与农业生态链，为客户提供自动化、定制化的智慧农业解决方案，重塑新农业。</p>
+                            </div>
+                            <a class="cst_hoverLink_navLink c-linkblock linkblock_qs78RM" href="/sites/ynzzkt/advantage.html"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--banner end-->
+
+
+    <div class="container-fluid cst_sectionBlock c-section cbsect_8adc420c wj-container container" data-c_tl_id="tl_86b5022c">
+
+        <div class="container-infos row">
+            <div class="container-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                <div class="titles">
+                    <span>更懂农作物的系列解决方案</span>
+                </div>
+                <div class="imgs" style="background-image: url(src/f7921981f18958c8d1f094786911074b_origin.jpg);">
+                    <!--<img src="src/f7921981f18958c8d1f094786911074b_origin.jpg"/>-->
+                </div>
+                <div class="container-info-box">
+                    <div>
+                        天麒农情监测系统（防病患于未然，为农作物保驾护航）
+                        <br/> 天麒植保基础设施（智能农机规模化、去人化作业，定位数据随用随调）
+                        <br/> 卫星遥感技术（农作物病虫害成像分析）
+                        <br/> 农业大数据平台（农业数据采集存储、运算分析、挖掘应用）
+                        <br/>
+                    </div>
+
+                    <div>More...</div>
+                </div>
+                <div class="offset-box"></div>
+            </div>
+            <div class="container-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="offset-box"></div>
+                <div class="titles">
+                    <span>天麒全自主植保无人机</span>
+                </div>
+                <div class="imgs" style="background-image: url(src/6647992cbd95cc8733950479af8399e2_origin.jpg);">
+                    <!--<img src="src/6647992cbd95cc8733950479af8399e2_origin.jpg"/>-->
+                </div>
+                <div class="container-info-box">
+
+                    <div>
+                        一控多机 精密高效
+                        <br/> 作业效率翻倍多 劳作成本翻倍少
+                        <br/> 支持一控多机 一个遥控器可遥控4-6台无人机
+                        <br/> 大大降低人力成本，节约时间成本，
+                        <br/> 智能生成无死角作业路径，无复喷漏喷错喷
+                    </div>
+
+                    <div>More...</div>
+                </div>
+            </div>
+            <div class="container-info col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="offset-box"></div>
+                <div class="titles">
+                    <span>无人机无人化的无人值守体系
+                    </span>
+                </div>
+                <div class="imgs" style="background-image: url(src/a553d62f51ae1e1e550c6b1245d369af_4096.jpg);">
+                    <!--<img src="src/a553d62f51ae1e1e550c6b1245d369af_4096.jpg"/>-->
+                </div>
+                <div class="container-info-box">
+                    <div>
+                        成功研发出更懂无人机的天麒全自主作业平台
+                        <br/> 全程自动为无人机续药续电续航
+                        <br/> 采集储存植保数据，提供智能自动化操作
+
+                    </div>
+
+                    <div>Mor.e..</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="container-fluid cst_sectionBlock c-section cbsect_a8297d60" data-c_tl_id="tl_f74d3ec0" id="section5f84ad5c">
+        <div class="container cst_container_base cst_w100 c-container-1 cbcont_09f01de0">
+            <div class="c-div div_kQ0cIW">
+                <div class="hidden-sm hidden-xs c-div c-initHide div_Zy5JRw" data-c_ani_id="ani_5938fabc3e460daf">
+                    <div class="cst_divimage c-inlineblock c-imageblock imageblock_J1B66B" mode="aspectFill" src="" style="background-size:    cover; background-position:    center center; background-repeat:    no-repeat; background-image: url('./src/home-r.jpg'); "></div>
+                </div>
+                <div class="c-div div_Kxl7Ju">
+                    <div class="c-div div_Fecsra">
+                        <div class="c-div div_rQMDLl">
+                            <div class="c-div div_OwtPyY"></div>
+                            <div class="c-div div_PmaDBI">
+                                <div class="c-div c-initHide div_9QXtId" data-c_ani_id="ani_ffb28b3fbd456c68">
+                                    <div class="c-div div_ioR9ym">
+                                        <div class="c-inlineblock c-imageblock imageblock_3ZrNXj" mode="aspectFill" src="" style="background-size:     cover; background-position:     center center; background-repeat:     no-repeat; background-image: url('./src/home-l.jpg'); "></div>
+                                    </div>
+                                </div>
+                                <div class="c-div div_0OTUaw">
+                                    <div class="c-div c-initHide div_tlTssu" data-c_ani_id="ani_3c5c5f850697521e">
+                                        <p class="c-paragraph paragraph_wAuZxg">关于我们</p>
+                                        <p class="c-paragraph paragraph_mSCnlT">About us</p>
+                                    </div>
+                                    <p class="c-ellipse c-paragraph c-initHide paragraph_S0xJRc" data-c_ani_id="ani_0bdd15d47dda9a71">成都天麒科技有限公司是一家以人工智能为核心，提供智能一体化农业服务的科技创新型企业， 成立于2013年6月，总部位于成都高新区。公司致力于空中..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid cst_sectionBlock c-section cbsect_354233e4" data-c_tl_id="tl_75e289cf" id="section487dae7c">
+        <div class="container cst_container_base c-container-1 cbcont_cd86817b">
+            <div class="c-div div_aueuSH">
+                <div class="c-div cbdiv_82c75adf">
+                    <div class="c-div cbdiv_d52de223">
+                        <p class="c-paragraph cbpara_1bf9dad9">业内资讯</p>
+                        <p class="c-paragraph cbpara_9870beae">News center</p>
+                    </div>
+                    <div class="hidden-sm hidden-xs c-div cbdiv_c5f1224a"></div>
+                </div>
+                <div class="c-div div_BDkRAn">
+                    <div class="cst_hoverLink_effect03 cst_hovershadow_Griditem cst_mLR-15 cst_cardlist_grid_base_CMS c-div cbdiv_82015426">
+                        <div class="cst_gridSpace c-contentlistviewv2 c-initHide cbcont_70b35c8e" data-c_ani_id="ani_bfc8168110ce610c">
+                            <div class="row cst_textSetting c-row cbrow_f1efb214">
+                                {{#each data}}
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_ed5c47a7" data-c_content_url="/sites/ynzzkt/index/5a5da6c1c8d27f3d8bceab88/contentview_58c9f0cc/"
+                                    data-c_contentview_id="contentview_58c9f0cc">
+                                    <div class="div_news c-div div_tqTQbn">
+                                        <div class="c-div div_LE74pF">
+                                            <div class="div_news_top c-div div_0LCLug">
+                                                <p class="c-ellipse c-paragraph paragraph_QzkeDW"> {{title}}</p>
+                                                <div class="c-div div_lLKXS2"></div>
+                                                <div class="c-div div_0xAqdX">
+                                                    <p class="c-paragraph youziku-e094346a5670469eaacd0dcc3afa6f0d paragraph_PjD2zu">{{updateDate}}</p>
+                                                </div>
+                                                <p class="c-ellipse c-paragraph paragraph_1ICu4N">{{discription}}</p>
+                                            </div>
+                                            <div class="div_news_bottom c-div div_5ypStR">
+                                                <div class="c-inlineblock c-imageblock imageblock_fktKXj" mode="aspectFill" 
+                                                    style="background-image: url({{sImg}});background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                            </div>
+                                        </div>
+                                        <a class="c-linkblock linkblock_UXSBR4" href="/news/{{_id}}"></a>
+                                    </div>
+                                </div>
+                                {{/each}}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-div div_gJooH6">
+                    <a class="btn-default btn c-initHide bsbutton_bmayCG" data-c_ani_id="ani_a017b3d419fb51a3" href="/news"
+                        options="btn btn-default" sizes="" type="button">read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid cst_sectionBlock cst_BGtransparent c-section cbsect_be4055d7" data-c_tl_id="tl_49108591" id="sectioncefa3a32">
+        <div class="cst_sectionBGwrap c-div cbdiv_652f7b9f">
+            <div class="cst_sectionBG cst_BGfixed c-div cbdiv_e22a3db3" src="http://qty83k.creatby.com/materials/95622/origin/1d21e1c87f05e78f5123e532288ffae0_origin.jpg"
+                style="background-image: url('./src/bj.jpg'); ">
+                <div class="cst_overlay c-div cbdiv_c9962fb1"></div>
+            </div>
+        </div>
+        <div class="container cst_container_base c-container-1 cbcont_9a6782a1">
+            <div class="c-div div_2CQfo0">
+                <div class="c-div div_R3SCJy">
+                    <div class="c-div div_jQaHzX">
+                        <div class="c-div div_zJGTmg">
+                            <div class="cst_mLR-15 cst_block_cardlist_grid cst_hovershadow_Griditem c-div c-initHide cbdiv_f731ef8b" data-c_ani_id="ani_1f28d86af6d9cae5">
+                                <div class="cst_grid cst_gridSpace cst_border_shadow_setting c-grid cbgrid_d68014b1">
+                                    <div class="row cst_textSetting column_advantage c-row cbrow_2fd09ac4">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/cb9431349ef89cd4729f36a46d27e6b7_origin.png"
+                                                                style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image:  url(http://qty83k.creatby.com/materials/95622/origin/cb9431349ef89cd4729f36a46d27e6b7_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">人工智能设备</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">以植保无人机为核心的人工智能农业设备</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/cb9431349ef89cd4729f36a46d27e6b7_origin.png"
+                                                                style="background-size:      contain; background-position:      center center; background-repeat:      no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/cb9431349ef89cd4729f36a46d27e6b7_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">互联网+农业</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">构建线上线下深度结合的互联网+农业云生态</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/b7fcc7aff9086c5733015eab768f3f3d_origin.png"
+                                                                style="background-size:       contain; background-position:       center center; background-repeat:       no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/b7fcc7aff9086c5733015eab768f3f3d_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">农业大数据</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">以运算分析、挖掘应用为基础的农业大数据平台</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/70ec106086b340baf72c71bf6e1d5cbf_origin.png"
+                                                                style="background-size:       contain; background-position:       center center; background-repeat:       no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/70ec106086b340baf72c71bf6e1d5cbf_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">定制化方案</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">针对不同场景及需求提供定制化智慧农业解决方案</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/e6bbe56967995dbbba71537538566a05_origin.png"
+                                                                style="background-size:       contain; background-position:       center center; background-repeat:       no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/e6bbe56967995dbbba71537538566a05_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">一体化服务</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">客户至上，提供售前、售后一体化服务</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 border_advantage c-column c-inline-column cbcolu_b19766e9">
+                                            <div class="c-div div_4T48CE">
+                                                <div class="c-div div_5IOpyJ">
+                                                    <div class="c-div div_l6jmVD">
+                                                        <div class="c-div div_6Ls8dj">
+                                                            <div class="c-inlineblock c-imageblock imageblock_phxvbc" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/2e4e8b71c01cfb15ceb0d5566c2dc552_origin.png"
+                                                                style="background-size:       contain; background-position:       center center; background-repeat:       no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/2e4e8b71c01cfb15ceb0d5566c2dc552_origin.png); "></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-div div_Mo89p7">
+                                                        <p class="c-paragraph paragraph_zT72Av">客户群</p>
+                                                    </div>
+                                                </div>
+                                                <p class="c-paragraph paragraph_mHjUmM">多条旅游度假线路备选</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid cst_sectionBlock c-section cbsect_bb979589" data-c_tl_id="M_4434c32319011132" id="section923e7114">
+        <div class="container cst_container_base cst_w100 c-container-1 cbcont_0f284be0">
+            <div class="c-div div_vFwiIh">
+                <div class="cst_mLR-15 cst_cardlist_grid_icon c-div cbdiv_a1d42fb2">
+                    <div class="cst_grid cst_gridSpace cst_border_shadow_setting c-grid cbgrid_cd4a995e">
+                        <div class="row cst_textSetting c-row cbrow_ad94279f">
+                            <div class="col-lg-2_4 col-md-2_4 col-sm-6 col-xs-6 c-column c-inline-column cbcolu_55167b8f">
+                                <div class="cst_block_item c-div cbdiv_86dfe99e">
+                                    <div class="c-div div_0IvtW8">
+                                        <div class="c-div cbdiv_11b57f7b">
+                                            <h1 class="counter c-heading cbhead_628af3b7">600</h1>
+                                            <p class="c-paragraph paragraph_tRZxOk">万亩</p>
+                                        </div>
+                                        <h4 class="cst_title c-heading cbhead_9d00ab80">作业面积</h4>
+                                    </div>
+                                    <div class="c-div div_a0lVjM">
+                                        <div class="c-inlineblock c-imageblock imageblock_3dFSEY" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/bc36eb977639d3837e8bfa385c7ed2b1_origin.png"
+                                            style="background-size: contain; background-position: center center; background-repeat: no-repeat; background-image:    url(http://qty83k.creatby.com/materials/95622/origin/bc36eb977639d3837e8bfa385c7ed2b1_origin.png); "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2_4 col-md-2_4 col-sm-6 col-xs-6 c-column c-inline-column cbcolu_55167b8f">
+                                <div class="cst_block_item c-div cbdiv_86dfe99e">
+                                    <div class="c-div div_0IvtW8">
+                                        <div class="c-div cbdiv_11b57f7b">
+                                            <h1 class="counter c-heading cbhead_628af3b7">100</h1>
+                                            <p class="c-paragraph paragraph_tRZxOk">+项</p>
+                                        </div>
+                                        <h4 class="cst_title c-heading cbhead_9d00ab80">技术专利</h4>
+                                    </div>
+                                    <div class="c-div div_a0lVjM">
+                                        <div class="c-inlineblock c-imageblock imageblock_3dFSEY" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/da103a754816563b1699aafafb9ccec9_origin.png"
+                                            style="background-size:     contain; background-position:     center center; background-repeat:     no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/da103a754816563b1699aafafb9ccec9_origin.png); "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2_4 col-md-2_4 col-sm-6 col-xs-6 c-column c-inline-column cbcolu_55167b8f">
+                                <div class="cst_block_item c-div cbdiv_86dfe99e">
+                                    <div class="c-div div_0IvtW8">
+                                        <div class="c-div cbdiv_11b57f7b">
+                                            <h1 class="counter c-heading cbhead_628af3b7">6</h1>
+                                            <p class="c-paragraph paragraph_tRZxOk">省</p>
+                                        </div>
+                                        <h4 class="cst_title c-heading cbhead_9d00ab80">分支机构覆盖</h4>
+                                    </div>
+                                    <div class="c-div div_a0lVjM">
+                                        <div class="c-inlineblock c-imageblock imageblock_3dFSEY" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/896f9fa792779563218f6c83ec9a6c74_origin.png"
+                                            style="background-size:     contain; background-position:     center center; background-repeat:     no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/896f9fa792779563218f6c83ec9a6c74_origin.png); "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2_4 col-md-2_4 col-sm-6 col-xs-6 c-column c-inline-column cbcolu_55167b8f">
+                                <div class="cst_block_item c-div cbdiv_86dfe99e">
+                                    <div class="c-div div_0IvtW8">
+                                        <div class="c-div cbdiv_11b57f7b">
+                                            <h1 class="counter c-heading cbhead_628af3b7">100</h1>
+                                            <p class="c-paragraph paragraph_tRZxOk">+家</p>
+                                        </div>
+                                        <h4 class="cst_title c-heading cbhead_9d00ab80">飞防合作单位</h4>
+                                    </div>
+                                    <div class="c-div div_a0lVjM">
+                                        <div class="c-inlineblock c-imageblock imageblock_3dFSEY" mode="aspectFit" src="http://qty83k.creatby.com/materials/95622/origin/f7a0c842b66526decddfec0ba3fd3ac5_origin.png"
+                                            style="background-size:     contain; background-position:     center center; background-repeat:     no-repeat; background-image: url(http://qty83k.creatby.com/materials/95622/origin/f7a0c842b66526decddfec0ba3fd3ac5_origin.png); "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2_4 col-md-2_4 col-sm-6 col-xs-6 hidden-sm hidden-xs c-column c-inline-column cbcolu_55167b8f">
+                                <div class="cst_block_item c-div cbdiv_86dfe99e">
+                                    <div class="c-div div_0IvtW8">
+                                        <div class="c-div cbdiv_11b57f7b">
+                                            <p class="c-paragraph youziku-c5a8f46018ec4cdfa827ba6989ffa10e paragraph_lUBfRo">更多资讯</p>
+                                        </div>
+                                        <h4 class="cst_title c-heading cbhead_9d00ab80">敬请期待</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-embedcode cbembe_4ca650d4">
+                        <script src="https://cdn.bootcss.com/waypoints/2.0.3/waypoints.min.js"></script>
+                        <script src="https://cdn.bootcss.com/Counter-Up/1.0/jquery.counterup.min.js"></script>
+                        <script>
+                            (function (window) {
+                                $('.counter').counterUp({
+                                    delay: 10,
+                                    time: 2000
+                                });
+                            })(window)
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid cst_sectionBlock cst_BGtransparent c-section cbsect_a547fa51" data-c_tl_id="tl_8841511c" id="sectionba92a0ba">
+        <div class="cst_sectionBGwrap c-div cbdiv_b1bc18e4">
+            <div class="cst_sectionBG c-div cbdiv_e6834f28" src="http://qty83k.creatby.com/materials/95622/origin/3755e7e13d6b326d13a1d86a31f1d108_origin.jpg"
+                style="background-image: url('http://qty83k.creatby.com/materials/95622/origin/3755e7e13d6b326d13a1d86a31f1d108_origin.jpg'); ">
+                <div class="cst_overlay c-div cbdiv_d1a38439"></div>
+            </div>
+        </div>
+        <div class="container cst_container_base c-container-1 cbcont_2a5290db">
+            <div class="c-div div_R8aGO0">
+                <div class="c-div div_Ml2ukZ">
+                    <div class="c-div div_IVkN4Q" >
+                        <div class="c-div c-initHide div_Wt96rg" data-c_ani_id="ani_c015493d753eacad">
+                            <div class="c-div div_r3DxsT">
+                                <a class="c-textlink textlink_OsLYwX" href="#"></a>
+                            </div>
+                            <p class="c-paragraph paragraph_IsyezX">
+                                以人工智能研发与应用为核心 <br/>
+                                聚焦农业现代化发展 <br/>
+                                提供智能一体化农业服务
+                            </p>
+                            <div class="c-div cs-repeatable div_mADiDs">
+                                <div class="c-div div_SKVkXn">
+                                    <div class="c-div div_1GBSVD">
+                                        <i class="fa fa-map-marker c-icon icon_jdeIU9"></i>
+                                    </div>
+                                    <div class="c-div div_UueHuy">
+                                        <p class="c-paragraph paragraph_8ZpSxx">
+                                            四川省成都市天府大道中段翠华路99号<br/>
+                                            成都节能国际大厦A座3405号
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="c-div cbdiv_c23f3e10">
+                                    <div class="c-div cbdiv_fa5fd714">
+                                        <i class="fa fa-phone c-icon cbicon_ad273e5b"></i>
+                                    </div>
+                                    <div class="c-div cbdiv_cd9ac49a">
+                                        <p class="c-paragraph cbpara_742d59e8">
+                                            400-117-7757<br/>
+                                            服务时间：周一至周五 9:00-18:00
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="c-div cbdiv_883081e6">
+                                    <div class="c-div cbdiv_106000e3">
+                                        <i class="fa fa-envelope-square c-icon cbicon_a9cc93e3"></i>
+                                    </div>
+                                    <div class="c-div cbdiv_63b2c890">
+                                        <p class="c-paragraph cbpara_567fd2bf">sales@skylinuav.com </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden-sm hidden-xs c-div div_C2o8fP" >
+                        <div class="c-div c-initHide div_mcOfFo" data-c_ani_id="ani_ab7b72b5a1456bcd">
+                            <p class="c-paragraph paragraph_VqH5jw">快速导航入口</p>
+                            <div class="c-div div_ixeCUC"></div>
+                            <div class="c-div cs-repeatable div_aFpmKS">
+                                <div class="c-div div_cjzCmJ">
+                                    <a class="c-textlink textlink_4XGEGD" href="/">网站首页</a>
+                                    
+                                </div>
+                                <div class="c-div div_cjzCmJ">
+                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/product.html">公司产品</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/V02">V02</a>
+                               <a class="c-textlink textlink_xeD7eH" href="/V02S">V02S</a>
+                               <a class="c-textlink textlink_xeD7eH" href="/V01">V01</a>
+                               
+                                </div>
+                                <div class="c-div div_cjzCmJ">
+                                    <a class="c-textlink textlink_4XGEGD" href="/sites/ynzzkt/news.html">解决方案</a>
+                                </div>
+                                <div class="c-div div_cjzCmJ">
+                                    <a class="c-textlink textlink_4XGEGD" href="/aboutUs">关于我们</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/aboutUs">天麒</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/news">新闻</a>
+                                </div>
+                                <div class="c-div div_cjzCmJ">
+                                    <a class="c-textlink textlink_4XGEGD" href="/service">服务于支持</a>
+                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/about.html">联系</a>
+
+                                    <a class="c-textlink textlink_xeD7eH" href="/sites/ynzzkt/about.html">服务</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden-xs c-div div_RHQ41K" >
+                        <div class="c-div c-initHide div_oNsHJY" data-c_ani_id="ani_218bac3bb3ec152c">
+                            <p class="c-paragraph paragraph_VqH5jw">精品度假路线</p>
+                            <div class="c-div div_ixeCUC"></div>
+                            <div class="c-div div_p9jdYz">
+                                <div class="cst_hoverLink_effect03 cst_hovershadow_Griditem cst_mLR-15 cst_cardlist_grid_base_CMS c-div cbdiv_2391de30">
+                                    <div class="cst_gridSpace c-contentlistviewv2 cbcont_f9834dfb">
+                                        <div class="row cst_textSetting c-row cbrow_a2de5160">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd536c8569692ddfd2db/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/c73f94421f41cdbb8a6b63d973aa23c8_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd536c8569692ddfd2db/"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd546c8569692891749d/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/a2198eca095cacb017959d236213a21f_origin_YgAAmt3.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd546c8569692891749d/"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd556c8569692b44dab8/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/05540e58ee45205254b31d3b9de05cfe_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd556c8569692b44dab8/"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd566c8569692747bbd2/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/38bbeab0881568104d85fae9fec50a67_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd566c8569692747bbd2/"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd566c8569692891749e/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/a84141b4eb2fd68792d1535a8e17aee8_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd566c8569692891749e/"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 c-column c-inline-column cbcolu_e8cebb14" data-c_content_url="/sites/ynzzkt/index/5aa9fd576c8569692b44dab9/contentview_58c9f0cc/"
+                                                data-c_contentview_id="contentview_58c9f0cc">
+                                                <div class="div_foot_product c-div div_ZMSSqr">
+                                                    <div class="img_foot_product c-inlineblock c-imageblock imageblock_cMLRlL" mode="aspectFill" src="http://qty83k.creatby.com/materials/95622/origin/8a4fb165b4a870724e702c842856b008_origin.jpg"
+                                                        style="background-image: url(http://qty83k.creatby.com/materials/95622/origin/c2fd7d4e72b50267d2ce0295507d753a_origin.jpg);background-size: cover;background-repeat: no-repeat;: ;background-position: center center;"></div>
+                                                    <div class="div_foot_product_hover c-div div_GQshK2">
+                                                        <p class="c-paragraph paragraph_p8cSVm">more</p>
+                                                    </div>
+                                                    <a class="c-linkblock linkblock_8XbgbR" href="/sites/ynzzkt/casedetails/5aa9fd576c8569692b44dab9/"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
+
+<script type="text/javascript" src="http://version.coolsite360.com/ynzzkt/15/index_data.js"></script>
+<script>
+    var page_slug = 'index';
+</script>
+<script>
+    
+
+</script>
