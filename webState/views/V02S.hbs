@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="./css/v02s.css">
+<script src="./js/vue-carousel-3d.min.js"></script>
+
+<style>
+	.slide {
+      background-position: center;
+      background-size: cover;
+	  background-repeat: no-repeat;
+      width: 400px;
+      height: 640px;
+	  border: 1px solid #e5e5e5;
+	  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3)
+    }
+	.fly{
+	background-position: center;
+      background-size: cover;
+	  background-repeat: no-repeat;
+	  background: url(./imgs/v02s/1.44.png)	; 
+	}
+	.A{
+		opacity: 0.3;
+	}
+	.crea li{
+		width: 10px;
+		height: 10px;
+		background: #999;
+		border-radius:50%; 
+		margin: 10px;
+	}
+	.crea {
+		display: flex;
+		justify-content: center;
+	}
+	.crea li.active{
+		background: red;
+	}
+	.carousel-3d-container{
+		overflow: visible !important;
+	}
+</style>
+
+<div class="v02">
+	{{> header}}
+	<div class="content-one">
+		<div class="wj bounceInDown">
+			<h1>VO2S</h1>
+			<p>力造全新精准农业</p>
+			<p>让植保更简单</p>
+		</div>
+	</div>
+	<div class="content-two">
+		<div class="content-two-t">
+			<div class="two-t-l" >
+				<div>
+					<h2>工艺工艺</h2>
+					<h2>工艺工艺</h2>
+					<span>工艺工艺</span>
+					<span>工艺工艺</span>
+					<span>工艺工艺</span>
+				</div>
+				
+			</div>
+			<div class="two-t-r">
+				<div class="w-t-r-c">
+					<div class="w-t-r-c-title">
+						<span>V02S-科技让植保更简单</span>
+					</div>
+					<ul>
+						<li><span></span><span>50-200um告诉阿斯达阿斯达删掉</span></li>
+						<li><span></span><span>50-200um告诉阿斯达阿斯达删掉</span></li>
+						<li><span></span><span>50-200um告诉阿斯达阿斯达删掉</span></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="content-two-b">
+			<ul>
+				<li>
+					<div><img src="./imgs/v02s/blow.png" alt=""></div>
+					<h3>高速离心雾化喷涂</h3>
+					<p>50-200um药物 各农作物敬请吸收</p>
+				</li>
+				<li>
+					<div><img src="./imgs/v02s/control.png" alt=""></div>
+					<h3>高速离心雾化喷涂</h3>
+					<p>50-200um药物 各农作物敬请吸收</p>
+				</li>
+				<li>
+					<div><img src="./imgs/v02s/battery.png" alt=""></div>
+					<h3>高速离心雾化喷涂</h3>
+					<p>50-200um药物 各农作物敬请吸收</p>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="content-three">
+		<div class="content-three-box">
+			<div class="three-box-t">
+				<div class="three-title">
+					V02S
+				</div>
+				<ul>
+					<li>
+						<img src="./imgs/v02s/icon_land.png" alt="">
+						<h3>适应地形</h3>
+						<p>耐高低温</p>
+						<p>适应各地各级作业</p>
+					</li>
+					<li>
+						<img src="./imgs/v02s/icon_land.png" alt="">
+						<h3>适应地形</h3>
+						<p>耐高低温</p>
+						<p>适应各地各级作业</p>
+					</li>
+					<li>
+						<img src="./imgs/v02s/icon_land.png" alt="">
+						<h3>适应地形</h3>
+						<p>耐高低温</p>
+						<p>适应各地各级作业</p>
+					</li>
+					<li>
+						<img src="./imgs/v02s/icon_land.png" alt="">
+						<h3>适应地形</h3>
+						<p>耐高低温</p>
+						<p>适应各地各级作业</p>
+					</li>
+					<li>
+						<img src="./imgs/v02s/icon_land.png" alt="">
+						<h3>适应地形</h3>
+						<p>耐高低温</p>
+						<p>适应各地各级作业</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="three-box-b">
+				<div class="three-title">
+					传统无人机
+				</div>
+				<ul>
+					<li>挨打的十点多</li>
+					<li>挨打的十点多</li>
+					<li>挨打的十点多</li>
+					<li>挨打的十点多</li>
+					<li>挨打的十点多</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content-four">
+		<h1>作业APP</h1>
+		<p class="info">以及多控以及多控以及多控以及多控以及多控</p>
+		<div class="swiper">
+			<carousel-3d :perspective="0" :display="5" :width="365" :height="650" :space="280" :inverse-scaling="0">
+				<slide :index="index" class="slide" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/phone_img"+(index+1)+".png)"}'></slide>
+			</carousel-3d>
+		</div>
+
+	</div>
+	<div class="content-five">
+		<div class="five-box">
+			<carousel-3d :perspective="0" :display="3" :width="400" :height="250" :space="500" :inverse-scaling="100"  @after-slide-change="onAfterSlideChange" @before-slide-change="onBeforeSlideChange" >
+				<slide :index="index" ref='fly' class="fly" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/1.4"+(index+4)+".png)"}'></slide>
+			</carousel-3d>
+			<ul class="crea">
+				<li v-for='n in 5' :class='{"active":(n==pIndex)}'></li>
+			</ul>
+		</div>
+		
+	</div>
+	{{> footer}}
+</div>
+<script>
+
+	new Vue({
+  		el:'.v02',
+		  components:{
+			  "carousel-3d":Carousel3d.Carousel3d,
+			  "slide":Carousel3d.Slide
+		  },
+		  data:{
+			  pIndex:1
+		  },
+  		mounted(){
+			  
+  		},
+		methods: {
+			addOpacity(index){
+				this.pIndex=index+1
+				let flys= $('.fly')
+				flys.each(function(item,i){					
+					if(index==item){
+						$(this).css({'opacity':' 1'})
+					}else{
+						$(this).css({'opacity':' 0.3'})
+					}
+				})
+
+			},
+			onAfterSlideChange(index) {
+			
+			this.addOpacity(index)
+			},
+			onBeforeSlideChange(index){
+				this.addOpacity(index)
+			}
+ 		 },	
+  	})
+
+</script>

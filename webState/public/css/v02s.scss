@@ -40,7 +40,7 @@
 .content-two>.content-two-t {
     position: relative;
     height: 590px;
-//  overflow: hidden;
+    //  overflow: hidden;
 }
 
 .content-two>.content-two-t>.two-t-l {
@@ -208,30 +208,36 @@
         }
     }
 }
-.content-four{
+
+.content-four {
     width: 1300px;
     margin: 0 auto;
     height: 980px;
     text-align: center;
-    h1{
+    h1 {
         color: #4D4D4D;
         font-size: 40px;
         margin-top: 58px;
-        
     }
-    .info{
+    .info {
         color: #808080;
-        font-size:18px ;
+        font-size: 18px;
         margin-top: 20px;
     }
+    .swiper {
+        width: 100%;
+        //      overflow: ;
+    }
 }
-.content-five{
+
+.content-five {
     width: 100%;
     height: 450px;
     background: #EBEBEB;
-    .five-box{
+    .five-box {
         width: 1300px;
         height: 100%;
         margin: 0 auto;
+        padding-top: 80px;
     }
 }
