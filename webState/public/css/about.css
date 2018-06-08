@@ -1,0 +1,82 @@
+.content-one {
+  height: 603px;
+  background: url(../imgs/about/banner-bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(67, 67, 67, 0);
+}
+
+.content-one .box {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-one .box img:nth-child(2) {
+  margin-top: 60px;
+}
+
+.content-two {
+  height: 1120px;
+}
+
+.content-two .title {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.content-two .box {
+  display: flex;
+  padding: 0 20px;
+  padding-top: 135px;
+}
+
+.content-two .box .l {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.content-two .box .l img {
+  width: 207px;
+  height: 58px;
+}
+
+.content-two .box .l .title {
+  margin-top: 35px;
+}
+
+.content-two .box .l span:nth-child(3) {
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #646464;
+  margin-top: 12px;
+}
+
+.content-two .box .r {
+  display: flex;
+  flex-direction: column;
+  width: 672px;
+}
+
+.content-two .box .r .info {
+  margin-top: 35px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 33px;
+  color: #646464;
+}
+
+.content-two .box .r img:nth-child(3) {
+  margin: 43px 0;
+  width: 600px;
+}
+
+.content-two .box .r .swiper {
+  margin-top: 35px;
+  width: 100%;
+  height: 417px;
+  border: 1px solid #000000;
+}

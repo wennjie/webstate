@@ -31,8 +31,18 @@ router.get('/product', (req, res) => {
         title: "天麒科技-产品"
     })
 })
+router.get('/V02', (req, res) => {
+    res.render('V02', {
+        title: "天麒科技-V02"
+    })
+})
+router.get('/V02S', (req, res) => {
+    res.render('V02S', {
+        title: "天麒科技-V02S"
+    })
+})
 router.get('/solution', (req, res) => {
-    res.render('index', {
+    res.render('solution', {
         title: "天麒科技-解决方案"
     })
 })

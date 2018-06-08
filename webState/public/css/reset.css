@@ -14,9 +14,9 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+	font-family: 'SourceHanSerifCN-Regular';
+	font-style: normal;
+    font-weight: normal;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -43,5 +43,6 @@ table {
 }
 *{
 	box-sizing: border-box;
-	line-height: 1;
+	margin: 0;
+	padding: 0;
 }

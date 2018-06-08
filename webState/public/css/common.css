@@ -1,39 +1,198 @@
-body,html {
-	min-width: 1300px;
-	overflow-x: hidden;
+@charset "UTF-8";
+body,
+html {
+  min-width: 1300px;
+  overflow-x: hidden;
 }
+
 header {
-    width: 100%;
-    height: 80px;
-    background: #000;
-    position: fixed;
-    top: 0;
-    z-index: 2;
+  width: 100%;
+  height: 80px;
+  background: #000;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 footer {
-    width: 100%;
-    background-color: #000000;
-    height: 80px;
-    line-height: 80px;
+  width: 100%;
+  background-color: #000000;
+  height: 80px;
+  line-height: 80px;
 }
 
-footer>div {
-    width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    text-align: center;
+footer > div {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-footer>div>span {
-    margin: 0 auto;
-    float: left;
-    color: #999;
-    /*text-indent:0.5em;//设置首行缩进*/
-    letter-spacing: 1px;
-    font-size: 15px;
+footer > div > span {
+  margin: 0 auto;
+  float: left;
+  color: #999;
+  /*text-indent:0.5em;//设置首行缩进*/
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
-footer>div>span:nth-child(2) {
-    margin-left: 170px;
+footer > div > span:nth-child(2) {
+  margin-left: 170px;
+}
+
+.box {
+  height: 100%;
+  width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.content-one {
+  margin-top: 79px;
+}
+
+.footer {
+  height: 680px;
+  background: url(../imgs/footer/footer-bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(67, 67, 67, 0);
+  color: #fff;
+}
+
+.footer ul {
+  width: 1200px;
+  margin: 0 auto;
+  height: 570px;
+  padding-top: 150px;
+  font-size: 14px;
+}
+
+.footer ul li {
+  float: left;
+  height: 427px;
+  border-right: 1px solid #b7b5b5;
+}
+
+.footer ul li:last-child {
+  border: none;
+}
+
+.footer ul li:nth-child(1) {
+  padding-right: 90px;
+  line-height: 33px;
+}
+
+.footer ul li:nth-child(1) .footer-logo {
+  width: 204px;
+  height: 59px;
+}
+
+.footer ul li:nth-child(1) .t {
+  margin-top: 52px;
+}
+
+.footer ul li:nth-child(1) .t span {
+  display: block;
+}
+
+.footer ul li:nth-child(1) .b {
+  margin-top: 52px;
+}
+
+.footer ul li:nth-child(1) .b > div {
+  position: relative;
+  width: 340px;
+  display: flex;
+}
+
+.footer ul li:nth-child(1) .b div.img {
+  width: 25px;
+  height: 33px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer ul li:nth-child(1) .b div.img div {
+  height: 20px;
+  margin-left: 5px;
+  background: #fff;
+  width: 1px;
+}
+
+.footer ul li:nth-child(1) .b span {
+  display: block;
+  margin-left: 5px;
+  width: 310px;
+}
+
+.footer ul li:nth-child(2) {
+  padding: 0 90px;
+}
+
+.footer ul li:nth-child(2) a {
+  text-decoration: none;
+  color: #b7b5b5;
+}
+
+.footer ul li:nth-child(2) .title div:nth-child(1) {
+  font-size: 24px;
+}
+
+.footer ul li:nth-child(2) .title div:nth-child(2) {
+  margin-top: 12px;
+  background: #fbd005;
+  width: 50px;
+  height: 3px;
+}
+
+.footer ul li:nth-child(2) .items {
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+  height: 75px;
+}
+
+.footer ul li:nth-child(2) .items .level {
+  color: #fff;
+  list-style: none;
+  display: block;
+  width: 110px;
+}
+
+.footer ul li:nth-child(3) {
+  padding-left: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer ul li:nth-child(3) div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer ul li:nth-child(3) div img {
+  width: 138px;
+  height: 138px;
+}
+
+.footer ul li:nth-child(3) div span {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  margin-top: 13px;
+  text-align: center;
+}
+
+.content {
+  overflow: hidden;
+  position: relative;
 }

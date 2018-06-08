@@ -1,46 +1,6 @@
 <link rel="stylesheet" href="./css/v02s.css">
 <script src="./js/vue-carousel-3d.min.js"></script>
-
-<style>
-	.slide {
-      background-position: center;
-      background-size: cover;
-	  background-repeat: no-repeat;
-      width: 400px;
-      height: 640px;
-	  border: 1px solid #e5e5e5;
-	  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3)
-    }
-	.fly{
-	background-position: center;
-      background-size: cover;
-	  background-repeat: no-repeat;
-	  background: url(./imgs/v02s/1.44.png)	; 
-	}
-	.A{
-		opacity: 0.3;
-	}
-	.crea li{
-		width: 10px;
-		height: 10px;
-		background: #999;
-		border-radius:50%; 
-		margin: 10px;
-	}
-	.crea {
-		display: flex;
-		justify-content: center;
-	}
-	.crea li.active{
-		background: red;
-	}
-	.carousel-3d-container{
-		overflow: visible !important;
-	}
-</style>
-
 <div class="v02">
-	{{> header}}
 	<div class="content-one">
 		<div class="wj bounceInDown">
 			<h1>VO2S</h1>
@@ -170,7 +130,6 @@
 		</div>
 		
 	</div>
-	{{> footer}}
 </div>
 <script>
 
