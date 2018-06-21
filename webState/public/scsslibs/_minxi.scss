@@ -1,0 +1,6 @@
+@mixin  fullbg{
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;   
+}
+%fullbg { @include fullbg; }

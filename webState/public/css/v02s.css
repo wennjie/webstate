@@ -63,12 +63,17 @@
   margin-top: 64px;
 }
 
+.two-t-l div h2 {
+  line-height: 40px;
+}
+
 .two-t-l div span:nth-child(3) {
   margin-top: 34px;
 }
 
 .two-t-l div span {
   font-size: 18px;
+  line-height: 33px;
 }
 
 .two-t-l span {
@@ -97,6 +102,7 @@
   background-image: url(../imgs//v02s//line.png);
   background-position-y: 100%;
   background-repeat: no-repeat;
+  letter-spacing: 3px;
 }
 
 /* .w-t-r-c-title span{
@@ -123,7 +129,7 @@
   height: 4px;
   background: #7fbb96;
   margin-right: 20px;
-  margin-top: 21px;
+  margin-top: 19px;
 }
 
 .content-two > .content-two-b {
@@ -150,6 +156,7 @@
 }
 
 .content-two > .content-two-b > ul > li h3 {
+  font-size: 24px;
   margin-top: 30px;
   color: #4d4d4d;
 }
@@ -157,7 +164,7 @@
 .content-two > .content-two-b > ul > li p {
   font-size: 18px;
   color: #808080;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .content-three {
@@ -198,17 +205,29 @@
   justify-content: space-between;
 }
 
+.content-three .content-three-box ul .img {
+  height: 79px;
+  line-height: 79px;
+}
+
+.content-three .content-three-box ul .img img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .content-three .content-three-box ul li {
   color: #cccccc;
 }
 
 .content-three .content-three-box ul h3 {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
   color: #7fbb96;
+  margin-top: 20px;
 }
 
 .content-three .content-three-box ul p {
   color: #cccccc;
+  margin-top: 20px;
 }
 
 .content-four {

@@ -1,0 +1,225 @@
+.content-one {
+    background: #EBEBEB;
+    height: 700px;
+    .box {
+        width: 1200px;
+        position: relative;
+        .l {
+            float: left;
+            margin-top: 244px;
+            p:nth-child(1) {
+                font-size: 50px;
+                color: #333333;
+                font-family: "微软雅黑";
+            }
+            p:nth-child(2) {
+                font-size: 28px;
+                color: #666;
+                margin-top: 37px;
+            }
+            p:nth-child(3) {
+                font-size: 18px;
+                color: #999;
+                margin-top: 37px;
+            }
+        }
+        .r {
+            float: left;
+            margin-left: 155px;
+            position: relative;
+            height: 100%;
+            width: auto;
+            img {
+                position: relative;
+                top: 83px;
+            }
+        }
+    }
+}
+
+.content-two {
+    height: 505px;
+    .box {
+        text-align: center;
+        .title{
+            color: #4D4D4D;
+        }
+        ul {
+            margin-top: 51px;
+            display: flex;
+            justify-content: space-between;
+            li {
+                .img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 182px;
+                    height: 182px;
+                }
+                p {
+                    margin-top: 28px;
+                    font-size:24px ;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.content-three {
+    height: 825px;
+    background-image: url('../imgs/monitor/bj1.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgba(67, 67, 67, 0);
+    .box{
+        .title{
+            color: #fff;
+        }
+        ul{
+            margin-top: 48px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 0 20px;
+            p{
+                margin-top: 20px;
+                color: #fff;
+            }
+        }
+        .bimg{
+            position: relative;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+    }
+}
+
+.content-four {
+    height: 850px;
+    background-image: url('../imgs/monitor/bj2.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: rgba(67, 67, 67, 0);
+    .box{
+        .title{
+            color: #fff;
+        }
+        .b{
+            margin-top: 42px;
+        }
+        .l{
+            float: left;
+//          margin-top: 63px;
+            width: 320px;
+            height: 400px;
+            padding: 0 8px;
+            padding-top: 15px;
+            
+            ul{
+                width: 100%;
+                height: 100%;
+                li{
+                    float: left;
+                    margin-top: 48px;
+                    color: #fff;
+                     width: 90px;
+//                   height: 130px;
+                    
+                     
+                    .img{
+                        width: 90px;
+                        height: 90px; 
+                    }
+                    &:nth-of-type(even){
+                         margin-left: 123px;
+                    }
+                    p{
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .r{
+            float: left;
+            margin-left: 247px;
+        }
+    }
+}
+
+.content-five {
+    height: 850px;
+    .box{
+        .b{
+            margin-top: 92px;
+            .r{
+                float: left;
+                margin-left: 210px;
+                margin-top: 75px;
+                ul{
+                    li{
+                        float: left;
+                        margin-right: 117px;
+                        &:last-child{
+                            margin: 0;
+                        }
+                        
+                        img{
+                            
+                        }
+                        p:nth-child(2){
+                            color: #333;
+                            font-size:24px ;
+                            margin-top: 15px;
+                        }
+                        p:nth-child(3){
+                            margin-top: 18px;
+                        }
+                        p{
+                             font-size:18px ;
+                             color: #808080;
+                             line-height: 28px;
+                             text-align: center;
+                        }
+                    }
+                }
+            }
+            .l{
+                float: left;
+                width: 650px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.monitor {
+    .box {
+        width: 1200px;
+    }
+    .title {
+        margin-top: 100px;
+        text-align: center;
+        font-size:40px ;
+        margin-bottom: 34px;
+    }
+    .info{
+            color: #b3b3b3;
+            font-size:18px ;
+            width: 930px;
+            margin: 0 auto;
+            text-align: center;
+            letter-spacing: 0px;
+            line-height: 28px;
+        }
+}

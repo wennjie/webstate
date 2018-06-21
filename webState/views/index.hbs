@@ -1,134 +1,290 @@
-<link rel="stylesheet" href="./css/v02.css">
-<style>
-
-</style>
-
-<div class="v02">
-	{{> header}}
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/vue-agile.js"></script>
+<div class="index app">
 	<div class="content-one">
-		<div class="box">
-			<div class="l" >
-				<h1>SKYLIN V02</h1>
-				<p>哒哒哒打</p>
-				<p>哒哒哒打</p>
+		<agile :autoplay='true' :arrows="true">
+			<div class="slide slide1"></div>
+			<div class="slide slide2"></div>
+			<div class="slide slide3"></div>
+		</agile>
+		<div class="repeatable">
+			<div class="border">
+				<a href="/v02">
+					<div>
+						<img src="./imgs/index/banner-icon1.png" alt="">
 
+					</div>
+					<div>
+
+						<p>智能植保无人机</p>
+						<p>天麒科技致力于智能植保无人机的研发与制造，以尖端科技解放农业生产力。</p>
+
+					</div>
+				</a>
 			</div>
-			<div class="r">
-				<img src="./imgs/v02/V02.png" alt="">
+			<div class="border">
+				<a href="">
+					<div class="imgs">
+						<img src="./imgs/index/banner-icon2.png" alt="">
+
+					</div>
+					<div>
+						<p>一体化农业服务</p>
+						<p>由植保无人机切入大农业，以人工智能为核心，让用户享受智能一体化农业服务。</p>
+					</div>
+				</a>
+			</div>
+			<div class="border">
+				<a href="">
+					<div>
+						<img src="./imgs/index/banner-icon3.png" alt="">
+					</div>
+					<div>
+						<p>智慧农业解决方案</p>
+						<p>深度参与农业生态链，为客户提供自动化、定制化的智慧农业解决方案，重塑新农业。</p>
+					</div>
+				</a>
 			</div>
 
 		</div>
-		
+
 	</div>
 	<div class="content-two">
-		<div class="box">
-			<ul>
-				<li>
-					<img src="./imgs/v02/2-1.png" alt="" srcset="">
-					<h3>全自动化</h3>
-					<p>自主飞行</p>
-					<p>精准喷药</p>
-					<p>智能避障</p>
-				</li>
-				<li>
-					<img src="./imgs/v02/2-2.png" alt="" srcset="">
-					<h3>全自动化</h3>
-					<p>自主飞行</p>
-					<p>精准喷药</p>
-					<p>智能避障</p>
-				</li>
-				<li>
-					<img src="./imgs/v02/2-3.png" alt="" srcset="">
-					<h3>全自动化</h3>
-					<p>自主飞行</p>
-					<p>精准喷药</p>
-					<p>智能避障</p>
-				</li>
 
-			</ul>
-			
-		</div>
-		
+
 	</div>
 	<div class="content-three">
+		<div class="l">
+
+		</div>
+		<div class="r">
+
+		</div>
 		<div class="box">
-			<h1>天麒V02全自动质保无人机</h1>
-			<div class="three-b">
-			<div class="l">
-				<img src="./imgs/v02/3-1.png" alt="" srcset="">
+			<div class="t">
+				<div class="imgs"></div>
 			</div>
-			<div class="r">
-				<ul>
-					<li>
-						<div><span></span><p>只能只能</p></div>
-						<div>只能只能</div>
-						<div>只能只能只能只能</div>
-					</li>
-					<li>
-						<div><span></span><p>只能只能</p></div>
-						<div>只能只能</div>
-						<div>只能只能只能只能</div>
-					</li>
-					<li>
-						<div><span></span><p>只能只能</p></div>
-						<div>只能只能</div>
-						<div>只能只能 只能只能只能</div>
-					</li>
-					<li>
-						<div><span></span><p>只能只能</p></div>
-						<div>只能只能</div>
-						<div>只能只能 只能只能只能</div>
-					</li>
-					
-					
-				</ul>
-			</div>
+			<div class="b">
+				<div>
+					<p>关于我们</p>
+					<p>About us</p>
+				</div>
+				<p class="content">成都天麒科技有限公司是一家以人工智能为核心，提供智能一体化农业服务的科技创新型企业， 成立于2013年6月，总部位于成都高新区。公司致力于空中无人机器人的研发和制造， 对于无人机在农林牧业等应用有深入的探索，已取得业内瞩目的成果和产品。</p>
 			</div>
 		</div>
-		
-	
+
 	</div>
 	<div class="content-four">
 		<div class="box">
-			<h1>v02参数</h1>
-			<div>
-				<div class="l">
-					<div class="t">
-						尺寸示意图
-						<img src="./imgs/v02/4-1.png" alt="">
-					</div>
-					<div class="b">
-
-					</div>
-					
-				</div>
-				<div class="r">
-
-				</div>
+			<div class="title">
+				<p class="c-paragraph">业内资讯</p>
+				<p class="c-paragraph">News center</p>
 			</div>
-			
+			<div class="news-box">
+				<a href="" class="news">
+					<div class="new">
+						<p class="news-title">
+							野外摄影师真是个高危又萌翻的职业
+						</p>
+						<div class="new-line"></div>
+						<div class="news-titme">
+							<p>01-16</p>
+						</div>
+						<p class="news-content">
+							在进行照相时，光通过小孔（更多时候是一个透镜组）进入暗盒，在暗盒背部（相对于光入射方向）的介质上成像。根据实际光强度和介质感光能力的不同，要求的光照时间也不同。在光照过程中，介质被感光
+						</p>
+					</div>
+					<div class="news-img">
+						<img src="http://qty83k.creatby.com/materials/95622/origin/3c28ab78af3484bd7e839fdaae456e43_origin.jpg" alt="">
+					</div>
+				</a>
+				<a href="" class="news">
+					<div class="new">
+						<p class="news-title">
+							野外摄影师真是个高危又萌翻的职业
+						</p>
+						<div class="new-line"></div>
+						<div class="news-titme">
+							<p>01-16</p>
+						</div>
+						<p class="news-content">
+							在进行照相时，光通过小孔（更多时候是一个透镜组）进入暗盒，
+						</p>
+					</div>
+					<div class="news-img">
+						<img src="http://qty83k.creatby.com/materials/95622/origin/3c28ab78af3484bd7e839fdaae456e43_origin.jpg" alt="">
+					</div>
+				</a>
+				<a href="" class="news">
+					<div class="new">
+						<p class="news-title">
+							野外摄影师真是个高危又萌翻的职业
+						</p>
+						<div class="new-line"></div>
+						<div class="news-titme">
+							<p>01-16</p>
+						</div>
+						<p class="news-content">
+							在进行照相时，光通过小孔（更多时候是一个透镜组）进入暗盒，在暗盒背部（相对于光入射方向）的介质上成像。根据实际光强度和介质感光能力的不同，要求的光照时间也不同。在光照过程中，介质被感光
+						</p>
+					</div>
+					<div class="news-img">
+						<img src="http://qty83k.creatby.com/materials/95622/origin/3c28ab78af3484bd7e839fdaae456e43_origin.jpg" alt="">
+					</div>
+				</a>
+			</div>
+			<div class="read-more">
+				<a class="btn-default btn bsbutton_bmayCG" href="/sites/zt1waw/news.html" sizes="" type="button" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); transform-origin: 50% 50% 0px;">read more</a>
+			</div>
 		</div>
-		
 
 	</div>
 	<div class="content-five">
+		<div class="img-scroll" data-image="./imgs/index/main4-bg.jpg"></div>
 		<div class="box">
-			<h1>只能配件</h1>
 			<ul>
 				<li>
-					<div>离心碰头 均需照耀</div>
-					<img src="./imgs/v02/5-1.png" alt="">
-					<p>离心碰头</p>
-					<p>离心碰头</p>
+					<div>
+						<div class="title">
+							<div class="l">
+								<img src="./imgs/index/main4-icon1.png" alt="">
+							</div>
+							<p class="r">人工智能设备</p>
+						</div>
+						<p class="conent">
+							以植保无人机为核心的人工智能农业设备
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="title">
+							<div class="l">
+								<img src="./imgs/index/main4-icon2.png" alt="">
+							</div>
+							<p class="r">互联网+农业</p>
+						</div>
+						<p class="conent">
+							构建线上线下深度结合的互联网+农业云生态
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="title">
+							<div class="l">
+								<img src="./imgs/index/main4-icon3.png" alt="">
+							</div>
+							<p class="r">农业大数据</p>
+						</div>
+						<p class="conent">
+							以运算分析、挖掘应用为基础的农业大数据平台
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="title">
+							<div class="l">
+								<img src="./imgs/index/main4-icon4.png" alt="">
+							</div>
+							<p class="r">定制化方案</p>
+						</div>
+						<p class="conent">
+							针对不同场景及需求提供定制化智慧农业解决方案
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<div class="title">
+							<div class="l">
+								<img src="./imgs/index/main4-icon5.png" alt="">
+							</div>
+							<p class="r">一体化服务</p>
+						</div>
+						<p class="conent">
+							客户至上，提供售前、售后一体化服务
+						</p>
+					</div>
 				</li>
 			</ul>
-			
 		</div>
-		
 	</div>
-	{{> footer}}
+	<div class="content-six">
+		<div class="box">	
+			<ul>
+				<li>
+					<div class="l">
+						<div class="t">
+							<h1>600</h1>
+							<p>万亩</p>
+						</div>
+						<p>作业面积</p>
+					</div>
+					<div class="r">
+						<img src="./imgs/index/main5-icon1.png" alt="">
+					</div>
+
+				</li>
+				<li>
+					<div class="l">
+						<div class="t">
+							<h1>100</h1>
+							<p>+</p>
+						</div>
+						<p>项技术专利</p>
+					</div>
+					<div class="r">
+						<img src="./imgs/index/main5-icon2.png" alt="">
+					</div>
+
+				</li>
+				<li>
+					<div class="l">
+						<div class="t">
+							<h1>6</h1>
+							<p>省</p>
+						</div>
+						<p>分支机构覆盖</p>
+					</div>
+					<div class="r">
+						<img src="./imgs/index/main5-icon3.png" alt="">
+					</div>
+
+				</li>
+				<li>
+					<div class="l">
+						<div class="t">
+							<h1>100</h1>
+							<p>+</p>
+						</div>
+						<p>家飞防合作单位 </p>
+					</div>
+					<div class="r">
+						<img src="./imgs/index/main5-icon4.png" alt="">
+					</div>
+
+				</li>
+				<li>
+					<div class="l">
+						<div class="t">
+							<h1>更多资讯</h1>
+						</div>
+						<p>敬请期待</p>
+					</div>
+				
+
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
 </div>
+
 <script>
-
-
+	new Vue({
+		el: '.app'
+	})
 </script>

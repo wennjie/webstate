@@ -2,6 +2,10 @@
   background: #f6f6f6;
 }
 
+.v02 h1 {
+  letter-spacing: 6px;
+}
+
 .content-one {
   height: 600px;
   border-bottom: 1px solid #000000;
@@ -25,10 +29,16 @@
 .content-one .box .l h1 {
   font-size: 60px;
   font-family: "SourceHanSerifCN-Heavy";
+  letter-spacing: 2px;
+}
+
+.content-one .box .l p:nth-child(2) {
+  margin-top: 36px;
 }
 
 .content-one .box .l p {
   font-size: 28px;
+  line-height: 44px;
 }
 
 .content-one .box img {
@@ -63,6 +73,28 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  line-height: 33px;
+}
+
+.content-two .box ul li h3 {
+  margin-top: 35px;
+  font-size: 24px;
+  line-height: 44px;
+}
+
+.content-two .box ul li p:nth-child(4) {
+  margin-top: 15px;
+}
+
+.content-two .box ul li p {
+  font-size: 18px;
+}
+
+.content-two .box ul li hr {
+  height: 3px;
+  width: 35px;
+  background: red;
+  border: none;
 }
 
 .content-three {
@@ -111,6 +143,7 @@
   margin-left: 25px;
   text-align: left;
   padding: 30px;
+  line-height: 33px;
 }
 
 .content-three .box .three-b .r ul li div:nth-child(1) {
@@ -137,11 +170,14 @@
 .content-three .box .three-b .r ul li div:nth-child(2) {
   color: #616161;
   font-size: 16px;
+  line-height: 33px;
+  margin-left: 4px;
 }
 
 .content-three .box .three-b .r ul li div:nth-child(3) {
   color: #616161;
   font-size: 16px;
+  margin-left: 4px;
 }
 
 .content-four {
@@ -236,11 +272,12 @@
   height: 1220px;
   border-bottom: 1px solid #000000;
   text-align: center;
-  padding-top: 100px;
+  margin-top: 95px;
 }
 
 .content-five .box {
   width: 1250px;
+  padding-top: 5px;
 }
 
 .content-five .box h1 {
@@ -260,6 +297,7 @@
   height: 398px;
   position: relative;
   color: #616161;
+  cursor: pointer;
 }
 
 .content-five .box ul li div:nth-child(1) {
@@ -274,8 +312,16 @@
   font-size: 24px;
 }
 
+.content-five .box ul li .img {
+  height: 206px;
+  line-height: 206px;
+}
+
 .content-five .box ul li img {
-  margin-top: 40px;
+  height: 155px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
 }
 
 .content-five .box ul li p {
@@ -300,4 +346,8 @@
 
 .content-five .box ul li:hover .plan {
   width: 100%;
+}
+
+.content-five .box ul li:hover img {
+  transform: scale(1.05);
 }

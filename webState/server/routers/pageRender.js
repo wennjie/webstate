@@ -46,6 +46,12 @@ router.get('/solution', (req, res) => {
         title: "天麒科技-解决方案"
     })
 })
+router.get('/monitor', (req, res) => {
+    res.render('monitor', {
+        title: "天麒科技-解决方案"
+    })
+})
+
 router.get('/service', (req, res) => {
     res.render('contact', {
         title: "天麒科技-服务与支持"
@@ -54,6 +60,11 @@ router.get('/service', (req, res) => {
 router.get('/aboutUs', (req, res) => {
     res.render('about', {
         title: "天麒科技-关于"
+    })
+})
+router.get('/contact', (req, res) => {
+    res.render('contact', {
+        title: "天麒科技-联系我们"
     })
 })
 router.get('/news', async(req, res) => {

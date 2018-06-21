@@ -1,5 +1,8 @@
 .v02 {
     background: rgb(246, 246, 246);
+    h1 {
+        letter-spacing: 6px;
+    }
 }
 
 .content-one {
@@ -20,9 +23,14 @@
             h1 {
                 font-size: 60px;
                 font-family: "SourceHanSerifCN-Heavy";
+                letter-spacing: 2px;
+            }
+            p:nth-child(2) {
+                margin-top: 36px;
             }
             p {
                 font-size: 28px;
+                line-height: 44px;
             }
         }
         img {
@@ -53,6 +61,24 @@
                 justify-content: center;
                 align-items: center;
                 color: #fff;
+                line-height: 33px;
+                h3 {
+                    margin-top: 35px;
+                    font-size: 24px;
+                    line-height: 44px;
+                }
+                p:nth-child(4) {
+                    margin-top: 15px;
+                }
+                p {
+                    font-size: 18px;
+                }
+                hr {
+                    height: 3px;
+                    width: 35px;
+                    background: red;
+                    border: none;
+                }
             }
         }
     }
@@ -95,6 +121,7 @@
                         margin-left: 25px;
                         text-align: left;
                         padding: 30px;
+                        line-height: 33px;
                         div:nth-child(1) {
                             line-height: 28px;
                             height: 30px;
@@ -116,10 +143,13 @@
                         div:nth-child(2) {
                             color: rgb(97, 97, 97);
                             font-size: 16px;
+                            line-height: 33px;
+                            margin-left: 4px;
                         }
                         div:nth-child(3) {
                             color: rgb(97, 97, 97);
                             font-size: 16px;
+                            margin-left: 4px;
                         }
                     }
                 }
@@ -154,19 +184,18 @@
                 height: 3px;
             }
         }
-        .items{
+        .items {
             position: relative;
         }
         .item {
             font-size: 18px;
             line-height: 30px;
             height: 30px;
-            span{
+            span {
                 display: block;
                 float: left;
             }
             span:nth-child(1) {
-                
                 width: 200px;
             }
             &:nth-child(1) {
@@ -191,9 +220,9 @@
             .r {
                 float: left;
                 margin-left: 200px;
-                .items-box{
+                .items-box {
                     margin-top: 60px;
-                    &:first-child{
+                    &:first-child {
                         margin-top: 0;
                     }
                 }
@@ -206,49 +235,55 @@
     height: 1220px;
     border-bottom: 1px solid #000000;
     text-align: center;
-    padding-top: 100px;
-    .box{
+    margin-top: 95px;
+    .box {
         width: 1250px;
-        h1{
+        padding-top: 5px;
+        h1 {
             font-size: 40px;
-
         }
-        ul{
+        ul {
             margin-top: 80px;
-            li{
-                margin:  0 19px;
-                margin-bottom:55px;
+            li {
+                margin: 0 19px;
+                margin-bottom: 55px;
                 float: left;
                 background: #fff;
                 width: 378px;
                 height: 398px;
                 position: relative;
                 color: rgb(97, 97, 97);
-                
-                 div:nth-child(1){
-                     width: 236px;
-                     height: 36px;
-                     border: 1px solid rgb(183, 181, 181);
-                     border-radius:3px; 
-                     color: #000000;
-                     line-height: 36px;
-                     margin: 0 auto;
-                     margin-top: 36px;
-                     font-size:24px; 
-                 }
-                 img{
-                     margin-top: 40px;
-
-                 }
-                 p{
-                     margin: 0;
-                     line-height: 30px;
-                     font-size:18px;
-                 }
-                 p:nth-child(3){
-                     margin-top: 26px;
-                 }
-                 .plan{
+                cursor: pointer;
+                div:nth-child(1) {
+                    width: 236px;
+                    height: 36px;
+                    border: 1px solid rgb(183, 181, 181);
+                    border-radius: 3px;
+                    color: #000000;
+                    line-height: 36px;
+                    margin: 0 auto;
+                    margin-top: 36px;
+                    font-size: 24px;
+                }
+                .img {
+                    height: 206px;
+                    line-height: 206px;
+                }
+                img {
+                    height: 155px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    transition: all 0.3s;
+                }
+                p {
+                    margin: 0;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+                p:nth-child(3) {
+                    margin-top: 26px;
+                }
+                .plan {
                     height: 10px;
                     background: rgb(251, 208, 5);
                     position: absolute;
@@ -256,13 +291,15 @@
                     left: 0;
                     width: 0px;
                     transition: all 0.3s;
-                 }
-                 &:hover{
-                     .plan{
-                         width: 100%;
-                     }
-                 }
-                
+                }
+                &:hover {
+                    .plan {
+                        width: 100%;
+                    }
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
             }
         }
     }

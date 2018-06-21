@@ -63,8 +63,65 @@
                 margin-top: 35px;
                 width: 100%;
                 height: 417px;
-                border: 1px solid #000000;
+                border: 1px solid #e5e5e5e5;
+
                 }
         }
     }
+}
+.slide,
+.agile,
+.agile__list {
+  width: 100%;
+  height: 417px;
+  background: red;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.slide1 {
+  background-image: url(../imgs/about/picture1.png);
+}
+.slide2 {
+  background-image: url(../imgs/about/picture2.png);
+}
+.slide3 {
+  background-image: url(../imgs/about/picture3.png);
+}
+.slide4 {
+  background-image: url(../imgs/about/picture4.png);
+}
+.slide5 {
+  background-image: url(../imgs/about/picture5.png);
+}
+.slide6 {
+  background-image: url(../imgs/about/picture6.png);
+}
+.slide7 {
+  background-image: url(../imgs/about/picture7.png);
+}
+ul.agile__dots{
+	position: absolute;
+	bottom: 17px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	
+}
+.agile__dot{
+	width: 17px;
+	height: 5px;
+	
+	margin: 0 2px;
+}
+.agile__dot button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius:0; 
+	background: rgba(255,255,255,0.6);
+}
+.agile__dot.agile__dot--current button{
+	background: rgb(255,255,255);
 }

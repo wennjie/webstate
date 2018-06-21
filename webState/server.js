@@ -148,9 +148,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //设置缓存
 app.use('/server', serve('./views/dist/server', true)) 
 app.use('/static', serve('./views/dist/static', true))
-
 app.use('/manifest.json', serve('./manifest.json'))
-
 app.use('/service-worker.js', serve('./views/dist/service-worker.js'))
 
 // api 路由
