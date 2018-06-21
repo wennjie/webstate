@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/fonts.css">
 	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/swiper.min.css">
 	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
 	<!--[if lt IE 9]>
@@ -26,23 +27,19 @@
 
 <body>
 	<div class="page">
-		{{> header}} 
-		{{{body}}}
-		{{> info}}
-		{{> footer}}
+		{{> header}} {{{body}}} {{> info}} {{> footer}}
 	</div>
-	
+
 
 	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery.lazyload.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
 	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/wow.min.js"></script>
 	<script src="./js/jquery.imageScroll.min.js"></script>
-
-</body>
-<script>
+	<script type="text/javascript">
 	$(function () {
 		$('.page').addClass('show')
 		new WOW(
@@ -55,7 +52,7 @@
 			}
 		).init();
 		$('img').lazyload({
-			 effect:'fadeIn'
+			effect: 'fadeIn'
 		});
 		$('header ul').on('mouseenter', function () {
 			$('.hide-header').addClass('active')
@@ -68,8 +65,31 @@
 			$(this).removeClass('active')
 		})
 		$('.img-scroll').imageScroll({});
+
+		//index .
+		new Swiper('.index .swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		new Swiper('.about .swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			loop: true,
+		});
+	
+
 	})
 
 </script>
+
+</body>
+
 
 </html>

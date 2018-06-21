@@ -2,11 +2,23 @@
 <script src="./js/vue-agile.js"></script>
 <div class="index app">
 	<div class="content-one">
-		<agile :autoplay='true' :arrows="true">
-			<div class="slide slide1"></div>
-			<div class="slide slide2"></div>
-			<div class="slide slide3"></div>
-		</agile>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1"></div>
+				<div class="swiper-slide slide2"></div>
+				<div class="swiper-slide slide3"></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination swiper-pagination-bullets">
+				<span class="swiper-pagination-bullet "></span>
+				<span class="swiper-pagination-bullet"></span>
+				<span class="swiper-pagination-bullet"></span>
+			
+			</div>
+			<div class="swiper-button-prev"></div><!--左箭头-->
+    		<div class="swiper-button-next"></div><!--右箭头-->
+			<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+		</div>
 		<div class="repeatable">
 			<div class="border">
 				<a href="/v02">
@@ -139,6 +151,7 @@
 		</div>
 
 	</div>
+	
 	<div class="content-five">
 		<div class="img-scroll" data-image="./imgs/index/main4-bg.jpg"></div>
 		<div class="box">
@@ -212,7 +225,7 @@
 		</div>
 	</div>
 	<div class="content-six">
-		<div class="box">	
+		<div class="box">
 			<ul>
 				<li>
 					<div class="l">
@@ -273,8 +286,6 @@
 						</div>
 						<p>敬请期待</p>
 					</div>
-				
-
 				</li>
 			</ul>
 		</div>
@@ -282,9 +293,3 @@
 	</div>
 
 </div>
-
-<script>
-	new Vue({
-		el: '.app'
-	})
-</script>

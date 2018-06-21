@@ -1,3 +1,4 @@
+@import '../scsslibs/index.scss';
 .content-one {
     width: 100%;
     height: 800px;
@@ -38,8 +39,7 @@
 
 .content-two>.content-two-t {
     position: relative;
-    height: 590px;
-    //  overflow: hidden;
+    height: 590px; //  overflow: hidden;
 }
 
 .content-two>.content-two-t>.two-t-l {
@@ -62,17 +62,14 @@
 
 .two-t-l div h2:nth-child(1) {
     margin-top: 64px;
-    
-}
-.two-t-l div h2 {
-  line-height: 40px;
-    
 }
 
+.two-t-l div h2 {
+    line-height: 40px;
+}
 
 .two-t-l div span:nth-child(3) {
     margin-top: 34px;
-    
 }
 
 .two-t-l div span {
@@ -108,7 +105,6 @@
     background-repeat: no-repeat;
     letter-spacing: 3px;
 }
-
 
 /* .w-t-r-c-title span{
     display: block;
@@ -180,7 +176,7 @@
     background-image: url(../imgs/v02s/v02-bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    font-size:18px ;
+    font-size: 18px;
     .content-three-box {
         width: 1300px;
         height: 100%;
@@ -205,12 +201,12 @@
             text-align: center;
             display: flex;
             justify-content: space-between;
-            .img{
+            .img {
                 height: 79px;
                 line-height: 79px;
-                img{
-                     display: inline-block;
-                     vertical-align: middle;
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
                 }
             }
             li {
@@ -219,7 +215,7 @@
             h3 {
                 margin-bottom: 36px;
                 color: #7fbb96;
-                margin-top:20px ;
+                margin-top: 20px;
             }
             p {
                 color: #cccccc;
@@ -245,8 +241,7 @@
         margin-top: 20px;
     }
     .swiper {
-        width: 100%;
-        //      overflow: ;
+        width: 100%; //      overflow: ;
     }
 }
 
@@ -262,7 +257,6 @@
     }
 }
 
-
 .slide {
     background-position: center;
     background-size: cover;
@@ -271,30 +265,36 @@
     height: 640px;
     border: 1px solid #e5e5e5;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3)
-  }
-  .fly{
-  background-position: center;
+}
+
+.fly {
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background: url(./imgs/v02s/1.44.png)	; 
-  }
-  .A{
-      opacity: 0.3;
-  }
-  .crea li{
-      width: 10px;
-      height: 10px;
-      background: #999;
-      border-radius:50%; 
-      margin: 10px;
-  }
-  .crea {
-      display: flex;
-      justify-content: center;
-  }
-  .crea li.active{
-      background: red;
-  }
-  .carousel-3d-container{
-      overflow: visible !important;
-  }
+    background: url(./imgs/v02s/1.44.png);
+}
+
+.A {
+    opacity: 0.3;
+}
+
+.crea li {
+    width: 10px;
+    height: 10px;
+    background: #999;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.crea {
+    display: flex;
+    justify-content: center;
+}
+
+.crea li.active {
+    background: red;
+}
+
+.carousel-3d-container {
+    overflow: visible !important;
+}

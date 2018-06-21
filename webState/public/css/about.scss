@@ -1,3 +1,4 @@
+@import '../scsslibs/index.scss';
 .content-one {
     height: 603px;
     background: url(../imgs/about/banner-bg.jpg);
@@ -69,15 +70,12 @@
         }
     }
 }
-.slide,
-.agile,
-.agile__list {
+.swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
   width: 100%;
   height: 417px;
-  background: red;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+@include fullbg;
   position: relative;
 }
 .slide1 {
@@ -101,27 +99,10 @@
 .slide7 {
   background-image: url(../imgs/about/picture7.png);
 }
-ul.agile__dots{
-	position: absolute;
-	bottom: 17px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	
-}
-.agile__dot{
+.swiper-pagination-bullet{
 	width: 17px;
 	height: 5px;
-	
-	margin: 0 2px;
-}
-.agile__dot button{
-	width: 100%;
-	height: 100%;
-	border: none;
-	border-radius:0; 
-	background: rgba(255,255,255,0.6);
-}
-.agile__dot.agile__dot--current button{
-	background: rgb(255,255,255);
+    margin: 0 2px;
+    background: rgba(255,255,255,0.6);
+    border-radius:0; 
 }
