@@ -520,7 +520,8 @@
   line-height: 20px; }
 
 .content-six {
-  height: 179px; }
+  height: 179px;
+  background: #fff; }
 
 .content-six .box {
   width: 95%;
@@ -555,7 +556,8 @@
 
 .content-six .box ul li .l {
   float: left;
-  height: 60px; }
+  height: 60px;
+  min-width: 98px; }
 
 .content-six .box ul li .l .t {
   height: 40px; }

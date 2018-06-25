@@ -22,6 +22,12 @@
 		<script src="./js/html5shiv.min.js"></script>
 		<script src="./js/respond.min.js"></script>
 		<![endif]-->
+	<script type="text/javascript">
+		if (navigator.appVersion.match(/MSIE [678]./i) == null) {
+			document.writeln(
+				'<link type="text/css" href="//version.coolsite360.com/ynzzkt/28/styles.css" rel="stylesheet">')
+		}
+	</script>
 	<script src="./js/vue.min.js"></script>
 </head>
 
@@ -39,55 +45,72 @@
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/wow.min.js"></script>
 	<script src="./js/jquery.imageScroll.min.js"></script>
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/jquery.counterup.min.js"></script>
+	<script>
+		(function (window) {
+			$('.contup').counterUp({
+				delay: 10,
+				time: 2000
+			});
+		})(window)
+	</script>
 	<script type="text/javascript">
-	$(function () {
-		$('.page').addClass('show')
-		new WOW(
-			{
-				boxClass: 'wj',
-				animateClass: 'animated',
-				offset: 0,
-				mobile: true,
-				live: true
-			}
-		).init();
-		$('img').lazyload({
-			effect: 'fadeIn'
-		});
-		$('header ul').on('mouseenter', function () {
-			$('.hide-header').addClass('active')
-		}).stop().on('mouseleave', function () {
-			$('.hide-header').removeClass('active')
+		$(function () {
+			$('.page').addClass('show')
+			new WOW(
+				{
+					boxClass: 'wj',
+					animateClass: 'animated',
+					offset: 0,
+					mobile: true,
+					live: true
+				}
+			).init();
+			$('img').lazyload({
+				effect: 'fadeIn'
+			});
+			$('header ul').on('mouseenter', function () {
+				$('.hide-header').addClass('active')
+			}).stop().on('mouseleave', function () {
+				$('.hide-header').removeClass('active')
+			})
+			$('.hide-header').on('mouseenter', function () {
+				$(this).addClass('active')
+			}).stop().on('mouseleave', function () {
+				$(this).removeClass('active')
+			})
+			$('.img-scroll').imageScroll({
+				image: null,
+				imageAttribute: 'image',
+				container: $('body'),
+				windowObject: $(window),
+				speed: 0,
+
+			});
+
+			//index .
+			new Swiper('.index .swiper-container', {
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				loop: true,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+			new Swiper('.about .swiper-container', {
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				loop: true,
+			});
+
+
 		})
-		$('.hide-header').on('mouseenter', function () {
-			$(this).addClass('active')
-		}).stop().on('mouseleave', function () {
-			$(this).removeClass('active')
-		})
-		$('.img-scroll').imageScroll({});
 
-		//index .
-		new Swiper('.index .swiper-container', {
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
-		new Swiper('.about .swiper-container', {
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			loop: true,
-		});
-	
-
-	})
-
-</script>
+	</script>
 
 </body>
 

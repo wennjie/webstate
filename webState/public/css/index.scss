@@ -148,8 +148,8 @@
             .imgs{
                 width: 100%;
                 height: 100%;
-               background: url(../imgs/index/main2-0.jpg.png);
-              @include fullbg;
+                background: url(../imgs/index/main2-0.jpg.png);
+                @include fullbg;
             }
         }
         .b{
@@ -204,7 +204,6 @@
         background-color: rgb(255, 255, 255);
         z-index: 1;
         min-height: 80px;
-        
     }
     .r {
         -webkit-box-flex: 1;
@@ -380,13 +379,16 @@
     overflow: hidden;
     position: relative;
     color: #fff;
+    // .img-scroll{
+    //     height: 100%;
+    //     width: 100%;
+    // }
     .box{
         width: 1200px;
         position: absolute;
         left: 50%;
         margin-left: -600px;
         top: 0;
-
         @include flexbox;
         @include justify-content(flex-end);
         @include align-items(center);
@@ -436,14 +438,12 @@
                         font-size: 16px;
                         // float: left;
                     }
-
                 }
                 .conent{
                     margin-top: 34px;
                     font-size:14px;
                     color: rgb(205, 202, 187);
                     line-height: 20px;
-
                 }
             }
         }
@@ -451,6 +451,7 @@
 }
 .content-six{
     height: 179px;
+    background: #fff;
     .box{
         width: 95%;
         // background: #000;
@@ -459,7 +460,6 @@
         padding-top: 15px;
         ul{
             width: 100%;
-            
             li{
                 width: 20%;
                 @include flexbox;
@@ -468,13 +468,13 @@
                 .l{
                     float: left;
                     height: 60px;
+                    min-width: 98px;
                     .t{
                         height: 40px;
                         h1{
                             font-size:30px;
                             float: left;
                             line-height: 35px;
-
                         }
                         p{
                             font-size:16px; 

@@ -4,6 +4,12 @@ html {
   min-width: 1300px;
   overflow-x: hidden; }
 
+a {
+  text-decoration: none; }
+
+a * {
+  color: #000; }
+
 header {
   width: 100%;
   height: 79px;
