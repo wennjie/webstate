@@ -1,7 +1,9 @@
+@import '../scsslibs/index.scss';
 .v02 {
     background: rgb(246, 246, 246);
     h1 {
-        letter-spacing: 6px;
+        letter-spacing: 4px;
+        font-size:36px; 
     }
 }
 
@@ -31,6 +33,7 @@
             p {
                 font-size: 28px;
                 line-height: 44px;
+                color: #999;
             }
         }
         img {
@@ -64,20 +67,21 @@
                 line-height: 33px;
                 h3 {
                     margin-top: 35px;
-                    font-size: 24px;
+                    font-size: 22px;
                     line-height: 44px;
                 }
                 p:nth-child(4) {
                     margin-top: 15px;
                 }
                 p {
-                    font-size: 18px;
+                    font-size: 14px;
                 }
                 hr {
                     height: 3px;
                     width: 35px;
-                    background: red;
+                    background: #fbd005;
                     border: none;
+                    margin-top: 5px;
                 }
             }
         }
@@ -85,13 +89,14 @@
 }
 
 .content-three {
-    height: 996px;
+    height: 796px;
     border-bottom: 1px solid #000000;
     .box {
         width: 1300px;
         text-align: center;
         h1 {
             margin-top: 110px;
+            font-size:36px; 
         }
         .three-b {
             width: 100%;
@@ -99,7 +104,7 @@
             .l,
             .r {
                 float: left;
-                margin-top: 280px;
+                margin-top: 150px;
             }
             .l {
                 width: 720px;
@@ -123,12 +128,13 @@
                         padding: 30px;
                         line-height: 33px;
                         div:nth-child(1) {
-                            line-height: 28px;
-                            height: 30px;
+                            line-height: 40px;
+                            height: 40px;
+                            @include flexbox;
+                            @include align-items(center);
                             span,
                             p {
                                 margin: 0;
-                                float: left;
                                 margin-left: 6px;
                             }
                             span {
@@ -136,20 +142,22 @@
                                 width: 8px;
                                 height: 8px;
                                 background: rgb(251, 208, 5);
-                                margin-top: 10px;
+                              
                             }
                             font-size:22px;
                         }
                         div:nth-child(2) {
                             color: rgb(97, 97, 97);
-                            font-size: 16px;
-                            line-height: 33px;
+                            font-size: 14px;
+                            line-height: 30px;
                             margin-left: 4px;
+                            margin-top: 5px;
                         }
                         div:nth-child(3) {
                             color: rgb(97, 97, 97);
-                            font-size: 16px;
+                            font-size: 14px;
                             margin-left: 4px;
+                            line-height: 30px;
                         }
                     }
                 }
@@ -171,11 +179,10 @@
         h1 {
             margin: 0;
             text-align: center;
-            font-size: 40px;
         }
         .title {
             div:nth-child(1) {
-                font-size: 24px;
+                font-size: 22px;
             }
             div:nth-child(2) {
                 margin-top: 12px;
@@ -188,7 +195,7 @@
             position: relative;
         }
         .item {
-            font-size: 18px;
+            font-size: 14px;
             line-height: 30px;
             height: 30px;
             span {
@@ -204,6 +211,8 @@
         }
         .box-b {
             margin-top: 105px;
+            @include flexbox;
+            @include justify-content(center);
             .l {
                 float: left;
                 .t {
@@ -232,16 +241,13 @@
 }
 
 .content-five {
-    height: 1220px;
+    height: 1120px;
     border-bottom: 1px solid #000000;
     text-align: center;
     margin-top: 95px;
     .box {
         width: 1250px;
         padding-top: 5px;
-        h1 {
-            font-size: 40px;
-        }
         ul {
             margin-top: 80px;
             li {
@@ -257,13 +263,13 @@
                 div:nth-child(1) {
                     width: 236px;
                     height: 36px;
-                    border: 1px solid rgb(183, 181, 181);
-                    border-radius: 3px;
+                    border: 1px solid rgba(0,0,0,0.15);
+                    border-radius: 7px;
                     color: #000000;
                     line-height: 36px;
                     margin: 0 auto;
                     margin-top: 36px;
-                    font-size: 24px;
+                    font-size: 22px;
                 }
                 .img {
                     height: 206px;
@@ -278,7 +284,7 @@
                 p {
                     margin: 0;
                     line-height: 30px;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
                 p:nth-child(3) {
                     margin-top: 26px;

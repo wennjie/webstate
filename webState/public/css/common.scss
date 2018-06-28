@@ -6,7 +6,7 @@ html {
 a{
     text-decoration: none;
     *{
-        color: #000;
+        color: #333;
     }
 }
 header {
@@ -17,7 +17,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 4;
-    font-size:18px ;
+    font-size:16px ;
     min-width: 1200px;
      a{ 
             text-decoration:none;
@@ -133,7 +133,7 @@ footer>div>span:nth-child(2) {
     height: 100%;
     width: 1300px;
     margin: 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 
@@ -141,7 +141,7 @@ footer>div>span:nth-child(2) {
     margin-top: 79px;
 }
 .footer{
-    height: 680px;
+    height: 430px;
     background: url(../imgs/footer/footer-bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
@@ -153,12 +153,12 @@ footer>div>span:nth-child(2) {
         width: 1200px;
         margin: 0 auto;
         height: 570px;
-        padding-top: 150px;
+        padding-top: 50px;
         font-size:14px; 
         
         li{
             float: left;
-            height: 427px;
+            height: 327px;
             border-right:1px solid rgb(183,181,181) ;
             &:last-child{
                 border: none;
@@ -166,27 +166,30 @@ footer>div>span:nth-child(2) {
         }
         li:nth-child(1){
             padding-right:90px; 
-            line-height: 33px;
+            line-height: 21px;
+            letter-spacing: 1px;
             .footer-logo{
-                width: 204px;
-                height: 59px;
+                // width: 204px;
+                height: 45px;
             }
             .t{
-                margin-top: 52px;
+                margin-top: 40px;
+                
                 span{
                     display: block;
                 }
             }
             .b{
-                margin-top: 52px;
+                margin-top: 40px;
                 >div{
                     position: relative;
                     width: 340px;
                     display: flex;
+                    padding: 5px 0;
                 }
                 div.img{
-                    width: 25px;
-                    height: 33px;
+                    // width: 25px;
+                    height: 21px;
                     text-align: center; 
                     display: flex;
                     align-items: center;
@@ -214,7 +217,7 @@ footer>div>span:nth-child(2) {
             }
             .title {
                 div:nth-child(1) {
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 div:nth-child(2) {
                     margin-top: 12px;
@@ -223,11 +226,14 @@ footer>div>span:nth-child(2) {
                     height: 3px;
                 }
             }
+            .items:nth-child(2){
+                height: 75px;
+            }
             .items{
                 width: 300px;
                 display: flex;
                 align-items: flex-end;
-                height: 75px;
+                height: 54px;
                 .level{
                     color: #fff;
                     list-style: none;

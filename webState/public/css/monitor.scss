@@ -1,6 +1,7 @@
 .content-one {
     background: #EBEBEB;
     height: 700px;
+    overflow: hidden;
     .box {
         width: 1200px;
         position: relative;
@@ -208,7 +209,7 @@
         width: 1200px;
     }
     .title {
-        margin-top: 100px;
+        padding-top: 100px;
         text-align: center;
         font-size:40px ;
         margin-bottom: 34px;

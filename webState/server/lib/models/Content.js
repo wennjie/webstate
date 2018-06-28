@@ -28,6 +28,7 @@ var ContentSchema = new Schema({
     discription: String,
     date: { type: Date, default: Date.now },
     updateDate: { type: Date, default: Date.now }, // 更新时间
+    // smalDate:{type}
     author: { type: String, ref: 'AdminUser' }, // 文档作者
     uAuthor: { type: String, ref: 'User' }, // 文档作者(普通用户)
     state: { type: Boolean, default: true },  // 是否在前台显示，默认显示

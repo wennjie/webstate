@@ -53,10 +53,20 @@ function checkFormData(req, res, fields) {
         throw new siteFunc.UserException(errMsg);
     }
 }
-
+function renderPage(req,res,data){
+    let render=req.render
+    if(render){
+     res.render(render.page,{
+         title:render.title,
+         data
+     })  
+    }else{
+        res.send(data)
+    }
+}
 class Content {
-    constructor() {
-        // super()
+    constructor(props) {
+        // super(props)
     }
     async getContents(req, res, next) {
         try {
@@ -150,7 +160,7 @@ class Content {
                 select: 'name _id'
             }]).exec();
             const totalItems = await ContentModel.count(queryObj);
-            res.send({
+            let data = {
                 state: 'success',
                 docs: contents,
                 pageInfo: {
@@ -159,7 +169,10 @@ class Content {
                     pageSize: Number(pageSize) || 10,
                     searchkey: searchkey || ''
                 }
-            })
+            }
+            renderPage(req,res,data)
+            
+            
         } catch (err) {
             logUtil.error(err, req)
             res.send({

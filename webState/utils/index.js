@@ -2,8 +2,6 @@
  * 工具集合
  * 
  */
-
-
 exports.mime = require('./mime');
 exports.service = require('./service');
 exports.settings = require('./settings');

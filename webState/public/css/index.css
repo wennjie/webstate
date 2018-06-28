@@ -156,6 +156,125 @@
   overflow: hidden;
   line-height: 18px; }
 
+.content-two {
+  padding: 150px 0;
+  background: #e5e5e5;
+  height: 870px;
+  overflow: hidden;
+  width: 100%; }
+
+.content-two .box {
+  margin: 0 auto;
+  position: relative;
+  overflow: visible; }
+
+.content-two .container-infos {
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  /*overflow: hidden;*/
+  display: flex;
+  justify-content: space-between; }
+
+.content-two .container-infos .container-info {
+  font-size: 14px;
+  position: relative;
+  height: 570px;
+  width: 400px;
+  float: left;
+  text-align: center;
+  background: #fff;
+  transition: all 0.2s;
+  border-right: 1px solid #e5e5e5;
+  z-index: 0;
+  line-height: 1.7em;
+  font-weight: normal;
+  font-size: 12px; }
+
+.content-two .container-infos .container-info .offset-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: all .2s; }
+
+.content-two .container-infos .container-info .titles {
+  height: 49px;
+  margin: 40px 30px 30px 30px;
+  display: block;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 5px;
+  z-index: 1; }
+
+.content-two .container-infos .container-info .titles span {
+  display: block;
+  height: 49px; }
+
+.content-two .container-infos .container-info .container-info-box {
+  padding: 20px 20px;
+  height: 200px;
+  position: relative;
+  z-index: 1; }
+
+.content-two .container-infos .container-info .container-info-box .title {
+  letter-spacing: 5px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 18px; }
+
+.content-two .container-infos .container-info .imgs {
+  height: 250px;
+  width: 100%;
+  overflow: hidden; }
+
+.content-two .container-infos .container-info .imgs div {
+  height: 250px;
+  overflow: hidden;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+  transition: all 0.5s; }
+
+.content-two .container-infos .container-info .more {
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  border-radius: 17px;
+  width: 105px;
+  height: 34px;
+  background: #fff;
+  line-height: 34px;
+  text-align: center;
+  color: #000;
+  margin: 0 auto;
+  font-size: 16px;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -52px; }
+
+.content-two .container-info:hover {
+  color: #FFFFFF;
+  z-index: 1; }
+
+.content-two .container-info:hover .offset-box {
+  background: #a1b1aa;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  top: -30px;
+  bottom: -30px; }
+
+.content-two .container-info:hover .more {
+  color: #000; }
+
+.content-two .container-info:hover .imgs div {
+  transform: scale(1.02); }
+
 .content-three {
   height: 40vw;
   padding-bottom: 0px;
@@ -263,12 +382,29 @@
   height: 100%;
   z-index: 0;
   right: 0px;
-  flex: 1 1 0%;
+  flex: 1 1 0%; }
+
+.content-three .r .about-swiper {
+  width: 100%;
+  height: 100%; }
+
+.content-three .r .about-swiper .swiper-slide {
   background: #000;
-  background: url("../imgs/index/main2-1.jpg");
   background-size: cover !important;
   background-position: 50% 50% !important;
   background-repeat: no-repeat !important; }
+
+.content-three .r .about-swiper .slide1 {
+  background: url("../imgs/index/main2-1.jpg"); }
+
+.content-three .r .about-swiper .slide2 {
+  background: url("../imgs/index/main2-2.jpg"); }
+
+.content-three .r .about-swiper .slide3 {
+  background: url("../imgs/index/main2-3.jpg"); }
+
+.content-three .r .about-swiper .swiper-pagination-bullet {
+  background: #fff; }
 
 .content-four {
   padding-bottom: 60px;
@@ -290,7 +426,7 @@
 
 .content-four .box .news-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 40px; }
 
 .content-four .box .news-box .news {
@@ -299,7 +435,11 @@
   padding: 5px;
   width: 337px;
   height: 380px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: 80px; }
+
+.content-four .box .news-box .news:nth-child(1) {
+  margin-left: 0; }
 
 .content-four .box .news-box .news:hover .new {
   top: 180px; }
@@ -419,6 +559,10 @@
   border-color: #ccc;
   text-decoration: none; }
 
+.content-four .box .read-more a:hover {
+  background: #ebebeb;
+  border-color: #ebebeb; }
+
 .content-five {
   height: 720px;
   overflow: hidden;
@@ -455,7 +599,7 @@
   float: left;
   width: 281px;
   height: 208px;
-  border: 1px solid #999;
+  border: 1px solid #ebebeb;
   box-sizing: border-box;
   padding: 40px 50px; }
 

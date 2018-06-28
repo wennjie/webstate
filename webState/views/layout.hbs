@@ -11,7 +11,7 @@
 
 	{{!--
 	<link href="./css/bootstrap.min.css" rel="stylesheet"> --}}
-	<link rel="stylesheet" href="./css/animate.min.css">
+	<link rel="stylesheet" href="./css/animate.css">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" href="./css/fonts.css">
 	<link rel="stylesheet" href="./css/reset.css">
@@ -60,7 +60,7 @@
 			$('.page').addClass('show')
 			new WOW(
 				{
-					boxClass: 'wj',
+					boxClass: 'wow',
 					animateClass: 'animated',
 					offset: 0,
 					mobile: true,
@@ -80,39 +80,57 @@
 			}).stop().on('mouseleave', function () {
 				$(this).removeClass('active')
 			})
-			$('.img-scroll').imageScroll({
-				image: null,
-				imageAttribute: 'image',
-				container: $('body'),
-				windowObject: $(window),
-				speed: 0,
-
-			});
+			
 
 			//index .
-			new Swiper('.index .swiper-container', {
-				pagination: {
-					el: '.swiper-pagination',
-				},
+			new Swiper('.index .banner-swiper', {
 				loop: true,
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
 				},
+				autoplay: true,
+				delay: 2000
+			});
+			new Swiper('.index .about-swiper', {
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				loop: true,
+				autoplay: true,
+				delay: 2000
+
+
 			});
 			new Swiper('.about .swiper-container', {
 				pagination: {
 					el: '.swiper-pagination',
 				},
-				loop: true,
+				loop: true
 			});
-
-
+			new Swiper('.solution .swiper-container', {
+				slidesPerView: 3,
+				spaceBetween: 90,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				loop: true,
+				autoplay: true,
+				delay: 4000
+			});
+			$('.img-holder').imageScroll({
+				image: null,
+				imageAttribute: 'image',
+				container: $('body'),
+				windowObject: $(window),
+				speed: 0,
+				holderMinHeight:720,
+				holderMaxHeight:720
+			});
+			
 		})
 
 	</script>
-
 </body>
-
-
 </html>

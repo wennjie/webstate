@@ -9,19 +9,21 @@
   align-items: center; }
 
 .solution .border span:nth-child(1) {
-  font-size: 24px; }
+  font-size: 22px;
+  letter-spacing: 2px; }
 
 .solution .border span:nth-child(2) {
   margin-top: 10px;
   width: 30px;
   height: 3px;
-  background: #b63f3f;
+  background: #fbd005;
   display: block; }
 
 .solution .title {
-  margin-top: 115px;
-  font-size: 40px;
-  text-align: center; }
+  padding-top: 115px;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 2px; }
 
 .content-one {
   height: 605px;
@@ -39,13 +41,15 @@
 
 .content-one .box .l span {
   font-size: 28px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  color: #999;
+  letter-spacing: 2px; }
 
 .content-one .box .l span:nth-child(1) {
-  font-size: 60px;
-  font-family: 'SourceHanSerifCN-Heavy';
-  font-weight: bold;
-  margin: 0; }
+  font-size: 50px;
+  margin: 0;
+  color: #333;
+  letter-spacing: 0px; }
 
 .content-one .box .r {
   width: 650px;
@@ -86,6 +90,80 @@
 .content-three .box {
   width: 1300px;
   margin: 0 auto; }
+
+.content-three .box .swiper {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.content-three .box .swiper .swiper-slide {
+  width: 300px;
+  height: 455px;
+  border: 1px solid #e9e5e5;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer; }
+
+.content-three .box .swiper .swiper-slide .imgs {
+  width: 240px;
+  height: 240px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.content-three .box .swiper .swiper-slide .imgs div {
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important; }
+
+.content-three .box .swiper .swiper-slide .imgs img {
+  width: 240px; }
+
+.content-three .box .swiper .swiper-slide p:nth-child(2) {
+  margin-top: 24px;
+  font-size: 22px; }
+
+.content-three .box .swiper .swiper-slide div:nth-child(3) {
+  width: 30px;
+  height: 3px;
+  background: #fbd005;
+  margin: 0 auto;
+  margin-top: 14px; }
+
+.content-three .box .swiper .swiper-slide p:nth-child(4) {
+  margin-top: 18px; }
+
+.content-three .box .swiper .swiper-slide p {
+  font-size: 16px;
+  margin-top: 15px; }
+
+.content-three .box .swiper .swiper-button-prev, .content-three .box .swiper .swiper-button-next {
+  list-style: none;
+  border: none;
+  outline: none;
+  margin-top: -60px; }
 
 .content-four {
   height: 625px;
@@ -129,7 +207,17 @@
 
 .content-five {
   height: 609px;
-  margin: 0; }
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
 
 .content-five .box {
   width: 1300px;
@@ -141,9 +229,8 @@
   width: 523px;
   height: 463px; }
 
-.content-five .box .l span:nth-child(2) {
-  font-size: 44px;
-  margin-top: 52px; }
+.content-five .box .v04-title {
+  font-size: 48px !important; }
 
 .content-six {
   height: 676px;
@@ -170,22 +257,22 @@
   float: left;
   width: 287px;
   height: 126px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(245, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 16px;
   margin: 15px 0; }
 
 .content-six .box .bottom .l ul li:nth-of-type(even) {
   margin-left: 40px; }
 
 .content-six .box .bottom .l ul li div {
-  margin-left: 15px; }
+  margin-left: 40px; }
 
 .content-six .box .bottom .l ul li img {
-  margin-left: 20px;
+  margin-left: 40px;
   height: 48px; }
 
 .content-six .box .bottom .r {
@@ -237,13 +324,13 @@
   border-bottom: 1px solid #999; }
 
 .content-seven .box ul li div:nth-child(2) span {
-  font-size: 24px;
+  font-size: 22px;
   font-family: "SourceHanSerifCN-Bold"; }
 
 .content-seven .box ul li div:nth-child(3) {
   margin: 0 36px;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: #878787;
   display: flex;
   flex-direction: column;

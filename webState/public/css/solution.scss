@@ -1,3 +1,4 @@
+@import '../scsslibs/index.scss';
 .solution {
     background: #f6f6f6;
     .border {
@@ -7,20 +8,22 @@
         flex-direction: column;
         align-items: center;
         span:nth-child(1) {
-            font-size: 24px;
+            font-size: 22px;
+            letter-spacing: 2px;
         }
         span:nth-child(2) {
             margin-top: 10px;
             width: 30px;
             height: 3px;
-            background: rgb(182, 63, 63);
+            background:$color;
             display: block;
         }
     }
     .title {
-        margin-top: 115px;
-        font-size: 40px;
+        padding-top: 115px;
+        font-size: 36px;
         text-align: center;
+        letter-spacing: 2px;
     }
 }
 
@@ -38,12 +41,14 @@
             span {
                 font-size: 28px;
                 margin-top: 30px;
+                color: #999;
+                letter-spacing: 2px;
             }
             span:nth-child(1) {
-                font-size: 60px;
-                font-family: 'SourceHanSerifCN-Heavy';
-                font-weight: bold;
+                font-size: 50px;
                 margin: 0;
+                color: #333;
+                letter-spacing: 0px;
             }
         }
         .r {
@@ -87,7 +92,66 @@
     height: 780px;
     .box {
         width: 1300px;
+        
         margin: 0 auto;
+       
+        .swiper{
+            width: 1080px;
+            margin: 0 auto;
+            margin-top: 80px;
+            @include flexbox;
+            @include align-items(center);
+            .swiper-slide{
+                width:300px ;
+                height: 455px;
+                border: 1px solid #e9e5e5;
+                padding: 30px;
+                text-align: center;
+                cursor: pointer;
+                .imgs{
+                    width: 240px;
+                    height: 240px;
+                    @include flexbox;
+                    @include justify-content(center);
+                    @include align-items(center);
+                    div{
+                        @include fullbg;
+
+                    }
+                    img{
+                        width: 240px;
+                    }
+                }
+                p:nth-child(2){
+                    margin-top: 24px;
+                    font-size:22px; 
+                }
+                div:nth-child(3){
+                    width:30px ;
+                    height: 3px;
+                    background: $color;
+                    margin: 0 auto;
+                    margin-top: 14px;
+                }
+                p:nth-child(4){
+                    margin-top: 18px;
+                }
+                p{
+                    font-size: 16px;
+                    margin-top: 15px;
+
+                }
+            }
+          
+            .swiper-button-prev,.swiper-button-next{
+                list-style: none;
+                border: none;
+                outline:none;
+                margin-top:-60px ;
+            }
+        }
+        
+    
     }
 }
 
@@ -137,6 +201,8 @@
 .content-five {
     height: 609px;
     margin: 0;
+    @include flexbox;
+    @include align-items(center);
     .box {
         width: 1300px;
         margin: 0 auto;
@@ -146,13 +212,12 @@
             width: 523px;
             height: 463px;
         }
-        .l {
-            span:nth-child(2) {
-                font-size: 44px;
-                margin-top: 52px;
-            }
+        .v04-title{
+            font-size: 48px !important;
         }
+       
     }
+   
 }
 
 .content-six {
@@ -178,22 +243,22 @@
                         float: left;
                         width: 287px;
                         height: 126px;
-                        border: 1px solid #fff;
+                        border: 1px solid rgba(245, 255, 255, 0.6);
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
                         line-height: 40px;
-                        font-size: 24px;
+                        font-size: 16px;
                         margin: 15px 0;
                         &:nth-of-type(even) {
                             margin-left: 40px;
                         }
                         div {
-                            margin-left: 15px;
+                            margin-left: 40px;
                             
                         }
                         img{
-                            margin-left:20px;
+                            margin-left:40px;
                             height: 48px;
                         }
                     }
@@ -247,14 +312,14 @@
                     height: 100px;
                     border-bottom: 1px solid #999;
                     span {
-                        font-size: 24px;
+                        font-size: 22px;
                         font-family: "SourceHanSerifCN-Bold";
                     }
                 }
                 div:nth-child(3) {
                     margin: 0 36px;
                     margin-top: 20px;
-                    font-size: 18px;
+                    font-size: 16px;
                     color: rgb(135, 135, 135);
                     display: flex;
                     flex-direction: column;
