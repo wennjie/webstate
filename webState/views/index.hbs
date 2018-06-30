@@ -4,9 +4,22 @@
 	<div class="content-one">
 		<div class="swiper-container banner-swiper">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide slide1"></div>
-				<div class="swiper-slide slide2"></div>
-				<div class="swiper-slide slide3"></div>
+				<div class="swiper-slide slide1" style="background-image: url(../imgs/index/banner/1/A.jpg)">
+				 
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s" style="background-image: url('../imgs/index/banner/1/1.png');" ></div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s" style="background-image: url('../imgs/index/banner/1/2.png');"></div>
+				</div>
+				<div class="swiper-slide slide2" style="background-image: url(../imgs/index/banner/2/Bg.jpg)">
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s" style="background-image: url('../imgs/index/banner/2/B.png');"></div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s" style="background-image: url('../imgs/index/banner/2/1.png');"></div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" style="background-image: url('../imgs/index/banner/2/2.png');"></div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" style="background-image: url('../imgs/index/banner/2/3.png');"></div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.4s" style="background-image: url('../imgs/index/banner/2/4.png');"></div>
+				</div>
+				<div class="swiper-slide slide3" style="background-image: url(../imgs/index/banner/3/C.jpg)">
+					<div style="background-image: url(../imgs/index/banner/3/C.png)" alt="" class="ani" swiper-animate-effect="fadeInUp"
+					 swiper-animate-duration="0.5s" swiper-animate-delay="0s"></div>
+				</div>
 			</div>
 			<!-- Add Pagination -->
 			<div class="swiper-button-prev"></div>
@@ -16,7 +29,7 @@
 		</div>
 		<div class="repeatable ">
 			<div class="border">
-				
+
 				<a href="/v02" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
 					<div>
 						<img src="./imgs/index/banner-icon1.png" alt="">
@@ -55,12 +68,12 @@
 	</div>
 	<div class="content-two">
 		<div class="container-infos box">
-			<div class="container-info">
+			<div class="container-info wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
 
 				<div class="titles">
 					<span>更懂农作物的系列解决方案</span>
 				</div>
-				<div class="imgs" >
+				<div class="imgs">
 					<div style="background-image: url(./imgs/index/main1-1.jpg);">
 
 					</div>
@@ -77,13 +90,13 @@
 				</div>
 				<div class="offset-box"></div>
 			</div>
-			<div class="container-info ">
+			<div class="container-info wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
 				<div class="offset-box"></div>
 				<div class="titles">
 					<span>天麒全自主植保无人机</span>
 				</div>
-				<div class="imgs" >
-				<div style="background-image: url(./imgs/index/main1-2.jpg);"></div>
+				<div class="imgs">
+					<div style="background-image: url(./imgs/index/main1-2.jpg);"></div>
 				</div>
 				<div class="container-info-box">
 
@@ -98,7 +111,7 @@
 					<div class="more">More...</div>
 				</div>
 			</div>
-			<div class="container-info ">
+			<div class="container-info wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
 				<div class="offset-box"></div>
 				<div class="titles">
 					<span>无人机无人化的无人值守体系
@@ -135,7 +148,7 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="t wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.1s" >
+			<div class="t wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.1s">
 				<div class="imgs"></div>
 			</div>
 			<div class="b">
@@ -156,25 +169,25 @@
 			</div>
 			<div class="news-box">
 				{{#each data.docs}}
-				<a href="/news/{{this._id}}" class="news wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
+				<a href="/news/{{this._id}}.html" class="news wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
 					<div class="new">
 						<p class="news-title">
 							{{this.title}}
 						</p>
 						<div class="new-line"></div>
 						<div class="news-titme">
-							<p>{{this.updateDate}}</p>
+							<p>{{this.date}}</p>
 						</div>
 						<p class="news-content">
 							{{this.discription}}
 						</p>
 					</div>
-					<div class="news-img">
-						<img src="{{this.sImg}}" alt="">
+					<div class="news-img" style="background:url({{this.sImg}})">
+						{{!-- <img src="{{}}" alt=""> --}}
 					</div>
 				</a>
 				{{/each}}
-				
+
 			</div>
 			<div class="read-more wow fadeInUp " data-wow-duration="0.5s" data-wow-delay="0.1s">
 				<a class="btn-default btn bsbutton_bmayCG" href="/news" sizes="" type="button" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); transform-origin: 50% 50% 0px;">read more</a>
@@ -256,7 +269,7 @@
 			</ul>
 		</div>
 	</div>
-	
+
 	<div class="content-six">
 		<div class="box">
 			<ul>

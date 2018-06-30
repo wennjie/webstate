@@ -9,7 +9,7 @@
                 </template>
             </el-table-column>
             <el-table-column prop="title" label="标题" width="200" show-overflow-tooltip>
-                <template slot-scope="scope"><a :href="'/details/'+scope.row._id+'.html'" target="_blank">{{scope.row.title}}</a></template>
+                <template slot-scope="scope"><a :href="'/news/'+scope.row._id+'.html'" target="_blank">{{scope.row.title}}</a></template>
             </el-table-column>
             <el-table-column prop="date" label="创建时间" width="180">
                 <template slot-scope="scope">{{scope.row.updateDate}}</template>
@@ -22,8 +22,8 @@
             </el-table-column>
             <el-table-column prop="clickNum" label="点击" show-overflow-tooltip>
             </el-table-column>
-            <el-table-column prop="commentNum" label="评论数" show-overflow-tooltip>
-            </el-table-column>
+            <!-- <el-table-column prop="commentNum" label="评论数" show-overflow-tooltip>
+            </el-table-column> -->
             <el-table-column prop="state" label="显示" show-overflow-tooltip>
                 <template slot-scope="scope">
                     <i :class="scope.row.state ? 'fa fa-check-circle' : 'fa fa-minus-circle'" :style="scope.row.state ? green : red"></i>

@@ -83,12 +83,13 @@
 
 .content-two .box ul li .news-list .l .l-time p {
   margin-bottom: 0px;
-  font-size: 36px;
+  font-size: 32px;
   width: 500px;
   position: relative;
   color: #999999;
   line-height: 1em;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  font-family: 'SourceHanSansCN-Light'; }
 
 .content-two .box ul li .news-list .l img {
   width: 20px; }
@@ -173,3 +174,26 @@
 .content-two .box ul li a:hover .r-r {
   transform: rotate(10deg) scale(1.9) translate(0%, 0%);
   padding-right: 0 !important; }
+
+.content-two .paging {
+  display: flex !important;
+  justify-content: flex-start !important;
+  height: 40px !important;
+  margin-top: 70px;
+  display: flex !important; }
+
+.content-two .paging li {
+  margin: 0;
+  padding: 0 !important;
+  width: 40px !important;
+  list-style: none;
+  line-height: 40px; }
+
+.content-two .paging li a {
+  color: #a4a4a4; }
+
+.content-two .paging li.active a {
+  color: #333; }
+
+.content-two .paging li:hover a {
+  color: #333; }

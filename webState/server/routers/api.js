@@ -13,7 +13,7 @@ const {
 } = require('../../utils');
 const authUser = require('../../utils/middleware/authUser');
 
-const { AdminUser, ContentCategory, Content, ContentTag, User, Message, SystemConfig, UserNotify, Ads } = require('../lib/controller');
+const { AdminUser, ContentCategory, Content, ContentTag, User, Message,leaveMessage, SystemConfig, UserNotify, Ads } = require('../lib/controller');
 const _ = require('lodash');
 const qr = require('qr-image')
 
@@ -133,5 +133,12 @@ router.get('/ads/getOne', (req, res, next) => { req.query.state = true; next() }
 // 获取可见的所有广告信息
 router.get('/ads/getAll', (req, res, next) => { req.query.state = true; next() }, Ads.getAds)
 
+// 6/30 wj 
+
+
+// 获取用户留言列表
+router.get('/leaveMessage/getList', leaveMessage.getLeveMessage)
+
+router.post('/leaveMessage/post', leaveMessage.postLeaveMessage)
 
 module.exports = router

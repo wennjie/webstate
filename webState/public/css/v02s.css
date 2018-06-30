@@ -8,20 +8,20 @@
   background-color: rgba(67, 67, 67, 0);
   color: #fff; }
 
-.content-one > div {
+.content-one div {
   margin: 0 auto;
   width: 1200px;
   padding-top: 250px; }
 
-.content-one > div > p {
+.content-one div p {
   margin: 0;
   font-size: 36px;
   margin-top: 16px; }
 
-.content-one > div > p:nth-child(2) {
+.content-one div p:nth-child(2) {
   margin: 0; }
 
-.content-one > div > h1 {
+.content-one div img {
   font-size: 80px;
   margin-bottom: 40px; }
 
@@ -167,7 +167,8 @@
   width: 100%;
   text-align: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 14px; }
 
 .content-three .content-three-box ul .img {
   height: 79px;
@@ -179,7 +180,7 @@
 
 .content-three .content-three-box ul li {
   color: #cccccc;
-  width: 130px; }
+  width: 160px; }
 
 .content-three .content-three-box ul h3 {
   margin-bottom: 36px;
@@ -257,3 +258,6 @@
 
 .carousel-3d-container {
   overflow: visible !important; }
+
+.carousel-3d-slide {
+  border-color: #EBEBEB !important; }

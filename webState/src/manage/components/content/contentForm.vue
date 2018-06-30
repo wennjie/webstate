@@ -10,7 +10,7 @@
             <el-form-item label="来源" prop="from">
                 <el-radio class="radio" v-model="formState.formData.from" label="1">原创</el-radio>
                 <el-radio class="radio" v-model="formState.formData.from" label="2">转载</el-radio>
-                <el-radio class="radio" v-model="formState.formData.from" label="3">用户发布</el-radio>
+                <!-- <el-radio class="radio" v-model="formState.formData.from" label="3">用户发布</el-radio> -->
             </el-form-item>
             <el-form-item label="发布" prop="state">
                 <el-switch on-text="是" off-text="否" v-model="formState.formData.state"></el-switch>

@@ -21,18 +21,14 @@ class Message {
             let current = req.query.current || 1;
             let pageSize = req.query.pageSize || 10;
             let searchkey = req.query.searchkey;
-            let contentId = req.query.contentId;
             let author = req.query.user;
             let queryObj = {};
-            if (contentId) {
-                queryObj.contentId = contentId;
-            }
             if (searchkey) {
                 let reKey = new RegExp(searchkey, 'i')
                 queryObj.content = { $regex: reKey }
             }
-            if (author) {
-                queryObj.author = author;
+            if (name) {
+                queryObj.name = name;
             }
             const messages = await MessageModel.find(queryObj).sort({
                 date: -1
@@ -78,12 +74,6 @@ class Message {
         form.parse(req, async (err, fields, files) => {
             try {
                 let errMsg = '';
-                if (_.isEmpty(req.session.user) && _.isEmpty(req.session.adminUserInfo)) {
-                    errMsg = '非法操作，请稍后重试！'
-                }
-                if (!shortid.isValid(fields.contentId)) {
-                    errMsg = '请针对指定文章进行评论！'
-                }
                 if (fields.content && (fields.content.length < 5 || fields.content.length > 200)) {
                     errMsg = '留言内容为5-200字'
                 }

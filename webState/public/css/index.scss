@@ -11,17 +11,15 @@
         @include fullbg;
         position: relative;
         background: #999;
-        position: relative;
-        z-index: 1;
+        z-index: 1;  
     }
-    .slide1 {
-        background-image: url(../imgs/index/banner-A.jpg)
-    }
-    .slide2 {
-        background-image: url(../imgs//index//banner-B.jpg)
-    }
-    .slide3 {
-        background-image: url(../imgs/index/banner-C.jpg)
+    .swiper-slide{
+       div{
+        @include fullbg;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+       }
     }
     .repeatable {
         width: 90%;
@@ -131,8 +129,7 @@
             text-align: center;
             background: #fff;
             transition: all 0.2s;
-            border-right: 1px solid #e5e5e5;
-            // flex: 1;
+            border-right: 1px solid #e5e5e5; // flex: 1;
             z-index: 0;
             .offset-box {
                 position: absolute;
@@ -175,7 +172,7 @@
                 height: 250px;
                 width: 100%;
                 overflow: hidden;
-                div{
+                div {
                     height: 250px;
                     overflow: hidden;
                     width: 100%;
@@ -198,8 +195,7 @@
                 line-height: 34px;
                 text-align: center;
                 color: #000;
-                margin: 0 auto;
-                // margin-top: 20px;
+                margin: 0 auto; // margin-top: 20px;
                 font-size: 16px;
                 bottom: 25px;
                 left: 50%;
@@ -220,10 +216,10 @@
         .more {
             color: #000;
         }
-        .imgs{
-           div{
-            transform: scale(1.02)
-           }
+        .imgs {
+            div {
+                transform: scale(1.02)
+            }
         }
     }
 }
@@ -351,7 +347,7 @@
             .slide3 {
                 background: url('../imgs/index/main2-3.jpg');
             }
-            .swiper-pagination-bullet{
+            .swiper-pagination-bullet {
                 background: #fff;
             }
         }
@@ -378,7 +374,7 @@
         }
         .news-box {
             display: flex;
-            justify-content:flex-start;
+            justify-content: flex-start;
             margin-top: 40px;
             .news {
                 display: block;
@@ -388,9 +384,8 @@
                 height: 380px;
                 overflow: hidden;
                 margin-left: 80px;
-                &:nth-child(1){
+                &:nth-child(1) {
                     margin-left: 0;
-                    
                 }
                 &:hover {
                     .new {
@@ -398,10 +393,11 @@
                     }
                     .news-img {
                         top: -180px;
+                        
                     }
                 }
                 .new {
-                    height: 180px;
+                    height: 185px;
                     position: relative;
                     transition: all 0.5s ease;
                     top: 0px;
@@ -447,7 +443,7 @@
                 }
                 .news-img {
                     position: relative;
-                    top: 0;
+                    top: 10px;
                     width: 100%;
                     height: 150px;
                     overflow: hidden;
@@ -455,6 +451,7 @@
                     justify-content: center;
                     align-items: center;
                     transition: all 0.5s ease;
+                    @include fullbg;
                     img {
                         width: 100%;
                     }
@@ -512,10 +509,9 @@
                 background-color: #fff;
                 border-color: #ccc;
                 text-decoration: none;
-                
-                &:hover{
+                &:hover {
                     background: #ebebeb;
-                    border-color:#ebebeb ;
+                    border-color: #ebebeb;
                 }
             }
         }
@@ -619,6 +615,7 @@
                             font-size: 30px;
                             float: left;
                             line-height: 35px;
+                            font-family: 'impact';
                         }
                         p {
                             font-size: 16px;

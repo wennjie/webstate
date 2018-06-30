@@ -8,9 +8,12 @@
     background-color: rgba(67, 67, 67, 0);
     .box {
         width: 1200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include display-flex(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        img {
+            width: 1100px;
+        }
         img:nth-child(2) {
             margin-top: 60px;
         }
@@ -18,19 +21,19 @@
 }
 
 .content-two {
-    height: 1120px;
+    height: 1020px;
     .title {
-        font-size: 30px;
+        font-size: 22px;
         letter-spacing: 4px;
     }
     .box {
         display: flex;
         padding: 0 20px;
-        padding-top: 135px;
+        padding-top: 100px;
         .l {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
+            @include display-flex(flex);
+            @include flex(1);
+            @include flex-direction(column);
             img {
                 width: 207px;
                 height: 58px;
@@ -39,70 +42,78 @@
                 margin-top: 35px;
             }
             span:nth-child(3) {
-                font-size: 24px;
+                font-size: 14px;
                 letter-spacing: 3px;
                 color: rgb(100, 100, 100);
                 margin-top: 12px;
             }
         }
         .r {
-            display: flex;
-            flex-direction: column;
+            @include display-flex(flex);
+            @include flex-direction(column);
             width: 672px;
-            .info{
+            .info {
                 margin-top: 35px;
-                font-size:16px ;
+                font-size: 14px;
                 letter-spacing: 1px;
                 line-height: 33px;
-                 color: rgb(100, 100, 100);
+                color: rgb(100, 100, 100);
             }
-            img:nth-child(3){
-                 margin: 43px 0;
-                 width: 600px;
+            img:nth-child(3) {
+                margin: 43px 0;
+                width: 600px;
             }
-            .swiper{
+            .swiper {
                 margin-top: 35px;
                 width: 100%;
                 height: 417px;
                 border: 1px solid #e5e5e5e5;
-
-                }
+            }
         }
     }
 }
+
 .swiper-container,
-    .swiper-wrapper,
-    .swiper-slide {
-  width: 100%;
-  height: 417px;
-@include fullbg;
-  position: relative;
+.swiper-wrapper,
+.swiper-slide {
+    width: 100%;
+    height: 417px;
+    @include fullbg;
+    position: relative;
 }
+
 .slide1 {
-  background-image: url(../imgs/about/picture1.png);
+    background-image: url(../imgs/about/picture1.png);
 }
+
 .slide2 {
-  background-image: url(../imgs/about/picture2.png);
+    background-image: url(../imgs/about/picture2.png);
 }
+
 .slide3 {
-  background-image: url(../imgs/about/picture3.png);
+    background-image: url(../imgs/about/picture3.png);
 }
+
 .slide4 {
-  background-image: url(../imgs/about/picture4.png);
+    background-image: url(../imgs/about/picture4.png);
 }
+
 .slide5 {
-  background-image: url(../imgs/about/picture5.png);
+    background-image: url(../imgs/about/picture5.png);
 }
+
 .slide6 {
-  background-image: url(../imgs/about/picture6.png);
+    background-image: url(../imgs/about/picture6.png);
 }
+
 .slide7 {
-  background-image: url(../imgs/about/picture7.png);
+    background-image: url(../imgs/about/picture7.png);
 }
-.swiper-pagination-bullet{
-	width: 17px;
-	height: 5px;
+
+.swiper-pagination-bullet {
+    width: 17px;
+    height: 5px;
     margin: 0 2px;
-    background: rgba(255,255,255,0.6);
-    border-radius:0; 
+    background: rgba(255, 255, 255, 0.6);
+    @include border-radius(0);
 }

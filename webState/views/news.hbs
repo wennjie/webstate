@@ -5,11 +5,10 @@
     </div>
     <div class="content-two">
         <div class="box">
-            <ul>
-               {{data.docs}}
+            <ul data-current="{{data.pageInfo.current}}" data-pageSize='{{data.pageInfo.pageSize}}' data-totalItems='{{data.pageInfo.totalItems}}'>
                 {{#each data.docs}}
-                <li>
-                    <a href="">
+                <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.{{@index}}s">
+                    <a href="/news/{{this._id}}.html">
                         <div class="news-list">
                         <div class="l">
                             <div class="rborder"></div>
@@ -34,9 +33,7 @@
                 </li>
                 {{/each}}
             </ul>
+            <div class="paging"></div>
         </div>
     </div>
 </div>
-<script>
-    console.log(` {{data}}`)
-</script>

@@ -1,28 +1,28 @@
 <template>
     <div>
         <el-table align="center" v-loading="loading" ref="multipleTable" :data="dataList" tooltip-effect="dark" style="width: 100%" @selection-change="handleMsgSelectionChange">
-            <el-table-column type="selection" width="55">
+            <!-- <el-table-column type="selection" width="55">
+            </el-table-column> -->
+            <el-table-column prop="name" label="留言者" width="100">
             </el-table-column>
-            <el-table-column prop="contentId.stitle" label="文章标题" width="200">
+            <el-table-column prop="telphone" label="电话" width="150" show-overflow-tooltip>
+                <template slot-scope="scope">{{scope.row.telphone}}</template>
             </el-table-column>
-            <el-table-column prop="content" label="留言内容" width="280" show-overflow-tooltip>
-                <template slot-scope="scope">{{scope.row.content | cutWords(20)}}</template>
+            <el-table-column prop="email" label="邮箱" width="150">
+                <template slot-scope="scope">{{scope.row.email}}</template>
             </el-table-column>
-            <el-table-column prop="author" label="留言者">
-                <template slot-scope="scope">{{scope.row.utype ==='0'?(scope.row.author?scope.row.author.userName:'匿名'):(scope.row.adminAuthor?scope.row.adminAuthor.userName:'')}}</template>
+            <el-table-column prop="date" label="时间" width="100">
+                <template slot-scope="scope">{{scope.row.date }}</template>
             </el-table-column>
-            <el-table-column prop="replyAuthor" label="关联用户(被回复)">
-                <template slot-scope="scope">{{scope.row.replyAuthor ? scope.row.replyAuthor.userName :(scope.row.adminReplyAuthor ? scope.row.adminReplyAuthor.userName : '')}}</template>
+            <el-table-column prop="content" label="内容">
+                <template slot-scope="scope">{{scope.row.content}}</template>
             </el-table-column>
-            <el-table-column prop="date" label="时间">
-                <template slot-scope="scope">{{scope.row.date}}</template>
-            </el-table-column>
-            <el-table-column label="操作" width="150" fixed="right">
+            <!-- <el-table-column label="操作" width="150" fixed="right">
                 <template slot-scope="scope">
                     <el-button size="mini" type="primary" plain round @click="replyContentMessage(scope.$index, dataList)"><i class="fa fa-mail-reply" aria-hidden="true"></i></el-button>
                     <el-button size="mini" type="danger" plain round icon="el-icon-delete" @click="deleteContentMessage(scope.$index, dataList)"></el-button>
                 </template>
-            </el-table-column>
+            </el-table-column> -->
         </el-table>
     </div>
 </template>

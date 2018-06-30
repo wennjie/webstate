@@ -131,15 +131,15 @@ export default {
     },
 
     contentMessageList(params) {
-        return reqJsonData('manage/contentMessage/getList', params, 'get')
+        return reqJsonData('manage/leaveMessage/getList', params, 'get')
     },
 
     addContentMessage(params) {
-        return reqJsonData('manage/contentMessage/addOne', params)
+        return reqJsonData('manage/leaveMessage/addOne', params)
     },
 
     deleteContentMessage(params) {
-        return reqJsonData('manage/contentMessage/deleteMessage', params, 'get')
+        return reqJsonData('manage/leaveMessage/deleteMessage', params, 'get')
     },
 
     regUserList(params) {

@@ -48,7 +48,7 @@ ContentSchema.set('toJSON', { getters: true, virtuals: true });
 ContentSchema.set('toObject', { getters: true, virtuals: true });
 
 ContentSchema.path('date').get(function (v) {
-    return moment(v).startOf('hour').fromNow();
+    return moment(v).format("MM-DD");
 });
 ContentSchema.path('updateDate').get(function (v) {
     return moment(v).format("YYYY-MM-DD");

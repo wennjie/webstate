@@ -6,38 +6,40 @@
     </div>
     <div class="content-two">
         <div class="box">
-            <div class="title">
+            <div class="title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
                 <p>联系我们</p>
                 <p>Contact us</p>
             </div>
-            <form class="c-form" data-action="/form/d4mkxe/?format=json" data-c_form="true">
-                <input class="c-input" name="name" placeholder="姓名" required="True" type="text">
-                <input class="c-input " name="telphne" placeholder="电话" required="True" type="text">
-                <input class="c-input " name="email" placeholder="Email" required="True" type="email">
-                <textarea class="c-input c-textarea" name="cntent" placeholder="内容" required="True"></textarea>
-                <button class="" name="" type="submit" wait="">SUBMIT</button>
+            <form class="c-form wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s" method="POST" enctype="multipart/form-data" id="form" method="post" action="#">
+                <div class="form-show">
+                    <input class="c-input" name="name" placeholder="姓名" required="false" type="text" max='16' min='2'>
+                    <input class="c-input " name="telphone" placeholder="电话" required="True" type="number" >
+                    <input class="c-input " name="email" placeholder="Email" required="True" type="email">
+                    <textarea class="c-input c-textarea" name="content" placeholder="内容" required="True" maxlength='200'></textarea>
+                    <button class="" name="" type="submit" wait="">SUBMIT</button>
+                </div>
                 <h3 class="c-successmessage">谢谢,表单已提交成功！</h3>
                 <h4 class="c-errormessage">请完整填写表单的信息后，再进行提交！</h4>
             </form>
 
             <div class="list">
                 <ul>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
                         <img src="./imgs/contact/phone.png" alt="">
                         <p>联系客服</p>
                         <p>400-117-7757</p>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                         <img src="./imgs/contact/email.png" alt="">
                         <p>电子邮箱</p>
                         <p>marketing@skylinuav.com</p>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                         <img src="./imgs/contact/time.png" alt="">
                         <p>服务时间</p>
                         <p>周一至周五9:00-18:00 </p>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
                         <img src="./imgs/contact/location.png" alt="">
                         <p>公司地址</p>
                         <p>四川省成都市天府大道中段萃华路99号成都国际节能大厦A座3405号</p>
@@ -45,7 +47,7 @@
                 </ul>
 
             </div>
-            <div id="map"></div>
+            <div id="map" class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s"></div>
         </div>
     </div>
 </div>
@@ -54,7 +56,7 @@
     var map = new BMap.Map("map");
     var point = new BMap.Point(104.0727050000, 30.5552440000)
     map.centerAndZoom(point, 18);
-    map.enableScrollWheelZoom(true);  
+    map.enableScrollWheelZoom(true);
     // 添加带有定位的导航控件
     var navigationControl = new BMap.NavigationControl({
         // 靠左上角位置

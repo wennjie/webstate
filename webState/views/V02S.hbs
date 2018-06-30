@@ -3,9 +3,9 @@
 <div class="v02s app">
 	<div class="content-one">
 		<div class="wj bounceInDown">
-			<h1>V02S</h1>
-			<p>力造全新精准农业</p>
-			<p>让植保更简单</p>
+			<img src="./imgs/v02s/v02s-logo.png" alt="" class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
+			<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">力造全新精准农业</p>
+			<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">让植保更简单</p>
 		</div>
 	</div>
 	<div class="content-two">
@@ -130,7 +130,7 @@
 		<p class="info">一控多机，任务一键执行，优化航线算法，操作得心应手</p>
 		<div class="swiper">
 			<carousel-3d :perspective="0" :display="5" :width="365" :height="650" :space="280" :inverse-scaling="0">
-				<slide :index="index" class="slide" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/phone_img"+(index+1)+".png)"}'></slide>
+				<slide :index="index" :key='index' class="slide" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/phone_img"+(index+1)+".png)"}'></slide>
 			</carousel-3d>
 		</div>
 
@@ -138,7 +138,7 @@
 	<div class="content-five">
 		<div class="five-box">
 			<carousel-3d :perspective="0" :display="3" :width="400" :height="250" :space="500" :inverse-scaling="100"  @after-slide-change="onAfterSlideChange" @before-slide-change="onBeforeSlideChange" >
-				<slide :index="index" ref='fly' class="fly" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/1.4"+(index+4)+".png)"}'></slide>
+				<slide :index="index" :key='index'ref='fly' class="fly" v-for='(n,index) in 5' :style='{background:"url(./imgs/v02s/1.4"+(index+4)+".png)"}'></slide>
 			</carousel-3d>
 			<ul class="crea">
 				<li v-for='n in 5' :class='{"active":(n==pIndex)}'></li>

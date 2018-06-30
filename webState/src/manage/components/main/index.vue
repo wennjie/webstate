@@ -41,9 +41,9 @@
                         <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
                             <StaticPannel icon="fa-user" :num="basicInfo.adminUserCount" type="primary" text="管理员总数"/>
                         </el-col>
-                        <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
+                        <!-- <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
                             <StaticPannel icon="fa-users" :num="basicInfo.regUserCount" type="success" text="注册用户"/>
-                        </el-col>
+                        </el-col> -->
                         <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
                             <StaticPannel icon="fa-file-text-o" :num="basicInfo.contentCount" type="warning" text="文档总数"/>
                         </el-col>
@@ -79,60 +79,6 @@
                                     <el-button size="small" type="danger" plain round @click="getToPage('backUpData')">
                                         <i class="fa fa-fw fa-database"></i> 数据备份</el-button>
                                 </li>
-                            </ul>
-                        </div>
-                    </el-card>
-                </div>
-            </el-col>
-        </el-row>
-        <el-row :gutter="15">
-            <el-col :span="12">
-                <div class="grid-content bg-purple-light">
-                    <el-card class="box-card pannel-box">
-                        <div slot="header" class="clearfix">
-                            <span>近期评论</span>
-                        </div>
-                        <div class="box-body">
-                            <div class="row user-messages">
-                                <div v-if="basicInfo.messages && basicInfo.messages.length > 0">
-                                    <div class="direct-chat-msg" v-for="msg in basicInfo.messages" :key="msg._id">
-                                        <div class="direct-chat-info clearfix">
-                                            <span class="direct-chat-name pull-left">
-                                                <a href="#">{{msg.utype =='0'?msg.author.userName:msg.adminAuthor.userName}}</a>
-                                                在
-                                                <a class="direct-chat-contentTitle" :href="'/details/'+msg.contentId._id+'.html'" target="_blank">{{msg.contentId.stitle | cutWords(25)}}</a> 中{{msg.utype =='0'?'说':`回复 `}}
-                                                <a href="#">{{msg.utype =='1'?(msg.replyAuthor ? msg.replyAuthor.userName : (msg.adminReplyAuthor ? msg.adminReplyAuthor.userName : '')) : ''}}</a>
-                                            </span>
-                                            <span class="direct-chat-timestamp pull-right">
-                                                <i class="fa fa-clock-o"></i>
-                                                <span>{{msg.date}}</span>
-                                            </span>
-                                        </div>
-                                        <img alt="message user image" :src="msg.utype =='0'?msg.author.logo:msg.adminAuthor.logo" class="direct-chat-img">
-                                        <div class="direct-chat-text" v-html="msg.content"></div>
-                                    </div>
-                                </div>
-                                <div v-else>暂无数据</div>
-                            </div>
-                        </div>
-                    </el-card>
-                </div>
-            </el-col>
-            <el-col :span="12">
-                <div class="grid-content bg-purple">
-                    <el-card class="box-card pannel-box">
-                        <div slot="header" class="clearfix">
-                            <span>新注册用户</span>
-                        </div>
-                        <div class="box-body">
-                            <ul class="row user-list">
-                                <div v-if="basicInfo.regUsers && basicInfo.regUsers.length > 0">
-                                    <li v-for="user in basicInfo.regUsers" :key="user._id">
-                                        <img :src="user.logo" :alt="user.userName" :title="user.userName" />
-                                        <span>{{user.userName | cutWords(8)}}</span>
-                                    </li>
-                                </div>
-                                <div v-else>暂无数据</div>
                             </ul>
                         </div>
                     </el-card>

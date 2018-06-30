@@ -77,12 +77,13 @@
                             min-height: 60px;
                             p {
                                 margin-bottom: 0px;
-                                font-size: 36px;
+                                font-size: 32px;
                                 width: 500px;
                                 position: relative; // left: -90px;
                                 color: rgb(153, 153, 153);
                                 line-height: 1em;
                                 transition: all 0.5s ease;
+                                font-family: 'SourceHanSansCN-Light';
                             }
                         }
                         img {
@@ -179,4 +180,33 @@
             }
         }
     }
+    .paging{
+        display: flex !important;
+        justify-content: flex-start !important;
+        height: 40px !important;
+        margin-top: 70px;
+        display: flex !important;
+        // width: 200px !important;
+        li{
+            margin: 0;
+            padding: 0 !important;
+            width: 40px !important;
+            list-style: none;
+            line-height: 40px;
+            a{
+                color: rgb(164, 164, 164);
+            }
+            &.active{
+                a{
+                    color: #333;
+                }
+            }
+            &:hover{
+                a{
+                    color: #333;
+                }
+            }
+        }
+    }
+ 
 }

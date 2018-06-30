@@ -10,6 +10,7 @@ const {
   ContentTag,
   User,
   Message,
+  leaveMessage,
   SystemConfig,
   DataOptionLog,
   SystemOptionLog,
@@ -217,4 +218,15 @@ router.post('/ads/updateOne', authToken, authPower, Ads.updateAds);
 router.get('/ads/delete', authToken, authPower, Ads.delAds);
 
 
+
+
+/**
+ * 留言 wj
+ */
+
+router.get('/leaveMessage/getList', authToken, leaveMessage.getLeveMessage)
+
+router.post('/leaveMessage/addOne', authToken, authPower, leaveMessage.postLeaveMessage)
+
+router.get('/leaveMessage/deleteMessage', authToken, authPower, leaveMessage.delLeaveMessage)
 module.exports = router

@@ -13,17 +13,15 @@
   background-repeat: no-repeat !important;
   position: relative;
   background: #999;
-  position: relative;
   z-index: 1; }
 
-.content-one .slide1 {
-  background-image: url(../imgs/index/banner-A.jpg); }
-
-.content-one .slide2 {
-  background-image: url(../imgs//index//banner-B.jpg); }
-
-.content-one .slide3 {
-  background-image: url(../imgs/index/banner-C.jpg); }
+.content-one .swiper-slide div {
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
 
 .content-one .repeatable {
   width: 90%;
@@ -448,7 +446,7 @@
   top: -180px; }
 
 .content-four .box .news-box .news .new {
-  height: 180px;
+  height: 185px;
   position: relative;
   transition: all 0.5s ease;
   top: 0px;
@@ -494,14 +492,17 @@
 
 .content-four .box .news-box .news .news-img {
   position: relative;
-  top: 0;
+  top: 10px;
   width: 100%;
   height: 150px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important; }
 
 .content-four .box .news-box .news .news-img img {
   width: 100%; }
@@ -709,7 +710,8 @@
 .content-six .box ul li .l .t h1 {
   font-size: 30px;
   float: left;
-  line-height: 35px; }
+  line-height: 35px;
+  font-family: 'impact'; }
 
 .content-six .box ul li .l .t p {
   font-size: 16px;

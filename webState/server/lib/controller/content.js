@@ -57,7 +57,7 @@ function renderPage(req,res,data){
     let render=req.render
     if(render){
      res.render(render.page,{
-         title:render.title,
+         seo:render.seo,
          data
      })  
     }else{
@@ -173,6 +173,7 @@ class Content {
             renderPage(req,res,data)
             
             
+            
         } catch (err) {
             logUtil.error(err, req)
             res.send({
@@ -213,12 +214,17 @@ class Content {
             // 推荐文章查询
             const totalContents = await ContentModel.count({});
             const randomArticles = await ContentModel.find({}, 'stitle sImg').skip(Math.floor(totalContents * Math.random())).limit(6);
-            res.send({
+            let data = {
                 state: 'success',
                 doc: content || {},
                 // messages,
                 randomArticles
-            })
+            }
+            req.render.seo.title=content.title
+            req.render.seo.Keywords=content.title
+            req.render.seo.description=content.discription
+            renderPage(req,res,data)
+            // return 
 
         } catch (err) {
             logUtil.error(err, req)
