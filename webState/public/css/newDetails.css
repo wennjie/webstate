@@ -1,22 +1,27 @@
 .newDetails {
   margin-top: 90px; }
-  .newDetails .box {
-    width: 1200px;
-    margin: 0 auto; }
-  .newDetails .title {
-    padding-top: 40px;
-    text-align: center; }
-    .newDetails .title h2 {
-      margin-bottom: 10px;
-      font-size: 18px; }
-    .newDetails .title p {
-      font-size: 13px;
-      color: #999999;
-      font-family: SimSun;
-      margin-left: 5px;
-      margin-right: 5px; }
-  .newDetails .content {
-    min-height: 500px;
-    margin-top: 30px;
-    text-align: left;
-    margin-bottom: 30px; }
+
+.newDetails .box {
+  width: 1200px;
+  margin: 0 auto; }
+
+.newDetails .title {
+  padding-top: 40px;
+  text-align: center; }
+
+.newDetails .title h2 {
+  margin-bottom: 10px;
+  font-size: 18px; }
+
+.newDetails .title p {
+  font-size: 13px;
+  color: #999999;
+  font-family: 'SimSun';
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.newDetails .content {
+  min-height: 500px;
+  margin-top: 30px;
+  text-align: left;
+  margin-bottom: 30px; }

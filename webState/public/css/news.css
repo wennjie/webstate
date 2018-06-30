@@ -30,7 +30,12 @@
   min-height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
   padding: 0px;
   border-type: border-bottom;
   float: none;
@@ -88,6 +93,9 @@
   position: relative;
   color: #999999;
   line-height: 1em;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: 'SourceHanSansCN-Light'; }
 
@@ -104,6 +112,9 @@
   height: 220px;
   width: 440px;
   padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .content-two .box ul li .news-list .r .r-l {
@@ -153,6 +164,9 @@
   overflow: hidden; }
 
 .content-two .box ul li .news-list .r .r-r div .imgs {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background-size: cover !important;
   background-position: 50% 50% !important;
@@ -169,18 +183,27 @@
   padding-left: 10px; }
 
 .content-two .box ul li a:hover .imgs {
+  -webkit-transform: rotate(0deg) scale(1.02) translate(10px, 0);
+  -moz-transform: rotate(0deg) scale(1.02) translate(10px, 0);
+  -ms-transform: rotate(0deg) scale(1.02) translate(10px, 0);
+  -o-transform: rotate(0deg) scale(1.02) translate(10px, 0);
   transform: rotate(0deg) scale(1.02) translate(10px, 0); }
 
 .content-two .box ul li a:hover .r-r {
+  -webkit-transform: rotate(10deg) scale(1.9) translate(0%, 0%);
+  -moz-transform: rotate(10deg) scale(1.9) translate(0%, 0%);
+  -ms-transform: rotate(10deg) scale(1.9) translate(0%, 0%);
+  -o-transform: rotate(10deg) scale(1.9) translate(0%, 0%);
   transform: rotate(10deg) scale(1.9) translate(0%, 0%);
   padding-right: 0 !important; }
 
 .content-two .paging {
+  display: -webkit-flex !important;
   display: flex !important;
+  -webkit-justify-content: flex-start !important;
   justify-content: flex-start !important;
   height: 40px !important;
-  margin-top: 70px;
-  display: flex !important; }
+  margin-top: 70px; }
 
 .content-two .paging li {
   margin: 0;

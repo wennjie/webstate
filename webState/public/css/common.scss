@@ -4,12 +4,14 @@ html {
     min-width: 1300px;
     overflow-x: hidden;
 }
-a{
+
+a {
     text-decoration: none;
-    *{
+    * {
         color: #333;
     }
 }
+
 header {
     width: 100%;
     height: 79px;
@@ -17,20 +19,20 @@ header {
     position: fixed;
     top: 0;
     z-index: 4;
-    font-size:16px ;
+    font-size: 16px;
     min-width: 1200px;
-     a{ 
-            text-decoration:none;
-           @include transition(all 0.1s);
-            color: #000000;
-            height: 100%;
-            display: block;
-            &:hover{
-              color: #999999;     
-            }
-        } 
-    .header{
-        border-bottom:1px solid #E5E5E5 ;
+    a {
+        text-decoration: none;
+        @include transition(all 0.1s);
+        color: #000000;
+        height: 100%;
+        display: block;
+        &:hover {
+            color: #999999;
+        }
+    }
+    .header {
+        border-bottom: 1px solid #E5E5E5;
         position: relative;
         padding: 0 40px !important;
         height: 100%;
@@ -38,43 +40,39 @@ header {
         margin: 0 auto;
         min-width: 1200px;
         z-index: 4;
-       
-        .l{
+        .l {
             height: 100%;
             float: left;
-            a{
+            a {
                 height: 100%;
                 line-height: 79px;
             }
-            img{
+            img {
                 height: 40px;
-                display: inline-block; 
+                display: inline-block;
                 vertical-align: middle;
             }
         }
-        .r{
+        .r {
             float: right;
-            ul{
+            ul {
                 float: left;
-                li{
+                li {
                     float: left;
-                    margin-left:60px ;
-                   
+                    margin-left: 60px;
                 }
-       
             }
-            .lang{
+            .lang {
                 float: left;
                 margin-left: 30px;
-                a{
+                a {
                     margin-left: 30px;
                     float: left;
                 }
             }
         }
-        
     }
-    .hide-header{
+    .hide-header {
         overflow: hidden;
         position: absolute;
         top: 79px;
@@ -83,23 +81,22 @@ header {
         background: #fff;
         @include transition(all 0.8s);
         @include opacity(0.5);
-        &.active{
+        &.active {
             @include opacity(1);
-             height: 160px;
+            height: 160px;
         }
-        ul{
+        ul {
             padding: 30px 40px;
             float: right;
             height: 160px;
             margin-right: 95px;
-            li{
+            li {
                 float: left;
                 margin-left: 60px;
                 line-height: 50px;
             }
         }
     }
-    
 }
 
 footer {
@@ -132,100 +129,95 @@ footer>div>span:nth-child(2) {
 .box {
     height: 100%;
     width: 1300px;
-    margin: 0 auto;
-    // overflow: hidden;
+    margin: 0 auto; // overflow: hidden;
     position: relative;
 }
 
 .content-one {
     margin-top: 79px;
 }
-.footer{
+
+.footer {
     height: 430px;
     background: url(../imgs/footer/footer-bg.jpg);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: rgba(67, 67, 67, 0);
-    color: #fff;
-    // letter-spacing:3px;
-    ul{
+    color: #fff; // letter-spacing:3px;
+    ul {
         width: 1200px;
         margin: 0 auto;
         height: 570px;
         padding-top: 50px;
-        font-size:14px; 
-        
-        li{
+        font-size: 14px;
+        li {
             float: left;
             height: 327px;
-            border-right:1px solid rgb(183,181,181) ;
-            &:last-child{
+            border-right: 1px solid rgb(183, 181, 181);
+            &:last-child {
                 border: none;
             }
         }
-        li:nth-child(1){
-            padding-right:90px; 
+        li:nth-child(1) {
+            padding-right: 90px;
             line-height: 21px;
             letter-spacing: 1px;
-            .footer-logo{
+            .footer-logo {
                 // width: 204px;
                 height: 45px;
             }
-            .t{
+            .t {
                 margin-top: 40px;
-                
-                span{
+                span {
                     display: block;
                 }
             }
-            .b{
+            .b {
                 margin-top: 40px;
-                >div{
+                >div {
                     position: relative;
                     width: 340px;
                     display: flex;
                     padding: 5px 0;
                 }
-                div.img{
+                div.img {
                     // width: 25px;
                     height: 21px;
-                    text-align: center; 
+                    text-align: center;
                     @include display-flex(flex);
                     @include align-items(center);
                     @include justify-content(center);
-                    div{
+                    div {
                         height: 20px;
                         margin-left: 5px;
                         background: #fff;
                         width: 1px;
                     }
                 }
-                span{
+                span {
                     display: block;
-                    margin-left:5px; 
+                    margin-left: 5px;
                     width: 310px;
                 }
             }
-
         }
-        li:nth-child(2){
-            padding:0 90px; 
-            a{
-                text-decoration:none;
-                
-                p{
-                    color: rgb(183,181,181);
+        li:nth-child(2) {
+            padding: 0 90px;
+            a {
+                text-decoration: none;
+                p {
+                    color: rgb(183, 181, 181);
                 }
-                div{
+                div {
                     margin-top: 10px;
                     background: $color;
                     height: 1px;
                     width: 0px;
-                    transition: all 0.2s ease;
+                    @include transition( all 0.2s ease);
                 }
-                &:hover{
-                    div{
+                &:hover {
+                    div {
                         width: 20px;
                     }
                 }
@@ -241,81 +233,78 @@ footer>div>span:nth-child(2) {
                     height: 3px;
                 }
             }
-            .items:nth-child(2){
+            .items:nth-child(2) {
                 height: 75px;
             }
-            .items{
+            .items {
                 width: 300px;
-                display: flex;
-                align-items: flex-end;
+                @include display-flex(flex);
+                @include align-items(flex-end);
                 height: 54px;
-                .level{
+                .level {
                     color: #fff;
                     list-style: none;
                     display: block;
                     width: 110px;
-                    
                 }
-                span{
-                    display: flex;
-                    a{
+                span {
+                    @include display-flex(flex);
+                    a {
                         margin-right: 18px;
                     }
                 }
-                
             }
-
         }
-        li:nth-child(3){
+        li:nth-child(3) {
             padding-left: 90px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            div{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                img{
-                    width:138px ;
+            @include display-flex(flex);
+            @include flex-direction(column);
+            @include justify-content(flex-end);
+            div {
+                @include display-flex(flex);
+                @include flex-direction(column);
+                @include justify-content(flex-end);
+                img {
+                    width: 138px;
                     height: 138px;
                 }
-                div{
+                div {
                     width: 140px;
                     height: 30px;
                     line-height: 30px;
                     border: 1px solid #fff;
-                    border-radius:15px; 
-                    margin-top:13px; 
+                    @include border-radius(15px);
+                    margin-top: 13px;
                     text-align: center;
                 }
             }
         }
-        
     }
 }
-.content{
+
+.content {
     overflow: hidden;
     position: relative;
 }
 
-.page{
-    opacity: 0;
-    transition: all 0.2s;
-    &.show{
-        opacity: 1;
+.page {
+    @include opacity(0);
+    @include transition(all 0.2s ease);
+    &.show {
+        @include opacity(1);
     }
 }
-.swiper-button-next{
-    background-image:url(../imgs/icon/right.png) !important;
-    height: 44px !important ;
+
+.swiper-button-next {
+    background-image: url(../imgs/icon/right.png) !important;
+    height: 44px !important;
     width: 26px !important;
     background-size: 13px 22px !important;
-
 }
-.swiper-button-prev{
-    background-image:url(../imgs/icon/left.png) !important ;
-    height: 44px !important ;
-    width: 26px !important;
-    background-size:13px 22px !important;
 
+.swiper-button-prev {
+    background-image: url(../imgs/icon/left.png) !important;
+    height: 44px !important;
+    width: 26px !important;
+    background-size: 13px 22px !important;
 }

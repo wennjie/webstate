@@ -1,0 +1,38 @@
+@import '../scsslibs/index.scss';
+@font-face {
+  font-family: "SourceHanSerifCN-Regular";
+  src: url("../fonts/SourceHanSerifCN-Regular.eot?t=1527583130946");
+  /* IE9*/
+  src: url("../fonts/SourceHanSerifCN-Regular.eot?t=1527583130946#iefix") format("embedded-opentype"), url("../fonts/SourceHanSerifCN-Regular.woff") format("woff"), url("../fonts/SourceHanSerifCN-Regular.woff2") format("woff2"), url("../fonts/SourceHanSerifCN-Regular.ttf?t=1527583130946") format("truetype");
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ }
+
+@font-face {
+  font-family: "SourceHanSerifCN-Heavy";
+  src: url("../fonts/SourceHanSerifCN-Heavy.eot?t=1527583130946");
+  /* IE9*/
+  src: url("../fonts/SourceHanSerifCN-Heavy.eot?t=1527583130946#iefix") format("embedded-opentype"), url("../fonts/SourceHanSerifCN-Heavy.woff") format("woff"), url("../fonts/SourceHanSerifCN-Heavy.woff2") format("woff2"), url("../fonts/SourceHanSerifCN-Heavy.ttf?t=1527583130946") format("truetype");
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ }
+
+@font-face {
+  font-family: "SourceHanSerifCN-Bold";
+  src: url("../fonts/SourceHanSerifCN-Bold.eot?t=1527583130946");
+  /* IE9*/
+  src: url("../fonts/SourceHanSerifCN-Bold.eot?t=1527583130946#iefix") format("embedded-opentype"), url("../fonts/SourceHanSerifCN-Bold.woff") format("woff"), url("../fonts/SourceHanSerifCN-Bold.woff2") format("woff2"), url("../fonts/SourceHanSerifCN-Bold.ttf?t=1527583130946") format("truetype");
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ }
+
+@font-face {
+  font-family: "impact";
+  src: url("../fonts/impact.eot?t=1527583130946");
+  /* IE9*/
+  src: url("../fonts/impact?t=1527583130946#iefix") format("embedded-opentype"), url("../fonts/impact.woff") format("woff"), url("../fonts/impact.woff2") format("woff2"), url("../fonts/impact.ttf?t=1527583130946") format("truetype");
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ }
+
+@font-face {
+  font-family: "SourceHanSansCN-Light";
+  src: url("../fonts/SourceHanSansCN-Light.eot?t=1527583130946");
+  /* IE9*/
+  src: url("../fonts/SourceHanSansCN-Light?t=1527583130946#iefix") format("embedded-opentype"), url("../fonts/SourceHanSansCN-Light.woff") format("woff"), url("../fonts/SourceHanSansCN-Light.woff2") format("woff2"), url("../fonts/SourceHanSansCN-Light.ttf?t=1527583130946") format("truetype");
+  /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ }
+
+  // @include font-face('name','../fonts/SourceHanSerifCN-Regular.woff','true')

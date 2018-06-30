@@ -28,8 +28,11 @@
 .content-two .box .c-form {
   margin-top: 65px;
   min-height: 200px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center; }
 
 .content-two .box .c-form h4 {
@@ -61,21 +64,23 @@
   cursor: pointer;
   margin-top: 18px;
   border-width: 1px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
   border-radius: 0px;
   border-color: rgba(204, 204, 204, 0.4);
   border-style: solid;
-  font-family: arial;
-  color: #999999;
-  transform: rotate(0deg) scale(1) translate(0%, 0%);
-  transition: All 0.5s ease;
+  -webkit-transform: rotate(0deg) scale(1) translate(0%, 0%);
+  -moz-transform: rotate(0deg) scale(1) translate(0%, 0%);
   -ms-transform: rotate(0deg) scale(1) translate(0%, 0%);
   -o-transform: rotate(0deg) scale(1) translate(0%, 0%);
-  -moz-transform: rotate(0deg) scale(1) translate(0%, 0%);
-  -webkit-transform: rotate(0deg) scale(1) translate(0%, 0%);
-  -ms-transition: All 0.5s ease;
-  -o-transition: All 0.5s ease;
-  -moz-transition: All 0.5s ease;
-  -webkit-transition: All 0.5s ease; }
+  transform: rotate(0deg) scale(1) translate(0%, 0%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #999999; }
 
 .content-two .box .c-form button:hover {
   background: #ebebeb;

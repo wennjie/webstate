@@ -12,8 +12,8 @@
     border-bottom: 1px solid #000000;
     .box {
         width: 1300px;
-        display: flex;
-        align-items: center;
+        @include display-flex(flex);
+        @include align-items(center);
         .l,
         .r {
             float: left;
@@ -47,22 +47,20 @@
     height: 435px;
     border-bottom: 1px solid #000000;
     background-image: url(../imgs/v02/2-bg.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    @include fullbg;
     position: relative;
     .box {
         width: 1200px;
         ul {
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            @include display-flex(flex);
+            @include justify-content(space-around);
+            @include align-items(center);
             li {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include flex-direction(column);
+                @include display-flex(flex);
+                @include justify-content(center);
+                @include align-items(center);
                 color: #fff;
                 line-height: 33px;
                 h3 {
@@ -130,7 +128,7 @@
                         div:nth-child(1) {
                             line-height: 40px;
                             height: 40px;
-                            @include flexbox;
+                            @include display-flex(flex);
                             @include align-items(center);
                             span,
                             p {
@@ -170,9 +168,7 @@
     height: 1284px;
     border-bottom: 1px solid #000000;
     background-image: url(../imgs/v02/4-bg.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    @include fullbg;
     .box {
         color: #fff;
         padding-top: 100px;
@@ -211,7 +207,7 @@
         }
         .box-b {
             margin-top: 105px;
-            @include flexbox;
+            @include display-flex(flex);
             @include justify-content(center);
             .l {
                 float: left;
@@ -264,7 +260,7 @@
                     width: 236px;
                     height: 36px;
                     border: 1px solid rgba(0,0,0,0.15);
-                    border-radius: 7px;
+                   @include border-radius(7px);
                     color: #000000;
                     line-height: 36px;
                     margin: 0 auto;
@@ -296,14 +292,14 @@
                     bottom: 0;
                     left: 0;
                     width: 0px;
-                    transition: all 0.3s;
+                    @include transition( all 0.3s);
                 }
                 &:hover {
                     .plan {
                         width: 100%;
                     }
                     img {
-                        transform: scale(1.05);
+                        @include transform(scale(1.05));
                     }
                 }
             }

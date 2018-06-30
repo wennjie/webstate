@@ -3,9 +3,7 @@
     width: 100%;
     height: 800px;
     background-image: url(../imgs/v02s/head_img.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    @include fullbg;
     background-color: rgba(67, 67, 67, 0);
     color: #fff;
     div {
@@ -37,13 +35,11 @@
         .two-t-l {
             width: 560px;
             height: 362px;
-            background-image: url(../imgs/v02s/bg_little.png);
-            background-size: cover;
             position: absolute;
             top: 153px;
             left: 0;
-            /* background-position: 50% 50%; */
-            background-repeat: no-repeat;
+            @include fullbg;
+            background-image: url('../imgs/v02s/bg_little.png');
             background-color: rgba(67, 67, 67, 0);
             div {
                 margin-left: 39px;
@@ -67,7 +63,7 @@
         .two-t-r {
             width: 856px;
             height: 320px;
-            box-shadow: 18px 18px 65px rgba(0, 0, 0, 0.2);
+            @include box-shadow(18px 18px 65px rgba(0, 0, 0, 0.2));
             position: absolute;
             top: 113px;
             right: 0;
@@ -79,7 +75,7 @@
                     color: #4d4d4d;
                     height: 118px;
                     padding-top: 46px;
-                    background-image: url(../imgs//v02s//line.png);
+                    background-image: url(../imgs/v02s//line.png);
                     background-position-y: 100%;
                     background-repeat: no-repeat;
                     letter-spacing: 3px;
@@ -120,7 +116,7 @@
                 float: left;
                 width: 369px;
                 height: 415px;
-                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.17);
+               @include box-shadow(5px 5px 20px rgba(0, 0, 0, 0.17));
                 margin: 0 31px;
                 text-align: center;
                 div {
@@ -149,8 +145,7 @@
     height: 664px;
     background: #4D4D4D;
     background-image: url(../imgs/v02s/v02-bg.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+   @include fullbg;
     font-size: 18px;
     .content-three-box {
         width: 1300px;
@@ -174,8 +169,8 @@
         ul {
             width: 100%;
             text-align: center;
-            display: flex;
-            justify-content: space-between;
+            @include display-flex(flex);
+            @include justify-content(space-between);
             font-size: 14px;
             .img {
                 height: 79px;
@@ -238,37 +233,33 @@
 }
 
 .slide {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+   @include fullbg;
     width: 400px;
     height: 640px;
     border: 1px solid #e5e5e5;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3)
+   @include box-shadow( 10px 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 .fly {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include fullbg;
     background: url(./imgs/v02s/1.44.png);
 }
 
 .A {
-    opacity: 0.3;
+    @include opacity( 0.3);
 }
 
 .crea li {
     width: 10px;
     height: 10px;
     background: #999;
-    border-radius: 50%;
+    @include border-radius(50%);
     margin: 10px;
 }
 
 .crea {
-    display: flex;
-    justify-content: center;
+    @include display-flex(flex);
+    @include justify-content(center);
 }
 
 .crea li.active {

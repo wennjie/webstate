@@ -218,6 +218,9 @@ footer > div > span:nth-child(2) {
   background: #fbd005;
   height: 1px;
   width: 0px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 .footer ul li:nth-child(2) a:hover div {
@@ -237,7 +240,9 @@ footer > div > span:nth-child(2) {
 
 .footer ul li:nth-child(2) .items {
   width: 300px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
   height: 54px; }
 
@@ -248,6 +253,7 @@ footer > div > span:nth-child(2) {
   width: 110px; }
 
 .footer ul li:nth-child(2) .items span {
+  display: -webkit-flex;
   display: flex; }
 
 .footer ul li:nth-child(2) .items span a {
@@ -255,13 +261,19 @@ footer > div > span:nth-child(2) {
 
 .footer ul li:nth-child(3) {
   padding-left: 90px;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end; }
 
 .footer ul li:nth-child(3) div {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end; }
 
 .footer ul li:nth-child(3) div img {
@@ -273,6 +285,10 @@ footer > div > span:nth-child(2) {
   height: 30px;
   line-height: 30px;
   border: 1px solid #fff;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   border-radius: 15px;
   margin-top: 13px;
   text-align: center; }
@@ -282,10 +298,15 @@ footer > div > span:nth-child(2) {
   position: relative; }
 
 .page {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  transition: all 0.2s; }
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 
 .page.show {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
 .swiper-button-next {

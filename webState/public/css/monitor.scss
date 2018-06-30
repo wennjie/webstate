@@ -1,3 +1,4 @@
+@import '../scsslibs/index.scss';
 .content-one {
     background: #EBEBEB;
     height: 700px;
@@ -47,13 +48,13 @@
         }
         ul {
             margin-top: 51px;
-            display: flex;
-            justify-content: space-between;
+            @include display-flex(flex);
+            @include justify-content(space-between);
             li {
                 .img {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include display-flex(flex);
+                    @include justify-content(center);
+                    @include align-items(center);
                     width: 182px;
                     height: 182px;
                 }
@@ -70,9 +71,7 @@
 .content-three {
     height: 825px;
     background-image: url('../imgs/monitor/bj1.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    @include fullbg;
     background-color: rgba(67, 67, 67, 0);
     overflow: hidden;
     .box{
@@ -81,9 +80,9 @@
         }
         ul{
             margin-top: 48px;
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
+            @include display-flex(flex);
+            @include justify-content(space-between);
+            @include align-items(center);
             padding: 0 20px;
             p{
                 margin-top: 20px;
@@ -94,9 +93,9 @@
             position: relative;
             bottom: 0;
             top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include display-flex(flex);
+                    @include justify-content(center);
+                    @include align-items(center);
             width: 726px;
                 height: 353px;
                 margin: 0 auto;
@@ -114,9 +113,7 @@
 .content-four {
     height: 850px;
     background-image: url('../imgs/monitor/bj2.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    @include fullbg;
     background-color: rgba(67, 67, 67, 0);
     .box{
         .title{
@@ -175,7 +172,8 @@
     .box{
         .b{
             margin-top: 92px;
-            display: flex;
+            @include display-flex(flex);
+                   
             .r{
                 float: left;
                 margin-left: 210px;

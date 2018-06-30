@@ -28,7 +28,9 @@
                 min-height: 20px;
                 display: -webkit-box;
                 display: -ms-flexbox;
-                display: flex;
+                @include display-flex(flex);
+                @include justify-content(center);
+                @include align-items(center);
                 padding: 0px;
                 border-type: border-bottom;
                 float: none;
@@ -82,7 +84,7 @@
                                 position: relative; // left: -90px;
                                 color: rgb(153, 153, 153);
                                 line-height: 1em;
-                                transition: all 0.5s ease;
+                               @include transition(all 0.5s ease);
                                 font-family: 'SourceHanSansCN-Light';
                             }
                         }
@@ -100,7 +102,7 @@
                         height: 220px;
                         width: 440px;
                         padding-left: 0;
-                        transition: all 0.5s ease;
+                       @include transition(all 0.5s ease);
                         .r-l {
                             padding-top: 15px;
                             padding-left: 30px;
@@ -146,7 +148,7 @@
                                 height: 100%;
                                 overflow: hidden;
                                 .imgs {
-                                    transition: all 0.5s ease;
+                                   @include transition(all 0.5s ease);
                                     @include fullbg;
                                     background: url(../imgs/news/banner.jpg);
                                 }
@@ -169,10 +171,10 @@
                         padding-left: 10px;
                     }
                     .imgs {
-                        transform: rotate(0deg) scale(1.02) translate(10px, 0);
+                        @include transform(rotate(0deg) scale(1.02) translate(10px, 0));
                     }
                     .r-r {
-                        transform: rotate(10deg) scale(1.9) translate(0%, 0%);
+                       @include transform( rotate(10deg) scale(1.9) translate(0%, 0%));
                         padding-right: 0 !important;
                     }
                     
@@ -181,12 +183,12 @@
         }
     }
     .paging{
-        display: flex !important;
-        justify-content: flex-start !important;
+        @include display-flex(flex !important);
+        @include justify-content(flex-start !important);
+    
         height: 40px !important;
         margin-top: 70px;
-        display: flex !important;
-        // width: 200px !important;
+   
         li{
             margin: 0;
             padding: 0 !important;

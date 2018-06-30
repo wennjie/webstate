@@ -29,16 +29,16 @@
         left: 5%;
         z-index: 2;
         background-color: rgb(255, 255, 255);
-        box-shadow: rgba(204, 204, 204, 0.4) 0px 1px 10px 1px;
-        border-radius: 2px;
-        @include flexbox;
+        @include box-shadow(rgba(204, 204, 204, 0.4) 0px 1px 10px 1px);
+       @include border-radius(2px);
+        @include display-flex(flex);
         margin-top: 0px;
         padding-top: 30px;
         padding-bottom: 30px;
         @include justify-content(space-around);
         div.border {
             border-left: 1px solid #e5e5e5;
-            @include flexbox;
+            @include display-flex(flex);
             @include align-items(center);
             @include flex(1);
             padding: 0 40px;
@@ -50,7 +50,7 @@
                 list-style: none;
                 text-decoration: none;
                 display: block;
-                @include flexbox;
+                @include display-flex(flex);
                 @include align-items(center);
             }
             a:hover {
@@ -61,7 +61,7 @@
             div:nth-child(1) {
                 width: 74px;
                 height: 74px;
-                @include flexbox;
+                @include display-flex(flex);
                 @include align-items(center);
                 @include justify-content(center);
                 img {
@@ -73,14 +73,14 @@
                 // position: absolute;
                 padding: 0 20px;
                 @include flex(1);
-                transition: all 0.2s;
+                @include transition(all 0.2s ease);
                 p {
                     // width: 80%;
                     font-size: 15px;
                     color: rgb(51, 51, 51);
                     text-overflow: ellipsis;
-                    @include flexbox;
-                    -webkit-box-orient: vertical;
+                    @include display-flex(flex);
+                   @include box-orient(vertical);
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     line-height: 24px;
@@ -89,8 +89,8 @@
                     font-size: 12px;
                     color: rgb(153, 153, 153);
                     text-overflow: ellipsis;
-                    @include flexbox;
-                    -webkit-box-orient: vertical;
+                    @include display-flex(flex);
+                    @include box-orient(vertical);
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     line-height: 18px;
@@ -118,8 +118,9 @@
         margin: 0 auto;
         position: relative;
         /*overflow: hidden;*/
-        display: flex;
-        justify-content: space-between;
+        @include display-flex(flex);
+        @include justify-content(space-between);
+
         .container-info {
             font-size: 14px;
             position: relative;
@@ -128,7 +129,7 @@
             float: left;
             text-align: center;
             background: #fff;
-            transition: all 0.2s;
+            @include transition(all 0.2s ease);
             border-right: 1px solid #e5e5e5; // flex: 1;
             z-index: 0;
             .offset-box {
@@ -138,7 +139,7 @@
                 right: 0;
                 bottom: 0;
                 z-index: 0;
-                transition: all .2s;
+                @include transition(all 0.2s ease);
             }
             line-height: 1.7em;
             font-weight: normal;
@@ -181,7 +182,7 @@
                     background-repeat: no-repeat;
                     z-index: 1;
                     position: relative;
-                    transition: all 0.5s;
+                    @include transition(all 0.5s ease);
                 }
             }
             .more {
@@ -208,7 +209,7 @@
         z-index: 1;
         .offset-box {
             background: rgb(161, 177, 170);
-            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+            @include box-shadow( 0px 15px 10px rgba(0, 0, 0, 0.3));
             color: #FFFFFF;
             top: -30px;
             bottom: -30px;
@@ -218,7 +219,7 @@
         }
         .imgs {
             div {
-                transform: scale(1.02)
+                @include transform(scale(1.02));
             }
         }
     }
@@ -240,14 +241,14 @@
         top: 0px;
         bottom: 0px;
         position: absolute;
-        display: flex;
+        @include display-flex(flex);
         -webkit-box-align: start;
-        align-items: flex-start;
+        @include align-items(flex-start);
+        @include flex-direction(column);
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        flex-direction: column;
         -webkit-box-pack: center;
-        justify-content: center;
+        @include justify-content(center);
         margin: auto;
         z-index: 2;
         .t {
@@ -259,9 +260,9 @@
             border-style: solid;
             padding: 10px;
             border-color: rgba(204, 204, 204, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include display-flex(flex);
+            @include justify-content(center);
+            @include align-items(center);
             overflow: hidden;
             .imgs {
                 width: 100%;
@@ -278,9 +279,9 @@
             min-height: 80px;
             div:nth-child(1) {
                 min-height: 0px;
-                display: flex;
+              @include  display-flex(flex);
                 -webkit-box-align: end;
-                align-items: flex-end;
+               @include align-items(flex-end);
                 margin-bottom: 20px;
                 p:nth-child(1) {
                     font-size: 18px;
@@ -300,6 +301,7 @@
             line-height: 2em;
             text-overflow: ellipsis;
             display: -webkit-box;
+            
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
             overflow: hidden;
@@ -328,7 +330,7 @@
         height: 100%;
         z-index: 0;
         right: 0px;
-        flex: 1 1 0%;
+        @include flex(1 1 0%);
         .about-swiper {
             width: 100%;
             height: 100%;
@@ -373,8 +375,9 @@
             }
         }
         .news-box {
-            display: flex;
-            justify-content: flex-start;
+            @include display-flex(flex);
+            @include justify-content(flex-start);
+       
             margin-top: 40px;
             .news {
                 display: block;
@@ -399,9 +402,8 @@
                 .new {
                     height: 185px;
                     position: relative;
-                    transition: all 0.5s ease;
+                   @include transition( all 0.5s ease);
                     top: 0px;
-                    transition: all 0.5s ease;
                     .news-title {
                         font-size: 16px;
                         color: rgb(51, 51, 51);
@@ -447,10 +449,10 @@
                     width: 100%;
                     height: 150px;
                     overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: all 0.5s ease;
+                    @include display-flex(flex);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    @include transition(all 0.5s ease);
                     @include fullbg;
                     img {
                         width: 100%;
@@ -461,9 +463,12 @@
         .read-more {
             display: -webkit-box;
             display: -ms-flexbox;
-            display: flex;
+            @include display-flex(flex);
             -webkit-box-pack: center;
             -ms-flex-pack: center;
+            @include justify-content(center);
+            @include align-items(center);
+            @include box-orient(vertical);
             justify-content: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
@@ -532,7 +537,7 @@
         left: 50%;
         margin-left: -600px;
         top: 0;
-        @include flexbox;
+        @include display-flex(flex);
         @include justify-content(flex-end);
         @include align-items(center);
         ul {
@@ -560,12 +565,12 @@
                     border-left: none;
                 }
                 .title {
-                    @include flexbox;
+                    @include display-flex(flex);
                     @include align-items(center);
                     .l {
                         width: 48px;
                         height: 48px;
-                        @include flexbox;
+                        @include display-flex(flex);
                         @include justify-content(center);
                         @include align-items(center);
                         overflow: hidden; // float: left;
@@ -595,14 +600,14 @@
     background: #fff;
     .box {
         width: 95%; // background: #000;
-        @include flexbox;
+        @include display-flex(flex);
         @include align-items(center);
         padding-top: 15px;
         ul {
             width: 100%;
             li {
                 width: 20%;
-                @include flexbox;
+                @include display-flex(flex);
                 @include align-items(center);
                 float: left;
                 .l {
